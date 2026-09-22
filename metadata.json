@@ -1,0 +1,6 @@
+{
+  "name": "Ventures.qa — Qatar Venture & Capital Intelligence",
+  "description": "The definitive resource for Qatar ventures, founders, and investment companies. Sourced news, startup incorporation guides, angel & VC deal-flow, verified ecosystem directory, and QPCI capital benchmarks.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

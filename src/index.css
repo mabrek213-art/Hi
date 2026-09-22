@@ -1,0 +1,66 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --qatar-maroon: #8A1538;
+    --qatar-maroon-dark: #630C25;
+    --qatar-maroon-light: #A51C44;
+    --sand-gold: #C5A059;
+    --sand-light: #F4EFEA;
+    --desert-canvas: #FAF8F5;
+  }
+
+  body {
+    font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  }
+
+  [dir="rtl"] body,
+  [dir="rtl"] {
+    font-family: 'Cairo', 'Plus Jakarta Sans', -apple-system, sans-serif;
+  }
+  
+  code, pre, .font-mono {
+    font-family: 'JetBrains Mono', monospace;
+  }
+}
+
+/* Islamic Geometric Motif patterns for sovereign prestige accents */
+.bg-islamic-pattern {
+  background-color: #FAF8F5;
+  background-image: radial-gradient(#8A1538 0.6px, transparent 0.6px), radial-gradient(#C5A059 0.6px, #FAF8F5 0.6px);
+  background-size: 24px 24px;
+  background-position: 0 0, 12px 12px;
+}
+
+.bg-maroon-pattern {
+  background-color: #8A1538;
+  background-image: radial-gradient(rgba(255, 255, 255, 0.08) 1px, transparent 1px);
+  background-size: 20px 20px;
+}
+
+.qatar-gradient-header {
+  background: linear-gradient(135deg, #6E0D29 0%, #8A1538 55%, #4C081A 100%);
+}
+
+.gold-gradient-border {
+  border-image: linear-gradient(to right, #C5A059, #E5C384, #8A1538) 1;
+}
+
+/* Custom scrollbars with Maroon touch */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #F4EFEA;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #D1C5B8;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #8A1538;
+}
