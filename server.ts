@@ -571,6 +571,14 @@ async function startServer() {
       message
     });
 
+    // Notify seller directly
+    db.logEmail(
+      'articleelkhalil@gmail.com',
+      `[Ventures.qa For Sale Inquiry] From: ${name} (${organization})`,
+      'deal_intro',
+      `New Acquisition Inquiry Received for Ventures.qa Platform:\n\nName: ${name}\nOrganization: ${organization}\nEmail: ${email}\nScope: ${inquiryType || 'full_acquisition'}\nEstimated Budget: ${estimatedBudget || 'N/A'}\nMessage:\n${message || 'No message provided'}\n\nRespond to buyer at: ${email}`
+    );
+
     res.status(201).json({
       success: true,
       message: 'Inquiry received under strict mutual NDA. Our team will follow up within 24 hours.',

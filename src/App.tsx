@@ -21,6 +21,7 @@ import { AuthModal } from './components/AuthModal';
 import { Footer } from './components/Footer';
 import { ArticlePage } from './components/ArticlePage';
 import { AcquisitionProspectusModal } from './components/AcquisitionProspectusModal';
+import { ContactAndSaleModule } from './components/ContactAndSaleModule';
 
 import { 
   SEED_ENTITIES, 
@@ -399,6 +400,14 @@ export function App() {
               report={SEED_STATE_OF_CAPITAL_REPORT}
               language={language}
               onOpenReportModal={() => setIsReportModalOpen(true)}
+            />
+          )}
+
+          {activeModule === 'for-sale' && (
+            <ContactAndSaleModule
+              language={language}
+              onOpenProspectusModal={() => setIsProspectusModalOpen(true)}
+              onNavigateTab={(tab) => setActiveModule(tab as any)}
             />
           )}
             </>

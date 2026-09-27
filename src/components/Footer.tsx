@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Language } from '../types';
+import { Logo } from './Logo';
 import { 
   Building2, 
   Newspaper, 
@@ -66,19 +67,12 @@ export const Footer: React.FC<FooterProps> = ({
           
           {/* Platform Identity */}
           <div className="lg:col-span-2 space-y-4">
-            <div className="flex items-center gap-3">
-              <div className="w-10 h-10 rounded-xl bg-[#8A1538] flex items-center justify-center text-white font-bold text-lg border border-[#C5A059] shadow-sm font-mono">
-                VQ
-              </div>
-              <div>
-                <span className="text-xl font-black text-white tracking-tight">
-                  Ventures<span className="text-[#8A1538]">.qa</span>
-                </span>
-                <span className="text-[11px] block text-[#A69999] font-medium">
-                  {isAr ? 'منصة استخبارات رأس المال الخاص والشركات الناشئة' : 'Independent Private Capital & Startup Intelligence'}
-                </span>
-              </div>
-            </div>
+            <Logo
+              language={language}
+              variant="footer"
+              size="md"
+              onClick={() => onNavigate('directory')}
+            />
 
             <p className="text-xs text-[#A69999] leading-relaxed max-w-sm">
               {isAr
@@ -202,13 +196,22 @@ export const Footer: React.FC<FooterProps> = ({
                   <span>{isAr ? 'تقرير Q2 لرأس المال' : 'Q2 State of Capital Report'}</span>
                 </button>
               </li>
+              <li>
+                <button
+                  onClick={() => onNavigate('for-sale')}
+                  className="hover:text-white transition-colors flex items-center gap-1.5 text-[#C5A059] font-bold"
+                >
+                  <span className="w-2 h-2 rounded-full bg-[#C5A059] animate-ping" />
+                  <span>{isAr ? 'المنصة معروضة للبيع (M&A)' : 'Platform For Sale & Contact'}</span>
+                </button>
+              </li>
               {onOpenProspectus && (
                 <li>
                   <button
                     onClick={onOpenProspectus}
                     className="hover:text-[#C5A059] transition-colors flex items-center gap-1.5 text-[#C5A059] font-medium"
                   >
-                    <span className="w-1.5 h-1.5 rounded-full bg-[#C5A059] animate-pulse" />
+                    <span className="w-1.5 h-1.5 rounded-full bg-[#C5A059]" />
                     <span>{isAr ? 'نشرة الاستحواذ على المنصة (M&A)' : 'Asset Prospectus & Acquisition'}</span>
                   </button>
                 </li>
@@ -249,6 +252,38 @@ export const Footer: React.FC<FooterProps> = ({
             )}
           </div>
 
+        </div>
+
+        {/* Asset For Sale Official Notice Banner */}
+        <div className="mt-10 p-6 rounded-2xl bg-gradient-to-r from-[#8A1538]/30 via-[#2D1B22] to-[#1A1415] border-2 border-[#C5A059]/40 flex flex-col md:flex-row md:items-center justify-between gap-4">
+          <div className="space-y-1">
+            <div className="flex items-center gap-2">
+              <span className="px-2 py-0.5 rounded text-[10px] font-black bg-[#C5A059] text-[#1E1919] uppercase font-mono">
+                {isAr ? 'أصل رقمي للبيع' : 'DIGITAL ASSET FOR SALE'}
+              </span>
+              <span className="text-white/80 text-xs font-semibold">Ventures.qa Turnkey Acquisition</span>
+            </div>
+            <p className="text-xs text-[#E8DFC8]">
+              {isAr
+                ? 'النطاق، ومستودع الكود، ومؤشر QPCI، ومحرك الذكاء الاصطناعي معروضة للبيع بالكامل. للتواصل مع البائع:'
+                : 'Domain, full-stack platform, QPCI database, and AI pipeline are available for acquisition. Contact seller:'}
+              <a
+                href="mailto:articleelkhalil@gmail.com?subject=Ventures.qa%20Acquisition%20Inquiry"
+                className="font-mono font-bold text-[#C5A059] underline hover:text-white ml-1 rtl:mr-1"
+              >
+                articleelkhalil@gmail.com
+              </a>
+            </p>
+          </div>
+
+          <div className="flex items-center gap-3">
+            <button
+              onClick={() => onNavigate('for-sale')}
+              className="px-4 py-2 rounded-xl bg-[#C5A059] hover:bg-[#D4AF67] text-[#1E1919] text-xs font-black transition-all shadow-md"
+            >
+              {isAr ? 'عرض تفاصيل البيع والتواصل' : 'View Sale Details & Contact'}
+            </button>
+          </div>
         </div>
 
         {/* Editorial Standards & Neutrality Disclaimer */}

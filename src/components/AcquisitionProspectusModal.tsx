@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Language } from '../types';
+import { LogoMark } from './Logo';
 import { 
   X, 
   Building2, 
@@ -17,7 +18,10 @@ import {
   FileText,
   Lock,
   ArrowRight,
-  ArrowLeft
+  ArrowLeft,
+  Mail,
+  Copy,
+  Check
 } from 'lucide-react';
 
 interface AcquisitionProspectusModalProps {
@@ -46,6 +50,14 @@ export const AcquisitionProspectusModal: React.FC<AcquisitionProspectusModalProp
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitted, setSubmitted] = useState(false);
   const [errorMsg, setErrorMsg] = useState('');
+  const [copied, setCopied] = useState(false);
+  const sellerEmail = 'articleelkhalil@gmail.com';
+
+  const handleCopyEmail = () => {
+    navigator.clipboard.writeText(sellerEmail);
+    setCopied(true);
+    setTimeout(() => setCopied(false), 2500);
+  };
 
   if (!isOpen) return null;
 
@@ -89,9 +101,7 @@ export const AcquisitionProspectusModal: React.FC<AcquisitionProspectusModalProp
         {/* Header */}
         <div className="bg-[#8A1538] text-white px-6 py-5 flex items-center justify-between border-b border-[#6E0D29]">
           <div className="flex items-center gap-3">
-            <div className="w-10 h-10 rounded-xl bg-[#6E0D29] border border-[#C5A059]/40 flex items-center justify-center text-[#C5A059] font-black text-sm font-mono">
-              VQ
-            </div>
+            <LogoMark size="md" />
             <div>
               <div className="flex items-center gap-2">
                 <span className="text-[10px] font-bold px-2 py-0.5 rounded bg-[#6E0D29] text-[#C5A059] uppercase tracking-wider font-mono">
@@ -126,6 +136,41 @@ export const AcquisitionProspectusModal: React.FC<AcquisitionProspectusModalProp
                 ? 'تم تصميم وبناء منصة Ventures.qa لتكون المرجع المستقل الأول لمنظومة المشاريع الريادية والمؤسسين والشركات الاستثمارية في دولة قطر. تقدم المنصة حلاً رقمياً متكاملاً جاهزاً للعمل (Turnkey Asset) يلائم الاستحواذ المؤسسي من قبل الجهات الحكومية والتنموية، وصناديق رأس المال الجريء، والمؤسسات الإعلامية الكبرى الراغبة في امتلاك أصل موثوق للبيانات الاستثمارية.'
                 : 'Ventures.qa was architected as the premier independent digital resource and market infrastructure for Qatar’s tech ventures, founders, and investment companies. Designed as a turnkey, institutional-grade media and data property, it represents an exceptional acquisition target for regional venture syndicates, media conglomerates, or government development entities seeking instant ecosystem authority.'}
             </p>
+          </div>
+
+          {/* Direct Seller Contact Banner */}
+          <div className="p-4 rounded-xl bg-gradient-to-r from-[#8A1538]/15 via-[#FAF8F5] to-[#C5A059]/15 border-2 border-[#8A1538]/30 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+            <div className="flex items-center gap-3">
+              <div className="w-10 h-10 rounded-lg bg-[#8A1538] text-white flex items-center justify-center shrink-0">
+                <Mail className="w-5 h-5 text-[#C5A059]" />
+              </div>
+              <div>
+                <span className="text-[10px] font-bold text-[#8A1538] uppercase font-mono tracking-wider">
+                  {isAr ? 'المنصة معروضة للبيع — التواصل المباشر مع البائع' : 'DIGITAL ASSET FOR SALE • DIRECT SELLER CONTACT'}
+                </span>
+                <p className="text-xs sm:text-sm font-black text-[#1E1919] font-mono">
+                  {sellerEmail}
+                </p>
+              </div>
+            </div>
+
+            <div className="flex items-center gap-2">
+              <button
+                type="button"
+                onClick={handleCopyEmail}
+                className="px-3 py-1.5 rounded-lg bg-white border border-[#D5C9B8] hover:bg-[#F2ECE4] text-[#1E1919] text-xs font-bold flex items-center gap-1.5 shadow-sm transition-colors"
+              >
+                {copied ? <Check className="w-3.5 h-3.5 text-emerald-600" /> : <Copy className="w-3.5 h-3.5 text-[#8A1538]" />}
+                <span>{copied ? (isAr ? 'تم النسخ' : 'Copied') : (isAr ? 'نسخ البريد' : 'Copy Email')}</span>
+              </button>
+              <a
+                href={`mailto:${sellerEmail}?subject=Ventures.qa%20Platform%20Acquisition%20Inquiry`}
+                className="px-3.5 py-1.5 rounded-lg bg-[#8A1538] hover:bg-[#6E0D29] text-white text-xs font-bold flex items-center gap-1.5 shadow-sm transition-colors"
+              >
+                <Send className="w-3 h-3 text-[#C5A059]" />
+                <span>{isAr ? 'مراسلة البائع' : 'Email Seller'}</span>
+              </a>
+            </div>
           </div>
 
           {/* Core Valuation Pillars */}

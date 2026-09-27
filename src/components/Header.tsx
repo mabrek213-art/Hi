@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Language, User } from '../types';
+import { Logo } from './Logo';
 import { 
   Building2, 
   Newspaper, 
@@ -18,7 +19,9 @@ import {
   FileText,
   User as UserIcon,
   Sparkles,
-  Lock
+  Lock,
+  Mail,
+  Flame
 } from 'lucide-react';
 
 interface HeaderProps {
@@ -111,34 +114,71 @@ export const Header: React.FC<HeaderProps> = ({
       icon: FileDown,
       badgeEn: 'Legal',
       badgeAr: 'قانوني'
+    },
+    {
+      id: 'for-sale',
+      labelEn: 'For Sale',
+      labelAr: 'المنصة للبيع',
+      icon: Flame,
+      badgeEn: 'Acquire',
+      badgeAr: 'استحواذ'
     }
   ];
 
   return (
     <header className="sticky top-0 z-40 bg-[#FAF8F5]/95 backdrop-blur-md border-b border-[#E8DFC8]">
-      {/* Top Independent Market Dispatch Bar */}
-      <div className="bg-[#8A1538] text-[#FAF8F5] px-4 py-1.5 text-xs font-medium border-b border-[#6E0D29]">
+      {/* Top Asset Sale Announcement Banner */}
+      <div className="bg-gradient-to-r from-[#50081C] via-[#8A1538] to-[#360513] text-white px-4 py-1.5 text-xs border-b border-[#C5A059]/40">
         <div className="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-2">
           <div className="flex items-center gap-2">
-            <span className="inline-flex items-center px-2 py-0.5 rounded text-[10px] font-bold bg-[#6E0D29] text-[#C5A059] border border-[#C5A059]/40 uppercase tracking-wider font-mono">
+            <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded text-[10px] font-black bg-[#C5A059] text-[#1E1919] uppercase tracking-wider font-mono shadow-sm">
+              <span className="w-1.5 h-1.5 rounded-full bg-red-600 animate-ping" />
+              {isAr ? 'معروض للبيع' : 'FOR SALE'}
+            </span>
+            <p className="text-white/95 text-xs font-medium">
+              {isAr
+                ? 'منصة ونطاق Ventures.qa معروضة رسمياً للبيع والاستحواذ الكامل — التواصل المباشر مع البائع: '
+                : 'Ventures.qa domain, full-stack platform & QPCI index officially FOR SALE — Contact seller: '}
+              <a 
+                href="mailto:articleelkhalil@gmail.com?subject=Ventures.qa%20Acquisition%20Inquiry"
+                className="underline font-mono font-bold text-[#C5A059] hover:text-white"
+              >
+                articleelkhalil@gmail.com
+              </a>
+            </p>
+          </div>
+          <div className="flex items-center gap-2">
+            <button
+              onClick={() => onTabChange('for-sale')}
+              className="px-2.5 py-0.5 rounded bg-white/10 hover:bg-white/20 text-[#C5A059] font-bold text-[11px] transition-colors flex items-center gap-1 border border-[#C5A059]/30"
+            >
+              <span>{isAr ? 'صفحة البيع والتواصل ←' : 'Sale & Contact Details →'}</span>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      {/* Top Independent Market Dispatch Bar */}
+      <div className="bg-[#1A1415] text-[#FAF8F5] px-4 py-1.5 text-xs font-medium border-b border-[#2D2425]">
+        <div className="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-2">
+          <div className="flex items-center gap-2">
+            <span className="inline-flex items-center px-2 py-0.5 rounded text-[10px] font-bold bg-[#2D2425] text-[#C5A059] border border-[#C5A059]/40 uppercase tracking-wider font-mono">
               {isAr ? 'منصة مستقلة' : 'INDEPENDENT INTELLIGENCE'}
             </span>
-            <p className="text-white/90 text-xs">
+            <p className="text-white/80 text-xs">
               {isAr
                 ? 'استخبارات رأس المال الخاص والشركات الناشئة في دولة قطر — بيانات محايدة وموثقة دون أي تبعية أو رعاية.'
                 : "Qatar's independent private-sector capital and startup intelligence platform — neutral, sourced reporting."}
             </p>
           </div>
           <div className="flex items-center gap-3 text-xs">
-            {onOpenProspectus && (
-              <button
-                onClick={onOpenProspectus}
-                className="hover:text-[#C5A059] transition-colors flex items-center gap-1.5 text-[#C5A059] font-bold"
-              >
-                <Sparkles className="w-3.5 h-3.5" />
-                <span>{isAr ? 'نشرة الاستحواذ (M&A)' : 'Asset Prospectus'}</span>
-              </button>
-            )}
+            <button
+              onClick={() => onTabChange('for-sale')}
+              className="hover:text-[#C5A059] transition-colors flex items-center gap-1.5 text-[#C5A059] font-bold"
+            >
+              <Sparkles className="w-3.5 h-3.5" />
+              <span>{isAr ? 'شراء المنصة (M&A)' : 'Acquire Platform'}</span>
+            </button>
             <span className="text-white/30 hidden sm:inline">|</span>
             <button
               onClick={onOpenReportModal}
@@ -163,25 +203,12 @@ export const Header: React.FC<HeaderProps> = ({
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
           {/* Brand Logo & Tagline */}
-          <div className="flex items-center gap-3.5 cursor-pointer" onClick={() => onTabChange('directory')}>
-            <div className="w-11 h-11 rounded-xl bg-[#8A1538] flex items-center justify-center text-white font-black text-lg shadow-md border-2 border-[#C5A059] relative overflow-hidden group">
-              <span className="relative z-10 font-mono tracking-tighter">V.qa</span>
-              <div className="absolute inset-0 bg-gradient-to-tr from-[#6E0D29] to-[#8A1538] opacity-90 group-hover:scale-105 transition-transform" />
-            </div>
-            <div>
-              <div className="flex items-center gap-2">
-                <span className="text-2xl font-black tracking-tight text-[#1E1919] font-serif">
-                  Ventures<span className="text-[#8A1538]">.qa</span>
-                </span>
-                <span className="text-[11px] px-2 py-0.5 rounded-full bg-[#8A1538]/10 text-[#8A1538] font-bold border border-[#8A1538]/20">
-                  {isAr ? 'قطر' : 'Qatar'}
-                </span>
-              </div>
-              <p className="text-[11px] text-[#7A6D6D] font-medium tracking-wide">
-                {isAr ? 'استخبارات رأس المال الخاص والشركات الناشئة' : "Private Capital & Startup Intelligence"}
-              </p>
-            </div>
-          </div>
+          <Logo
+            language={language}
+            variant="header"
+            size="md"
+            onClick={() => onTabChange('directory')}
+          />
 
           {/* Desktop Navigation Tabs */}
           <nav className="hidden xl:flex items-center space-x-1 rtl:space-x-reverse">
@@ -243,6 +270,15 @@ export const Header: React.FC<HeaderProps> = ({
               <span>
                 {user ? user.name.split(' ')[0] : (isAr ? 'دخول / حساب' : 'Sign In')}
               </span>
+            </button>
+
+            {/* For Sale CTA Button */}
+            <button
+              onClick={() => onTabChange('for-sale')}
+              className="px-3.5 py-1.5 rounded-xl bg-gradient-to-r from-[#C5A059] to-[#DFBA73] hover:from-[#B89248] hover:to-[#C5A059] text-[#1E1919] text-xs font-black shadow-sm transition-all flex items-center gap-1.5 border border-[#8A1538]/20"
+            >
+              <Flame className="w-3.5 h-3.5 text-[#8A1538] fill-[#8A1538]" />
+              <span>{isAr ? 'المنصة للبيع' : 'For Sale'}</span>
             </button>
 
             {/* Claim / Submit Entity Button */}

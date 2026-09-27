@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { NewsArticle, Language, EntityProfile } from '../types';
+import { LogoMark } from './Logo';
 import { 
   ArrowLeft, 
   ArrowRight, 
@@ -268,6 +269,7 @@ export const ArticlePage: React.FC<ArticlePageProps> = ({
         </button>
 
         <div className="flex items-center gap-2 text-xs text-[#7A6D6D] font-mono">
+          <LogoMark size="sm" className="w-5 h-5 !rounded-md" />
           <span>Ventures.qa</span>
           <ChevronRight className="w-3.5 h-3.5 rtl:rotate-180 text-[#C5A059]" />
           <span>{article.category}</span>

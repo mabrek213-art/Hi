@@ -34,7 +34,8 @@ export type ActiveModule =
   | 'alignment'
   | 'events' 
   | 'jobs' 
-  | 'resources';
+  | 'resources'
+  | 'for-sale';
 
 export type UserRole = 'startup' | 'investor' | 'admin' | 'analyst';
 
