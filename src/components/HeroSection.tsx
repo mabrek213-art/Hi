@@ -30,6 +30,7 @@ interface HeroSectionProps {
   onViewNews?: () => void;
   onSelectArticleSlug?: (slug: string) => void;
   onOpenProspectus?: () => void;
+  onNavigateMethodology?: () => void;
   searchQuery: string;
   onSearchChange: (query: string) => void;
   totalEntitiesCount: number;
@@ -44,6 +45,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
   onViewNews,
   onSelectArticleSlug,
   onOpenProspectus,
+  onNavigateMethodology,
   searchQuery,
   onSearchChange,
   totalEntitiesCount,
@@ -54,40 +56,40 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
 
   const seoGuides = [
     {
-      slug: 'qatar-tech-founder-incorporation-playbook-2026',
-      badgeEn: 'Founders Playbook',
-      badgeAr: 'دليل المؤسسين',
-      titleEn: 'Tech Founder’s Incorporation Playbook (2026): MOCI vs QSTP vs QFC vs Free Zones',
-      titleAr: 'دليل مؤسس الشركات للتأسيس في قطر: مقارنة شاملة بين وزارة التجارة والواحة ومركز المال والمناطق الحرة',
-      readTime: '7 min read',
-      tag: 'Incorporation & 100% Ownership'
-    },
-    {
-      slug: 'fundraising-guide-qatar-angels-safes-venture-capital',
-      badgeEn: 'Capital Raising',
-      badgeAr: 'جمع التمويل',
-      titleEn: 'Fundraising in Qatar: Guide to Angels, SAFEs, and Venture Capital (2026)',
-      titleAr: 'دليل جمع التمويل في قطر: خارطة طريق المؤسسين للمستثمرين الملائكيين واتفاقيات SAFE',
+      slug: 'every-funded-startup-in-qatar-tracked-in-one-place',
+      badgeEn: 'Directory Intel',
+      badgeAr: 'دليل التمويل',
+      titleEn: 'Every Funded Startup in Qatar, Tracked in One Place',
+      titleAr: 'كل شركة ناشئة ممولة في قطر، موثقة في مكان واحد',
       readTime: '6 min read',
-      tag: 'Angels & VC Syndicates'
+      tag: 'Verified Capital Database'
     },
     {
-      slug: 'institutional-investors-guide-qatar-tech-family-offices-vc',
-      badgeEn: 'Institutional Allocators',
-      badgeAr: 'المستثمر المؤسسي',
-      titleEn: 'The Institutional Investor’s Guide: How Family Offices & VCs Deploy in Qatar Tech',
-      titleAr: 'دليل المستثمر المؤسسي للتكنولوجيا في قطر: استراتيجيات المكاتب العائلية وصناديق الاستثمار',
-      readTime: '6 min read',
-      tag: 'Family Office Deployments'
+      slug: 'what-qatars-funding-numbers-actually-mean-for-founders',
+      badgeEn: 'Founders Intel',
+      badgeAr: 'رؤى المؤسسين',
+      titleEn: 'What Qatar’s Funding Numbers Actually Mean for Founders',
+      titleAr: 'ماذا تعني أرقام التمويل في قطر فعلياً لرواد الأعمال والمؤسسين',
+      readTime: '5 min read',
+      tag: 'Seed Benchmarks & Reality'
     },
     {
-      slug: 'qatar-startup-valuation-deal-terms-benchmarks-2026',
-      badgeEn: 'QPCI Market Data',
-      badgeAr: 'بيانات المؤشر QPCI',
-      titleEn: 'Qatar Startup Valuation & Deal Term Benchmarks (2026): Empirical QPCI Data',
-      titleAr: 'معايير تقييم الشركات الناشئة وشروط الصفقات في قطر (٢٠٢٦): متوسطات التقييم وجولات التمويل',
+      slug: 'raising-money-in-qatar-whos-actually-writing-checks',
+      badgeEn: 'Check Writers',
+      badgeAr: 'كتاب الشيكات',
+      titleEn: 'Raising Money in Qatar: Who’s Actually Writing Checks',
+      titleAr: 'جمع التمويل في قطر: من يكتب الشيكات الاستثمارية فعلياً في السوق؟',
       readTime: '7 min read',
-      tag: 'Valuations & Multiples'
+      tag: 'Active VCs & Angels'
+    },
+    {
+      slug: 'qatars-startup-scene-this-week-issue-1',
+      badgeEn: 'Weekly Digest',
+      badgeAr: 'الموجز الأسبوعي',
+      titleEn: 'Qatar’s Startup Scene This Week (Issue #1): Sovereign Mandates & Scaleups',
+      titleAr: 'مشهد الشركات الناشئة في قطر هذا الأسبوع (العدد الأول): صفقات وتوسع الشركات',
+      readTime: '4 min read',
+      tag: 'Ecosystem Dispatches'
     }
   ];
 
@@ -139,21 +141,21 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
             <h1 className="text-3xl sm:text-5xl lg:text-6xl font-black text-[#1E1919] tracking-tight leading-[1.12]">
               {isAr ? (
                 <>
-                  المرجع المتكامل <br className="hidden sm:inline" />
-                  <span className="text-[#8A1538]">للمشاريع والمؤسسين والمستثمرين</span>
+                  اعثر على جميع الشركات الناشئة والمستثمرين <br className="hidden sm:inline" />
+                  <span className="text-[#8A1538]">وصفقات التمويل في قطر — في مكان واحد</span>
                 </>
               ) : (
                 <>
-                  The Resource for <br className="hidden sm:inline" />
-                  <span className="text-[#8A1538]">Ventures, Founders & Investors</span>
+                  Find every Qatari startup, investor, <br className="hidden sm:inline" />
+                  <span className="text-[#8A1538]">and funding deal — in one place.</span>
                 </>
               )}
             </h1>
 
             <p className="text-sm sm:text-base text-[#5A4E4E] max-w-2xl leading-relaxed font-medium">
               {isAr
-                ? 'المنصة الوطنية المستقلة لدولة قطر: أدلة تأسيس الشركات الناشئة، وتوثيق صفقات رأس المال الجريء، ومؤشر السوق الخاص (QPCI)، والربط الاستثماري المباشر بين المكاتب العائلية ورواد الأعمال.'
-                : 'Qatar’s definitive independent resource: startup incorporation playbooks, verified venture directories, the Qatar Private Capital Index (QPCI), and direct deal matchmaking between family offices and innovative founders.'}
+                ? 'المنصة المستقلة الموحدة لدولة قطر: توثيق صفقات رأس المال الجريء، ومؤشر السوق الخاص (QPCI)، وأدلة المؤسسين، والربط الاستثماري المباشر بين المكاتب العائلية ورواد الأعمال.'
+                : 'Qatar’s independent venture intelligence resource: verified startup directory, the Qatar Private Capital Index (QPCI), founder playbooks, and direct capital matching.'}
             </p>
 
             {/* Live Search Bar */}
@@ -266,7 +268,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
                     {isAr ? 'الكيانات الموثقة بالدليل' : 'Verified Entities Listed'}
                   </span>
                   <span className="font-bold text-[#1E1919] text-sm font-mono">
-                    {totalEntitiesCount}+ {isAr ? 'كياناً' : 'Entities'}
+                    {totalEntitiesCount} {isAr ? 'كيان موثق' : 'Live Entities'}
                   </span>
                 </div>
 
@@ -292,19 +294,30 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
                 </div>
               </div>
 
-              {/* Neutral Sourced Badge */}
-              <div className="mt-3.5 p-3 rounded-xl bg-[#FAF8F5] border border-[#E8DFC8] flex items-center gap-2.5">
-                <div className="w-7 h-7 rounded-lg bg-[#8A1538] text-[#C5A059] flex items-center justify-center shrink-0 font-bold text-[10px] font-mono">
-                  VQ
+              {/* Neutral Sourced Badge & Methodology Link */}
+              <div className="mt-3.5 p-3 rounded-xl bg-[#FAF8F5] border border-[#E8DFC8] space-y-2">
+                <div className="flex items-center gap-2.5">
+                  <div className="w-7 h-7 rounded-lg bg-[#8A1538] text-[#C5A059] flex items-center justify-center shrink-0 font-bold text-[10px] font-mono">
+                    VQ
+                  </div>
+                  <div className="text-[11px] leading-tight">
+                    <p className="font-bold text-[#1E1919]">
+                      {isAr ? 'بيانات صحفية مستقلة' : 'Independent Third-Party Intelligence'}
+                    </p>
+                    <p className="text-[#6B5E5E] mt-0.5 text-[10px]">
+                      {isAr ? 'توثيق محايد لصفقات وبيانات السوق الخاص' : 'Zero institutional affiliation • Objective sourcing'}
+                    </p>
+                  </div>
                 </div>
-                <div className="text-[11px] leading-tight">
-                  <p className="font-bold text-[#1E1919]">
-                    {isAr ? 'بيانات صحفية مستقلة' : 'Independent Third-Party Intelligence'}
-                  </p>
-                  <p className="text-[#6B5E5E] mt-0.5 text-[10px]">
-                    {isAr ? 'توثيق محايد لصفقات وبيانات السوق الخاص' : 'Zero institutional affiliation • Objective sourcing'}
-                  </p>
-                </div>
+
+                {onNavigateMethodology && (
+                  <button
+                    onClick={onNavigateMethodology}
+                    className="w-full pt-2 border-t border-[#E8DFC8] text-[11px] font-bold text-[#8A1538] hover:text-[#6E0D29] flex items-center justify-between transition-colors"
+                  >
+                    <span>{isAr ? 'الاطلاع على منهجية المؤشر وتوثيق البيانات ←' : 'Read QPCI Calculation & Verification Methodology →'}</span>
+                  </button>
+                )}
               </div>
             </div>
           </div>

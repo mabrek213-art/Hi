@@ -76,27 +76,34 @@ export const MarketIntelligenceModule: React.FC<MarketIntelligenceModuleProps> =
           </p>
         </div>
 
-        {/* Pro Tier Simulator Toggle */}
-        <div className="flex items-center gap-3 bg-white p-2 rounded-xl border border-[#E8DFC8] shadow-sm">
-          <div className="text-right rtl:text-left text-xs">
-            <p className="font-bold text-[#1E1919]">
-              {isProUnlocked ? (isAr ? 'حساب المستثمرين (برو)' : 'Intelligence Pro Tier') : (isAr ? 'النسخة العامة المجانية' : 'Public Free Tier')}
-            </p>
-            <p className="text-[11px] text-[#7A6D6D]">
-              {isProUnlocked ? (isAr ? 'كامل بنود الصفقات مفتوحة' : 'Full Deal Dossiers Unlocked') : (isAr ? 'الملخصات والعناوين فقط' : 'Headlines & Summaries')}
-            </p>
+        {/* Pro Tier Simulator Toggle & Last Updated Timestamp */}
+        <div className="flex flex-col sm:flex-row items-start sm:items-center gap-3">
+          <div className="flex items-center gap-1.5 px-3.5 py-2 rounded-xl bg-white border border-[#E8DFC8] text-[#5A4E4E] font-mono text-[11px] shadow-sm">
+            <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
+            <span>{isAr ? 'آخر تحديث للمؤشر: ٢٧ سبتمبر ٢٠٢٦' : 'Index Last Updated: September 27, 2026'}</span>
           </div>
-          <button
-            onClick={() => setIsProUnlocked(!isProUnlocked)}
-            className={`px-3 py-2 rounded-lg text-xs font-bold transition-all flex items-center gap-1.5 ${
-              isProUnlocked
-                ? 'bg-emerald-700 text-white'
-                : 'bg-[#8A1538] text-white hover:bg-[#6E0D29]'
-            }`}
-          >
-            {isProUnlocked ? <Unlock className="w-3.5 h-3.5 text-[#C5A059]" /> : <Lock className="w-3.5 h-3.5 text-[#C5A059]" />}
-            <span>{isProUnlocked ? (isAr ? 'نشط (برو)' : 'Pro Active') : (isAr ? 'تجربة حساب Pro' : 'Toggle Pro View')}</span>
-          </button>
+
+          <div className="flex items-center gap-3 bg-white p-2 rounded-xl border border-[#E8DFC8] shadow-sm">
+            <div className="text-right rtl:text-left text-xs">
+              <p className="font-bold text-[#1E1919]">
+                {isProUnlocked ? (isAr ? 'حساب المستثمرين (برو)' : 'Intelligence Pro Tier') : (isAr ? 'النسخة العامة المجانية' : 'Public Free Tier')}
+              </p>
+              <p className="text-[11px] text-[#7A6D6D]">
+                {isProUnlocked ? (isAr ? 'كامل بنود الصفقات مفتوحة' : 'Full Deal Dossiers Unlocked') : (isAr ? 'الملخصات والعناوين فقط' : 'Headlines & Summaries')}
+              </p>
+            </div>
+            <button
+              onClick={() => setIsProUnlocked(!isProUnlocked)}
+              className={`px-3 py-2 rounded-lg text-xs font-bold transition-all flex items-center gap-1.5 ${
+                isProUnlocked
+                  ? 'bg-emerald-700 text-white'
+                  : 'bg-[#8A1538] text-white hover:bg-[#6E0D29]'
+              }`}
+            >
+              {isProUnlocked ? <Unlock className="w-3.5 h-3.5 text-[#C5A059]" /> : <Lock className="w-3.5 h-3.5 text-[#C5A059]" />}
+              <span>{isProUnlocked ? (isAr ? 'نشط (برو)' : 'Pro Active') : (isAr ? 'تجربة حساب Pro' : 'Toggle Pro View')}</span>
+            </button>
+          </div>
         </div>
       </div>
 

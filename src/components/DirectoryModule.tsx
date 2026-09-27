@@ -161,7 +161,14 @@ export const DirectoryModule: React.FC<DirectoryModuleProps> = ({
           </p>
         </div>
 
-        <div className="flex items-center gap-2">
+        <div className="flex flex-wrap items-center gap-2">
+          {/* Visible Last Updated Timestamp */}
+          <div className="flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-white border border-[#E8DFC8] text-[#5A4E4E] font-mono text-[11px] shadow-sm">
+            <Calendar className="w-3.5 h-3.5 text-[#8A1538]" />
+            <span>{isAr ? 'آخر تحديث: ٢٧ سبتمبر ٢٠٢٦' : 'Last updated: September 27, 2026'}</span>
+            <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse ml-0.5" />
+          </div>
+
           <button
             onClick={() => setShowAlertModal(true)}
             className="px-3.5 py-1.5 rounded-xl bg-white hover:bg-[#FAF8F5] border border-[#E8DFC8] text-[#8A1538] text-xs font-bold flex items-center gap-1.5 shadow-sm transition-colors"
@@ -171,7 +178,7 @@ export const DirectoryModule: React.FC<DirectoryModuleProps> = ({
           </button>
 
           <span className="text-xs px-3 py-1.5 rounded-xl bg-[#FAF8F5] border border-[#E8DFC8] font-mono text-[#1E1919] font-bold">
-            {filteredEntities.length} / {entities.length} {isAr ? 'كيان' : 'Entities'}
+            {filteredEntities.length} / {entities.length} {isAr ? 'جهة' : 'Entities'}
           </span>
         </div>
       </div>
@@ -383,7 +390,7 @@ export const DirectoryModule: React.FC<DirectoryModuleProps> = ({
                   </p>
 
                   {/* Metadata Pills */}
-                  <div className="flex flex-wrap gap-1.5 mb-3 text-[11px]">
+                  <div className="flex flex-wrap items-center gap-1.5 mb-3 text-[11px]">
                     <span className="px-2 py-0.5 rounded bg-[#FAF8F5] border border-[#E8DFC8] text-[#5A4E4E] font-medium">
                       {entity.sector}
                     </span>
@@ -393,6 +400,21 @@ export const DirectoryModule: React.FC<DirectoryModuleProps> = ({
                         {isAr ? entity.headquartersAr : entity.headquarters}
                       </span>
                     </span>
+                  </div>
+
+                  {/* Trust Signal: Claimed by Company vs Unverified Sourced from Public Data */}
+                  <div className="mb-3">
+                    {entity.claimed ? (
+                      <div className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-emerald-50 text-emerald-900 border border-emerald-300 font-bold text-[11px]">
+                        <CheckCircle2 className="w-3.5 h-3.5 text-emerald-600 shrink-0" />
+                        <span>{isAr ? `موثق من قبل ${entity.nameAr}` : `Claimed by ${entity.name}`}</span>
+                      </div>
+                    ) : (
+                      <div className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-amber-50/80 text-amber-900 border border-amber-300 font-medium text-[10px]">
+                        <span className="w-2 h-2 rounded-full bg-amber-500 shrink-0" />
+                        <span>{isAr ? 'غير موثق — مستخرج من بيانات عامة' : 'Unverified — sourced from public data'}</span>
+                      </div>
+                    )}
                   </div>
 
                   {/* Financial Metrics Highlight */}

@@ -50,7 +50,9 @@ export function generateSitemapXml(): string {
     '/deals',
     '/events',
     '/jobs',
-    '/resources'
+    '/resources',
+    '/methodology',
+    '/for-sale'
   ];
 
   const staticXml = staticPages.map(page => `  <url>

@@ -35,6 +35,7 @@ export type ActiveModule =
   | 'events' 
   | 'jobs' 
   | 'resources'
+  | 'methodology'
   | 'for-sale';
 
 export type UserRole = 'startup' | 'investor' | 'admin' | 'analyst';
@@ -182,6 +183,7 @@ export interface PaymentOrder {
 export const STAGES = [
   'Pre-Seed',
   'Seed',
+  'Pre-Series A',
   'Series A',
   'Series B+',
   'Growth',
@@ -237,6 +239,7 @@ export interface EntityProfile {
   crNumber?: string;
   verificationStatus?: string;
   sourcingNote?: string;
+  sourceCitation?: string;
   isEnterprise?: boolean;
   totalFundingRaisedQar?: string;
   totalFundingRaisedUsd?: string;

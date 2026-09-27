@@ -13,952 +13,1951 @@ import {
 } from '../types';
 
 export const SEED_ENTITIES: EntityProfile[] = [
-  // --- STARTUPS & SMES ---
   {
-    id: 'snoonu',
-    slug: 'snoonu',
-    name: 'Snoonu',
-    nameAr: 'سنونو',
-    tagline: "Qatar's leading super-app for hyper-local on-demand delivery, quick-commerce, and logistics",
-    taglineAr: 'تطبيق التوصيل الرائد في قطر للتجارة السريعة والخدمات اللوجستية',
-    description: 'Founded in 2019 by Hamad Al-Hajri, Snoonu has grown into one of Qatar’s premier technology scaleups. Operating restaurant delivery, grocery, pharmacy, electronics, and digital merchant solutions with over 500,000 active users and proprietary route-optimization logistics.',
-    descriptionAr: 'تأسست في عام 2019 بواسطة حمد الهاجري، وتطورت لتصبح من أبرز الشركات التكنولوجية الصاعدة في قطر، شاملة توصيل المتاجر والمطاعم والتجارة السريعة لأكثر من 500 ألف مستخدم نشط.',
-    type: 'startup',
-    sector: 'Logistics & Supply Chain',
-    stage: 'Series B+',
-    foundedYear: 2019,
-    teamSize: '350+ FTEs',
-    headquarters: 'Lusail City, Qatar',
-    headquartersAr: 'مدينة لوسيل، قطر',
-    website: 'https://snoonu.com',
-    logo: 'SN',
-    logoBg: '#8A1538',
-    verified: true,
-    claimed: true,
-    claimedByEmail: 'founders@snoonu.com',
-    totalFundingRaisedQar: '72,800,000 QAR',
-    totalFundingRaisedUsd: '$20,000,000 USD',
-    fundingRounds: [
-      { round: 'Series B', amountQar: '43.7M QAR', amountUsd: '$12M USD', date: '2024-03-15', leadInvestor: 'Institutional & Private Venture Syndicates' },
-      { round: 'Series A', amountQar: '18.2M QAR', amountUsd: '$5M USD', date: '2022-04-10', leadInvestor: 'Doha Tech Angels & Private Family Offices' },
-      { round: 'Seed', amountQar: '10.9M QAR', amountUsd: '$3M USD', date: '2020-09-01', leadInvestor: 'Angel Investors & Venture Accelerators' }
-    ],
-    institutionalBacking: ['Regional Tech Incubators', 'Private Angel Syndicates', 'GCC Venture Funds'],
-    keyPeople: [
-      { name: 'Hamad Al-Hajri', nameAr: 'حمد الهاجري', role: 'Founder & CEO', roleAr: 'المؤسس والرئيس التنفيذي' },
-      { name: 'Sabah Al-Kuwari', nameAr: 'صباح الكواري', role: 'Chief Operating Officer', roleAr: 'رئيس العمليات' }
-    ],
-    metrics: {
-      'Monthly Orders': '1,200,000+',
-      'Active Merchants': '4,500+',
-      'Driver Fleet': '2,200+',
-      'Domestic Market Share': '64%'
-    },
-    isFeatured: true,
-    contactEmail: 'partnerships@snoonu.com'
-  },
-  {
-    id: 'skipcash',
-    slug: 'skipcash',
-    name: 'SkipCash',
-    nameAr: 'سكيب كاش',
-    tagline: 'Leading mobile payment gateway and digital point-of-sale platform in Qatar',
-    taglineAr: 'بوابة المدفوعات ونقاط البيع الرقمية الرائدة في قطر',
-    description: 'SkipCash delivers frictionless contactless payments, payment link invoicing, and integrated merchant checkouts for enterprise retailers and digital platforms across Qatar.',
-    descriptionAr: 'منصة دفع رقمية مبتكرة تمكّن التجار والمستهلكين من إتمام المعاملات النقدية الرقمية وربط بوابات التجارة الإلكترونية بسلاسة وأمان.',
-    type: 'startup',
-    sector: 'FinTech',
-    stage: 'Series A',
-    foundedYear: 2020,
-    teamSize: '40 FTEs',
-    headquarters: 'West Bay, Doha',
-    headquartersAr: 'الخليج الغربي، الدوحة',
-    website: 'https://skipcash.com',
-    logo: 'SC',
-    logoBg: '#10B981',
-    verified: true,
-    claimed: true,
-    claimedByEmail: 'info@skipcash.com',
-    totalFundingRaisedQar: '25,480,000 QAR',
-    totalFundingRaisedUsd: '$7,000,000 USD',
-    fundingRounds: [
-      { round: 'Series A', amountQar: '18.2M QAR', amountUsd: '$5.0M USD', date: '2023-11-10', leadInvestor: 'Private Family Capital & Regional VCs' },
-      { round: 'Seed', amountQar: '7.28M QAR', amountUsd: '$2.0M USD', date: '2021-06-05', leadInvestor: 'Angel Investors Network' }
-    ],
-    institutionalBacking: ['FinTech Accelerators', 'Commercial Banking Partners', 'Private Angel Consortium'],
-    keyPeople: [
-      { name: 'Mohammed Al-Delaimi', nameAr: 'محمد الدليمي', role: 'Founder & CEO', roleAr: 'المؤسس والرئيس التنفيذي' }
-    ],
-    metrics: {
-      'Processed Transactions': '1.5M+ transactions',
-      'Merchant Network': '1,800+ stores',
-      'Annual Processing Volume': '$180M+ USD'
-    },
-    isFeatured: true,
-    contactEmail: 'contact@skipcash.com'
-  },
-  {
-    id: 'cwallet',
-    slug: 'cwallet',
-    name: 'Cwallet',
-    nameAr: 'سي والت',
-    tagline: 'Licensed neo-banking, mobile payroll, and financial inclusion ecosystem',
-    taglineAr: 'منظومة مصرفية رقمية وحلول شمول مالي ودفع أجور مرخصة',
-    description: 'Cwallet provides digital mobile payroll, low-cost cross-border remittances, utility payments, and micro-savings specifically tailored for resident workforces and unbanked communities.',
-    descriptionAr: 'منصة تكنولوجيا مالية تقدم حلول دفع الأجور والتحويلات المالية الدولية والمدفوعات غير النقدية لتعزيز الشمول المالي.',
-    type: 'startup',
-    sector: 'FinTech',
-    stage: 'Series A',
-    foundedYear: 2020,
-    teamSize: '45 FTEs',
-    headquarters: 'Qatar Financial Centre (QFC), West Bay',
-    headquartersAr: 'مركز قطر للمال، الخليج الغربي',
-    website: 'https://cwallet.qa',
-    logo: 'CW',
-    logoBg: '#0D9488',
-    verified: true,
-    claimed: true,
-    totalFundingRaisedQar: '21,840,000 QAR',
-    totalFundingRaisedUsd: '$6,000,000 USD',
-    fundingRounds: [
-      { round: 'Series A', amountQar: '14.5M QAR', amountUsd: '$4.0M USD', date: '2024-01-18', leadInvestor: 'Rasmal Ventures & Al-Mana Capital' },
-      { round: 'Seed', amountQar: '7.3M QAR', amountUsd: '$2.0M USD', date: '2021-12-10', leadInvestor: 'MBK Holding & Regional Angel Syndicate' }
-    ],
-    institutionalBacking: ['FinTech Regulatory Sandbox', 'Regional Seed Programs', 'Family Office Syndicates'],
-    keyPeople: [
-      { name: 'Michael Javier', nameAr: 'مايكل خافيير', role: 'Co-Founder & CEO', roleAr: 'المؤسس الشريك والرئيس التنفيذي' },
-      { name: 'Abdulaziz Al-Khal', nameAr: 'عبدالعزيز الخال', role: 'Co-Founder & Director', roleAr: 'مؤسس شريك وعضو مجلس الإدارة' }
-    ],
-    metrics: {
-      'Registered Wallets': '220,000+',
-      'Payroll Volume (Monthly)': '45M QAR',
-      'Corridor Partners': '12 Countries'
-    },
-    isFeatured: true,
-    contactEmail: 'support@cwallet.qa'
-  },
-  {
-    id: 'avey-health',
-    slug: 'avey-health',
-    name: 'Avey AI Health',
-    nameAr: 'آفي للذكاء الاصطناعي الصحي',
-    tagline: 'DeepTech AI diagnostic self-assessment and medical triage intelligence',
-    taglineAr: 'محرك تشخيص وتوجيه طبي متطور مدعوم بنماذج الذكاء الاصطناعي السريرية',
-    description: 'Developed by computer scientists and physicians in Doha, Avey utilizes customized machine learning and clinical reasoning engines to provide instant medical diagnosis with higher than 92% clinical accuracy, connecting patients to virtual consultations and clinics.',
-    descriptionAr: 'منصة تكنولوجيا صحية طورتها فرق بحثية في الدوحة لتقديم استشارات وتشخيصات طبية مدعومة بالذكاء الاصطناعي مع ربط المرضى بمقدمي الرعاية الصحية المعتمدين.',
-    type: 'startup',
-    sector: 'HealthTech & Bio',
-    stage: 'Series A',
-    foundedYear: 2021,
-    teamSize: '55 FTEs',
-    headquarters: 'Qatar Science & Technology Park, Education City',
-    headquartersAr: 'واحة قطر للعلوم والتكنولوجيا، المدينة التعليمية',
-    website: 'https://avey.ai',
-    logo: 'AV',
-    logoBg: '#2563EB',
-    verified: true,
-    claimed: true,
-    totalFundingRaisedQar: '31,000,000 QAR',
-    totalFundingRaisedUsd: '$8,500,000 USD',
-    fundingRounds: [
-      { round: 'Series A', amountQar: '20.0M QAR', amountUsd: '$5.5M USD', date: '2024-02-14', leadInvestor: 'Global Healthtech Syndicate & Doha Family Capital' },
-      { round: 'Seed', amountQar: '11.0M QAR', amountUsd: '$3.0M USD', date: '2022-01-20', leadInvestor: 'Health Venture Angels' }
-    ],
-    institutionalBacking: ['Technology Park Research Fund', 'Global Bio-Ventures Consortium'],
-    keyPeople: [
-      { name: 'Dr. Mohammad Hammoud', nameAr: 'د. محمد حمود', role: 'Founder & CEO', roleAr: 'المؤسس والرئيس التنفيذي' }
-    ],
-    metrics: {
-      'Diagnostic Assessments': '3,400,000+',
-      'Clinical Diagnostic Accuracy': '93.4%',
-      'Global User Reach': '140+ Countries'
-    },
-    isFeatured: true,
-    contactEmail: 'contact@avey.ai'
-  },
-  {
-    id: 'urbanpoint',
-    slug: 'urbanpoint',
-    name: 'UrbanPoint',
-    nameAr: 'إربان بوينت',
-    tagline: 'Enterprise customer loyalty, retention, and merchant discovery marketplace',
-    taglineAr: 'منصة برامج الولاء للشركات وتفعيل عروض التجار والمطاعم',
-    description: 'UrbanPoint is an enterprise customer engagement and lifestyle rewards platform that partners with major telecom carriers and financial institutions to drive local retail and hospitality transactions.',
-    descriptionAr: 'منصة رقمية لبرامج ولاء العملاء والعروض الترويجية تعتمد على الشراكات مع كبرى شركات الاتصالات والبنوك لتعزيز الإنفاق المحلي.',
-    type: 'startup',
-    sector: 'Enterprise & SaaS',
-    stage: 'Series A',
-    foundedYear: 2016,
-    teamSize: '30 FTEs',
-    headquarters: 'Al Sadd, Doha',
-    headquartersAr: 'السد، الدوحة',
-    website: 'https://urbanpoint.com',
-    logo: 'UP',
-    logoBg: '#E11D48',
-    verified: true,
-    claimed: false,
-    totalFundingRaisedQar: '14,560,000 QAR',
-    totalFundingRaisedUsd: '$4,000,000 USD',
-    institutionalBacking: ['Telecom Innovation Alliances', 'Regional Seed Accelerators'],
-    keyPeople: [
-      { name: 'Saif Qazi', nameAr: 'سيف قاضي', role: 'Co-Founder & Managing Director', roleAr: 'مؤسس شريك ومدير تنفيذي' },
-      { name: 'Susanna Ingalls', nameAr: 'سوزانا إينغالز', role: 'Co-Founder & Head of Product', roleAr: 'مؤسسة شريكة ورئيسة المنتج' }
-    ],
-    metrics: {
-      'Active Subscribed Users': '320,000+',
-      'Partner Merchant Outlets': '1,400+',
-      'Customer Spend Driven': '$70M+ USD'
-    },
-    isFeatured: false,
-    contactEmail: 'hello@urbanpoint.com'
-  },
-  {
-    id: 'droobi-health',
-    slug: 'droobi-health',
-    name: 'Droobi Health',
-    nameAr: 'دروبي للصحة',
-    tagline: 'Bilingual digital therapeutics for diabetes prevention and chronic condition care',
-    taglineAr: 'منصة علاجية رقمية متقدمة لإدارة داء السكري والأمراض المزمنة باللغة العربية',
-    description: 'Clinically validated digital health intervention app providing personalized lifestyle coaching, glucose tracking, and nutritionist consultations specifically calibrated for Arab lifestyle and dietary patterns.',
-    descriptionAr: 'تطبيق علاجي رقمي معتمد سريرياً يقدّم برامج توجيه صحي وتغذوي مخصصة لإدارة داء السكري والوقاية منه لمرضى منطقة الشرق الأوسط.',
-    type: 'startup',
-    sector: 'HealthTech & Bio',
-    stage: 'Series A',
-    foundedYear: 2018,
-    teamSize: '38 FTEs',
-    headquarters: 'Education City, Doha',
-    headquartersAr: 'المدينة التعليمية، الدوحة',
-    website: 'https://droobihealth.com',
-    logo: 'DH',
-    logoBg: '#14B8A6',
-    verified: true,
-    claimed: true,
-    totalFundingRaisedQar: '18,200,000 QAR',
-    totalFundingRaisedUsd: '$5,000,000 USD',
-    institutionalBacking: ['Healthcare Research Consortiums', 'Regional Venture Syndicate'],
-    keyPeople: [
-      { name: 'Majed Lababidi', nameAr: 'مجد لبابيدي', role: 'Founder & CEO', roleAr: 'المؤسس والرئيس التنفيذي' }
-    ],
-    metrics: {
-      'Patients Monitored': '15,000+',
-      'Average HbA1c Reduction': '-1.2%',
-      'Clinical Health System Deployments': '6 Networks'
-    },
-    isFeatured: false,
-    contactEmail: 'team@droobihealth.com'
-  },
-  {
-    id: 'karty',
-    slug: 'karty',
-    name: 'Karty',
-    nameAr: 'كارتي',
-    tagline: 'Smart Visa card and financial wellness management app for daily spend optimization',
-    taglineAr: 'بطاقة فيزا ذكية وتطبيق إدارة مالية شخصية لترشيد وتتبع المصروفات اليومية',
-    description: 'Karty is a modern financial technology app providing instant contactless Visa cards, automated budgeting categorization, family spend sharing, and financial analytics.',
-    descriptionAr: 'تطبيق تكنولوجيا مالية يوفر بطاقات دفع رقمية وتتبع تلقائي للمصروفات مع تحليلات مالية ذكية للأفراد والعائلات.',
-    type: 'startup',
-    sector: 'FinTech',
-    stage: 'Seed',
-    foundedYear: 2021,
-    teamSize: '22 FTEs',
-    headquarters: 'Qatar Financial Centre, Doha',
-    headquartersAr: 'مركز قطر للمال، الدوحة',
-    website: 'https://karty.qa',
-    logo: 'KT',
-    logoBg: '#6366F1',
-    verified: true,
-    claimed: true,
-    totalFundingRaisedQar: '8,000,000 QAR',
-    totalFundingRaisedUsd: '$2,200,000 USD',
-    institutionalBacking: ['FinTech Accelerator Cohorts', 'Early Stage Angel Groups'],
-    keyPeople: [
-      { name: 'Mohammed Suleiman', nameAr: 'محمد سليمان', role: 'Co-Founder & CEO', roleAr: 'مؤسس شريك ورئيس تنفيذي' },
-      { name: 'Abdulaziz Al-Marri', nameAr: 'عبدالعزيز المري', role: 'Co-Founder & COO', roleAr: 'مؤسس شريك ورئيس العمليات' }
-    ],
-    metrics: {
-      'App Downloads': '95,000+',
-      'Monthly Card Volume': '$4.2M USD',
-      'Transaction Growth MoM': '+18%'
-    },
-    isFeatured: true,
-    contactEmail: 'hi@karty.qa'
-  },
-  {
-    id: 'airlift-systems',
-    slug: 'airlift-systems',
-    name: 'Airlift Systems',
-    nameAr: 'أنظمة إيرلفت',
-    tagline: 'Autonomous hardware & fleet software for sustainable last-mile logistics',
-    taglineAr: 'روبوتات وبرمجيات ذاتية القيادة لتوصيل الميل الأخير المستدام والصديق للبيئة',
-    description: 'Engineering electric autonomous delivery robots and automated dispatch software to replace polluting delivery vans in commercial districts, university campuses, and closed residential communities.',
-    descriptionAr: 'تصميم وتصنيع روبوتات ذاتية القيادة وبرمجيات إدارة الأساطيل لحلول التوصيل الصديقة للبيئة في الأحياء السكنية والجامعات.',
-    type: 'startup',
-    sector: 'DeepTech & AI',
-    stage: 'Seed',
-    foundedYear: 2020,
-    teamSize: '18 Engineers',
-    headquarters: 'Tech Park Zone, Al Rayyan',
-    headquartersAr: 'منطقة الواحة التكنولوجية، الريان',
-    website: 'https://airliftsystems.com',
-    logo: 'AL',
-    logoBg: '#F59E0B',
-    verified: true,
-    claimed: true,
-    totalFundingRaisedQar: '9,100,000 QAR',
-    totalFundingRaisedUsd: '$2,500,000 USD',
-    institutionalBacking: ['Mobility Innovation Grants', 'DeepTech Angels'],
-    keyPeople: [
-      { name: 'Ahmed Mohamedali', nameAr: 'أحمد محمد علي', role: 'Founder & CEO', roleAr: 'المؤسس والرئيس التنفيذي' }
-    ],
-    metrics: {
-      'Autonomous Miles Driven': '62,000+ km',
-      'Carbon Emissions Saved': '48 Tons CO2',
-      'Commercial Pilots Active': '5 Campus Zones'
-    },
-    isFeatured: false,
-    contactEmail: 'contact@airliftsystems.com'
-  },
-  {
-    id: 'rimads',
-    slug: 'rimads',
-    name: 'Rimads Health',
-    nameAr: 'ريمادس للحلول الصحية',
-    tagline: 'Digital e-pharmacy and pharmaceutical inventory logistics software',
-    taglineAr: 'منصة الصيدلة الرقمية وبرمجيات سلاسل الإمداد الدوائي السريع',
-    description: 'Integrated digital pharmacy marketplace connecting licensed community pharmacies with on-demand delivery, electronic prescription fulfillment, and smart inventory optimization.',
-    descriptionAr: 'منظومة صيدلية رقمية تربط الصيدليات المرخصة بالمرضى مع تقديم خدمات توصيل الدواء وتتبع الوصفات الطبية بدقة.',
-    type: 'startup',
-    sector: 'HealthTech & Bio',
-    stage: 'Seed',
-    foundedYear: 2019,
-    teamSize: '28 FTEs',
-    headquarters: 'West Bay, Doha',
-    headquartersAr: 'الخليج الغربي، الدوحة',
-    website: 'https://rimads.com',
-    logo: 'RM',
-    logoBg: '#EC4899',
-    verified: true,
-    claimed: false,
-    totalFundingRaisedQar: '6,550,000 QAR',
-    totalFundingRaisedUsd: '$1,800,000 USD',
-    institutionalBacking: ['Private Health Investors', 'Angel Groups'],
-    keyPeople: [
-      { name: 'Khalid Al-Kuwari', nameAr: 'خالد الكواري', role: 'Managing Partner', roleAr: 'الشريك الإداري' }
-    ],
-    metrics: {
-      'Prescriptions Delivered': '380,000+',
-      'Partner Pharmacies': '85 Locations',
-      'Delivery SLA': '< 45 Minutes'
-    },
-    isFeatured: false,
-    contactEmail: 'info@rimads.com'
-  },
-
-  // --- INVESTORS & PRIVATE CAPITAL ---
-  {
-    id: 'rasmal-ventures',
-    slug: 'rasmal-ventures',
-    name: 'Rasmal Ventures',
-    nameAr: 'راسمال فنتشرز',
-    tagline: 'Independent QFC-regulated venture capital fund manager investing in MENA tech leaders',
-    taglineAr: 'شركة إدارة صناديق استثمار جريء مستقلة ومرخصة في مركز قطر للمال',
-    description: 'Rasmal Ventures is an independent venture capital firm headquartered in Doha, focusing on Series Seed and Series A investments in high-growth technology companies across enterprise SaaS, FinTech, and B2B marketplaces in Qatar and the broader MENA region.',
-    descriptionAr: 'شركة استثمار جريء مستقلة مقرها الدوحة، تركز على الاستثمار في جولات التأسيس والأولى للشركات التكنولوجية سريعة النمو في قطر والشرق الأوسط.',
-    type: 'investor',
-    sector: 'Enterprise & SaaS',
-    stage: 'Multi-stage',
-    foundedYear: 2023,
-    teamSize: '12 Partners & Associates',
-    headquarters: 'Qatar Financial Centre Tower 1, West Bay',
-    headquartersAr: 'برج مركز قطر للمال 1، الخليج الغربي',
-    website: 'https://rasmalventures.com',
-    logo: 'RV',
-    logoBg: '#8A1538',
-    verified: true,
-    claimed: true,
-    claimedByEmail: 'partners@rasmalventures.com',
-    aumUsd: '$100,000,000 USD',
-    checkSizeRange: '$500K – $3M USD',
-    institutionalBacking: ['Private Regional Family Offices', 'High Net Worth Syndicates'],
-    keyPeople: [
-      { name: 'Alexander Wiedmer', nameAr: 'ألكسندر فيدمير', role: 'Founding Partner', roleAr: 'شريك مؤسس' },
-      { name: 'Angus Montagu', nameAr: 'أنغوس مونتاغو', role: 'Founding Partner', roleAr: 'شريك مؤسس' }
-    ],
-    metrics: {
-      'Portfolio Companies': '11 Startups',
-      'Fund I Target': '$100M USD',
-      'Capital Deployed to Date': '$28.5M USD'
-    },
-    isFeatured: true,
-    contactEmail: 'dealflow@rasmalventures.com'
-  },
-  {
-    id: 'doha-tech-angels',
-    slug: 'doha-tech-angels',
-    name: 'Doha Tech Angels (DTA)',
-    nameAr: 'ملائكة التكنولوجيا بالدوحة',
-    tagline: 'Premier private angel investor syndicate investing in early-stage technology innovations',
-    taglineAr: 'شبكة المستثمرين الملائكيين المستقلة لدعم وتطوير الشركات الناشئة المبكرة',
-    description: 'Doha Tech Angels brings together seasoned Qatari executives, serial entrepreneurs, and private family office principals to syndicate early-stage angel investments, providing seed capital, hands-on mentorship, and regional market access.',
-    descriptionAr: 'شبكة استثمار ملائكي تضم نخبة من المستثمرين ورواد الأعمال والمدراء التنفيذيين في قطر لتمويل ودعم الشركات التقنية الناشئة في مراحلها التأسيسية.',
-    type: 'investor',
-    sector: 'FinTech',
-    stage: 'Pre-Seed',
-    foundedYear: 2018,
-    teamSize: '35 Angel Members',
-    headquarters: 'West Bay, Doha',
-    headquartersAr: 'الخليج الغربي، الدوحة',
-    website: 'https://dohatechangels.com',
-    logo: 'DA',
-    logoBg: '#4338CA',
-    verified: true,
-    claimed: true,
-    aumUsd: '$25,000,000 USD Syndicated',
-    checkSizeRange: '$100K – $500K USD',
-    institutionalBacking: ['Independent Private Angel Network'],
-    keyPeople: [
-      { name: 'Dr. Sudhir Nair', nameAr: 'د. سودهير ناير', role: 'Syndicate Lead & Angel Investor', roleAr: 'قائد الشبكة ومستثمر ملائكي' }
-    ],
-    metrics: {
-      'Syndicated Deals': '24 Investments',
-      'Follow-on Funding Catalyzed': '$45M+ USD',
-      'Average Syndicate Check': '$250,000 USD'
-    },
-    isFeatured: true,
-    contactEmail: 'pitch@dohatechangels.com'
-  },
-  {
-    id: 'al-mana-capital',
-    slug: 'al-mana-capital',
-    name: 'Al-Mana Private Capital',
-    nameAr: 'المانع للاستثمار الخاص',
-    tagline: 'Private multi-family office venture allocation and growth equity division',
-    taglineAr: 'مكتب استثماري عائلي خاص لإدارة استثمارات النمو ورأس المال الجريء',
-    description: 'The venture and direct investment vehicle of one of Qatar’s prominent commercial trading groups, active in retail tech, consumer platforms, supply chain infrastructure, and digital logistics.',
-    descriptionAr: 'الذراع الاستثماري لإحدى كبرى المجموعات التجارية العائلية في قطر، يركز على تكنولوجيا التجزئة والخدمات اللوجستية ومنصات المستهلكين.',
-    type: 'investor',
-    sector: 'Logistics & Supply Chain',
-    stage: 'Series A',
-    foundedYear: 2015,
-    teamSize: '15 Investment Professionals',
-    headquarters: 'Al Mana Tower, Airport Road, Doha',
-    headquartersAr: 'برج المانع، طريق المطار، الدوحة',
-    website: 'https://almanacapital.qa',
-    logo: 'AM',
-    logoBg: '#047857',
-    verified: true,
-    claimed: true,
-    aumUsd: '$220,000,000 USD',
-    checkSizeRange: '$1M – $5M USD',
-    institutionalBacking: ['Private Family Group Balance Sheet'],
-    keyPeople: [
-      { name: 'Tariq Al-Mana', nameAr: 'طارق المانع', role: 'Managing Director - Direct Investments', roleAr: 'العضو المنتدب - الاستثمارات المباشرة' }
-    ],
-    metrics: {
-      'Active Direct Investments': '16 Companies',
-      'Average Hold Horizon': '5-7 Years',
-      'Venture Allocation Share': '22% of Portfolio'
-    },
-    isFeatured: false,
-    contactEmail: 'investments@almanacapital.qa'
-  },
-
-  // --- ECOSYSTEM HUBS & ACCELERATORS ---
-  {
-    id: 'qfth-hub',
-    slug: 'qfth-hub',
-    name: 'Qatar FinTech Hub (QFTH)',
-    nameAr: 'مركز قطر للتكنولوجيا المالية',
-    tagline: 'Specialized ecosystem incubator and global accelerator for FinTech and InsurTech',
-    taglineAr: 'حاضنة ومسرّعة متخصصة لتطوير شركات التكنولوجيا المالية والتأمين الرقمي',
-    description: 'Ecosystem platform that runs specialized incubation and acceleration cohorts connecting global and regional FinTech entrepreneurs with financial regulators, commercial banks, and venture mentors.',
-    descriptionAr: 'مركز تكنولوجي ينظم دورات تسريع سنوية لتمكين رواد أعمال التكنولوجيا المالية من بناء حلول الدفع والامتثال والحلول المصرفية الرقمية.',
-    type: 'incubator',
-    sector: 'FinTech',
-    stage: 'Pre-Seed',
-    foundedYear: 2019,
-    teamSize: '20 Mentors & Program Leads',
-    headquarters: 'Tornado Tower, West Bay, Doha',
-    headquartersAr: 'برج تورنادو، الخليج الغربي، الدوحة',
-    website: 'https://fintech.qa',
-    logo: 'QF',
-    logoBg: '#0284C7',
-    verified: true,
-    claimed: true,
-    institutionalBacking: ['Financial Ecosystem Stakeholders', 'Global Industry Mentors'],
-    keyPeople: [
-      { name: 'Heba Al-Tamimi', nameAr: 'هبة التميمي', role: 'Head of Accelerator Programs', roleAr: 'رئيسة برامج التسريع' }
-    ],
-    metrics: {
-      'Graduated Startups': '65+ Companies',
-      'Cohorts Completed': '6 Cycles',
-      'Alumni Capital Raised': '$38M+ USD'
-    },
-    isFeatured: true,
-    contactEmail: 'apply@fintech.qa'
-  },
-  {
-    id: 'tech-park-incubator',
-    slug: 'tech-park-incubator',
-    name: 'Tech Innovation Incubator',
-    nameAr: 'حاضنة الابتكار التقني',
-    tagline: 'DeepTech product incubation, prototype grants, and patent acceleration hub',
-    taglineAr: 'حاضنة متقدمة للنماذج الأولية وبراءات الاختراع والتقنيات العميقة',
-    description: 'Offering laboratory facilities, hardware rapid-prototyping suites, co-working studios, and seed coaching to tech founders in Education City.',
-    descriptionAr: 'توفر مساحات عمل ومختبرات تصنيع نماذج أولية واستشارات تأسيس للشركات التكنولوجية في مجالات الذكاء الاصطناعي والصحة والحلول البيئية.',
-    type: 'incubator',
-    sector: 'DeepTech & AI',
-    stage: 'Pre-Seed',
-    foundedYear: 2017,
-    teamSize: '25 Specialists',
-    headquarters: 'Tech Park Campus, Education City',
-    headquartersAr: 'مجمع الواحة التكنولوجية، المدينة التعليمية',
-    website: 'https://innovationincubator.qa',
-    logo: 'TI',
-    logoBg: '#7C3AED',
-    verified: true,
-    claimed: true,
-    institutionalBacking: ['Academic & Research Innovation Network'],
-    keyPeople: [
-      { name: 'Dr. Yousef Al-Saleh', nameAr: 'د. يوسف الصالح', role: 'Executive Director', roleAr: 'المدير التنفيذي' }
-    ],
-    metrics: {
-      'Active Incubatees': '34 Teams',
-      'Patent Applications Filed': '42 Patents',
-      'Prototype Success Rate': '78%'
-    },
-    isFeatured: false,
-    contactEmail: 'incubation@innovationincubator.qa'
-  }
-];
-
-// --- 15 REAL INDEPENDENT NEWS ARTICLES & WEEKLY SPOTLIGHTS ---
-export const SEED_NEWS_ARTICLES: NewsArticle[] = [
-{
-  "id": "pillar-seo-1",
-  "slug": "qatar-tech-founder-incorporation-playbook-2026",
-  "titleEn": "The Qatar Tech Founder’s Incorporation Playbook (2026): MOCI vs. QSTP vs. QFC vs. Free Zones",
-  "titleAr": "دليل مؤسس الشركات الناشئة للتأسيس في قطر (٢٠٢٦): مقارنة شاملة بين وزارة التجارة والواحة ومركز المال والمناطق الحرة",
-  "summaryEn": "A comprehensive, practical guide for tech founders navigating 100% foreign ownership, licensing regimes, visa quotas, banking setup, and corporate tax exemptions across Qatar mainland and special economic zones.",
-  "summaryAr": "دليل عملي شامل لمؤسسي الشركات التكنولوجية لاستكشاف الملكية الأجنبية بنسبة 100%، وأنظمة التراخيص، وحصص التأشيرات، وفتح الحسابات المصرفية، والإعفاءات الضريبية في قطر.",
-  "contentEn": "### Executive Overview for Tech Founders\n\nStarting a venture-backed technology enterprise in Qatar has undergone a systemic modernization following the expansion of 100% foreign ownership laws and the consolidation of unified digital registration portals. However, choosing the correct licensing jurisdiction remains the single most critical structural decision for a founding team. A mismatched jurisdiction can hinder future institutional fundraising, complicate cap table mechanics, or delay commercial enterprise banking by months.\n\nThis playbook outlines the four primary corporate licensing avenues in Qatar, evaluating each against ownership thresholds, capital requirements, tax exemptions, and institutional investor preferences.\n\n---\n\n### The Four Jurisdictions Compared\n\n#### 1. MOCI Mainland (Ministry of Commerce and Industry)\n* **Best For:** B2C startups requiring physical street-level commercial presence, local retail distribution, direct government procurement, or broad domestic trading.\n* **Foreign Ownership:** Up to 100% foreign equity under Law No. 1 of 2019 upon ministerial pre-approval, or standard 51/49 joint-venture partnership with a Qatari partner.\n* **Minimum Share Capital:** Typically QAR 10,000 for standard Limited Liability Companies (W.L.L. / L.L.C.).\n* **Tax Profile:** Standard 10% corporate income tax on non-Qatari share of net corporate profits.\n* **Corporate Banking:** Full access to all domestic commercial banks (QNB, Commercial Bank, Dukhan Bank, Masraf Al Rayyan).\n* **Fundraising Note:** Mainland LLCs do not natively support convertible equity instruments (such as Delaware-style SAFE notes or convertible promissory notes) without custom shareholder debt side-agreements.\n\n#### 2. QSTP Free Zone (Qatar Science & Technology Park)\n* **Best For:** DeepTech, AI, BioTech, CleanTech, and enterprise software startups investing directly in scientific R&D, product innovation, and proprietary intellectual property.\n* **Foreign Ownership:** 100% foreign equity guaranteed by dedicated sovereign statute.\n* **Tax Profile:** 0% corporate tax, 0% personal income tax, 0% customs duties on imported equipment and hardware indefinitely.\n* **Incentives & Grants:** Access to QSTP Product Development Fund (PDF) grants (up to QAR 1.2M equity-free) and the QSTP Tech Venture Fund (seed to Series A co-investment).\n* **Corporate Banking:** Direct corporate banking integration with fast-tracked onboarding channels through partnered commercial banks.\n* **Fundraising Note:** Recognized and preferred by international VCs due to streamlined transfer of shares and standardized intellectual property governance.\n\n#### 3. QFC (Qatar Financial Centre)\n* **Best For:** FinTech, InsurTech, RegTech, Professional Services, and venture-scale SaaS companies requiring an English Common Law legal framework.\n* **Foreign Ownership:** 100% foreign equity permitted across all approved business activity codes.\n* **Legal System:** Independent legal and regulatory infrastructure governed by English Common Law, with the QFC Civil and Commercial Court offering international judicial precedents.\n* **Tax Profile:** Competitive 10% corporate tax on locally sourced profits, with 100% profit and capital repatriation to any global jurisdiction.\n* **Fundraising Note:** Highly favored by regional and global venture capital syndicates because the QFC Companies Regulations natively accommodate multiple share classes (Common vs. Preferred Series A/B), drag-along and tag-along rights, and SAFE notes.\n\n#### 4. QFZA (Qatar Free Zones Authority — Ras Bufontas & Umm Alhoul)\n* **Best For:** Cross-border logistics tech, hardware assembly, robotics, autonomous fleets, data center operators, and regional fulfillment hubs adjacent to Hamad International Airport or Hamad Port.\n* **Foreign Ownership:** 100% foreign equity with guaranteed 20-year renewable corporate tax holiday.\n* **Logistics Advantage:** Zero customs duties on imports/exports and bonded customs corridors connected directly to air cargo terminals.\n\n---\n\n### Step-by-Step Incorporation Checklist for Tech Founders\n\n1. **Activity Code Selection:** Ensure your company scope is classified under Tech R&D, Computer Programming, or Data Processing to qualify for fast-track processing.\n2. **Trade Name Reservation:** Reserve your company trade name online via the designated registry portal.\n3. **Articles of Association (AoA):** Formulate customized corporate bylaws specifying founder vesting schedules, IP assignments, and transfer restrictions.\n4. **Commercial Registration (CR) & Computer Card:** Obtain the CR certificate and establishment card (Qayd Al-Munsha'a) required for visa issuance.\n5. **Commercial License (Rukhsa):** Secure physical lease agreement or approved incubator flex-desk allocation.\n6. **Corporate Bank Account Opening:** Present passport copies, CR, AoA, tax card, and executive CVs to designated commercial banking relationship desks. Expected turnaround is 2–4 weeks.\n\n---\n\n### Key Takeaway for Founders\nFor pure-play digital SaaS, FinTech, and venture-backed scaleups aiming to raise institutional capital, **QFC** and **QSTP** represent the gold standard due to 100% foreign ownership, IP protection, and compatibility with international venture agreements.",
-  "contentAr": "### نظرة عامة لمؤسسي الشركات الناشئة\nشهد تأسيس الشركات التكنولوجية في دولة قطر تطوراً شاملاً مع توسيع قوانين التملك الأجنبي بنسبة 100%، إلا أن اختيار البيئة التنظيمية والتسجيلية المناسبة يظل القرار الأهم للمؤسسين.\n\nيستعرض هذا الدليل مقارنة تفصيلية بين المظلات الأربع الرئيسية في قطر:\n1. **السجل التجاري بوزارة التجارة والصناعة (MOCI):** الأنسب للشركات التي تحتاج تواجداً في السوق المحلي وعمليات التوزيع المباشر.\n2. **واحة قطر للعلوم والتكنولوجيا (QSTP):** الأنسب لشركات البحث والتطوير والذكاء الاصطناعي مع إعفاء ضريبي 0% ومنح تطوير المنتجات.\n3. **مركز قطر للمال (QFC):** الخيار المفضل لصناديق رأس المال الجريء العالمية لاتباعه القانون العام الإنجليزي (English Common Law) ودعمه المباشر لاتفاقيات SAFE وفئات الأسهم الممتازة.\n4. **هيئة المناطق الحرة (QFZA):** الأنسب لتقنيات اللوجستيات والأجهزة المتقدمة بجوار المطار والميناء مع إعفاء ضريبي لمدة 20 عاماً.",
-  "category": "Policy & Regulation",
-  "publishedDate": "2026-09-20",
-  "readTimeMinutes": 7,
-  "author": "Ventures.qa Regulatory Intelligence Desk",
-  "sourceCitation": "MOCI, QFC, QSTP Regulatory Frameworks 2026",
-  "sourceUrl": "https://ventures.qa/resources/incorporation-guide",
-  "isSpotlight": false,
-  "likesCount": 64,
-  "status": "published"
-},
-{
-  "id": "pillar-seo-2",
-  "slug": "fundraising-guide-qatar-angels-safes-venture-capital",
-  "titleEn": "Fundraising in Qatar: The Complete Founder’s Guide to Angels, SAFEs, and Venture Capital (2026)",
-  "titleAr": "دليل جمع التمويل في قطر: خارطة طريق المؤسسين للاستثمار الملائكي وصناديق رأس المال الجريء واتفاقيات SAFE",
-  "summaryEn": "Everything founders need to know about raising Pre-Seed, Seed, and Series A in Doha: active angel syndicates, standard SAFE note terms under local laws, QDB matching grants, and pitching GCC venture funds.",
-  "summaryAr": "كل ما يحتاجه المؤسسون لجمع التمويل التأسيسي والجولة أ في الدوحة: شبكات المستثمرين الملائكيين، وصياغة اتفاقيات SAFE، وبرامج التمويل المشترك، واستراتيجيات التفاوض.",
-  "contentEn": "### The Venture Capital Landscape in Qatar\n\nFundraising in Qatar has transformed over the past three years from informal family-network funding into an institutionalized, data-driven ecosystem. Founders who understand how domestic angels, sovereign-backed funds, and regional GCC venture syndicates collaborate can close rounds significantly faster while safeguarding equity ownership.\n\n---\n\n### Capital Tiers & Active Players\n\n#### Tier 1: Angel Networks & Syndicates (Pre-Seed: 00K – 00K)\n* **Doha Tech Angels (DTA):** A premier private syndicate of high-net-worth tech executives and institutional leaders writing individual checks of 0K to 50K per member into vetted tech ventures.\n* **Private Angel Syndicates & Family Principals:** High-net-worth individuals and second-generation family leaders seeking direct equity exposure to tech scaleups.\n* **Typical Deal Instrument:** Post-Money SAFE (Simple Agreement for Future Equity) with standard valuation caps ranging from .5M to M.\n\n#### Tier 2: Institutional & Sovereign Facilities (Seed: 00K – .5M)\n* **Qatar Development Bank (QDB):** Offers co-matching venture facilities and equity-free accelerator grants through its tech incubation initiatives.\n* **QSTP Tech Venture Fund:** Deploys early-stage institutional venture tickets alongside private lead investors for tech startups demonstrating demonstrable IP.\n* **Rasmal Ventures:** An independent, institutional QFC-licensed venture capital fund manager deploying regional fund tickets across enterprise SaaS, FinTech, and B2B scaleups.\n\n#### Tier 3: Growth Equity & Regional VCs (Series A/B: M – 5M)\n* Regional venture funds from Saudi Arabia, the UAE, and Kuwait increasingly co-invest in Qatari champions that display clear regional expansion potential into Riyadh or Muscat (as demonstrated by Snoonu, SkipCash, and Droobi Health).\n\n---\n\n### Structuring SAFEs Under Qatar Jurisdictions\n\nThe Post-Money SAFE pioneered by Y Combinator has become the regional standard for early-stage financing. In Qatar, founders should note:\n1. **Governing Law:** Structure SAFEs under QFC or DIFC English Common Law to ensure clear enforceability upon a subsequent equity qualifying round.\n2. **Valuation Caps:** Pre-Seed caps in Doha average **M – .5M USD**, while Seed round caps range from **M – M USD** depending on monthly recurring revenue (MRR) traction.\n3. **Discount Rates:** Standard conversion discounts are typically pegged at **15% to 20%**.\n4. **Information Rights:** Early-stage Qatari investors appreciate quarterly investor updates detailing cash burn, runway in months, customer acquisition cost (CAC), and pipeline developments.\n\n---\n\n### 5 Rules for Successfully Closing a Round in Doha\n\n* **Rule 1: Build Local Traction First:** Investors in Doha want to see paying local B2B enterprise pilots or verified consumer adoption before committing lead capital.\n* **Rule 2: Prepare a Clean Data Room:** Institutionalize your cap table, corporate registration documents, and IP assignment contracts before launching meetings.\n* **Rule 3: Leverage Sovereign Matching:** Engage programs such as QDB and QSTP early to match private syndicate capital dollar-for-dollar.\n* **Rule 4: Articulate the GCC Expansion Strategy:** Qatar is an exceptional testbed, but a venture thesis requires a clear roadmap for scaling across the wider .1T GCC economic block.\n* **Rule 5: Maintain Realistic Valuation Benchmarks:** Over-inflating early valuations creates down-round risks during Series A diligence.",
-  "contentAr": "### خارطة جمع التمويل في قطر\nتحول جمع التمويل للشركات الناشئة في قطر إلى منظومة مؤسسية متقدمة تعتمد على البيانات والشروط المعيارية العالمية.\n\n#### الركائز الأساسية للتمويل:\n1. **الاستثمار الملائكي (Pre-Seed):** تقوده شبكات مثل ملائكة التكنولوجيا بالدوحة (Doha Tech Angels) وصناع القرار في المكاتب العائلية ببطاقات استثمارية تتراوح بين 50 إلى 150 ألف دولار عبر اتفاقيات SAFE.\n2. **الصناديق المؤسسية (Seed):** بنك قطر للتنمية (QDB) عبر برامج التمويل المشترك، وصندوق واحة قطر للمشاريع التقنية، وراسمال فنتشرز (Rasmal Ventures).\n3. **صناديق النمو الإقليمية (Series A/B):** مشاركة صناديق الاستثمار الجريء الإقليمية في جولات التوسع مثل سنونو وسكيب كاش.\n\n#### أهم معايير النجاح:\n* صياغة اتفاقيات SAFE بموجب القانون العام لمركز قطر للمال.\n* تقييمات واقعية للجولة التأسيسية بين 3 إلى 7 ملايين دولار بناء على الإيرادات الشهرية.\n* إظهار خطة واضحة للتوسع نحو أسواق الخليج (السعودية والإمارات وعمان).",
-  "category": "Funding News",
-  "publishedDate": "2026-09-18",
-  "readTimeMinutes": 6,
-  "author": "Ventures.qa Capital Research Team",
-  "sourceCitation": "QPCI Capital Index & Deal Flow Database",
-  "sourceUrl": "https://ventures.qa/resources/fundraising-guide",
-  "isSpotlight": false,
-  "likesCount": 52,
-  "status": "published"
-},
-{
-  "id": "pillar-seo-3",
-  "slug": "institutional-investors-guide-qatar-tech-family-offices-vc",
-  "titleEn": "The Institutional Investor’s Guide to Qatar Tech: How Family Offices & VCs Are Deploying Capital",
-  "titleAr": "دليل المستثمر المؤسسي للتكنولوجيا في قطر: كيف توظف المكاتب العائلية وصناديق الاستثمار رؤوس أموالها؟",
-  "summaryEn": "An analytical briefing examining how Doha private family offices and regional investment firms are re-weighting portfolios into venture capital, co-investment syndicates, and direct technology scaleup equity.",
-  "summaryAr": "تقرير تحليلي يستعرض كيف تعيد المكاتب العائلية في الدوحة والشركات الاستثمارية توجيه محافظها نحو رأس المال الجريء، وصفقات التمويل المشترك، وحصص الملكية في الشركات الصاعدة.",
-  "contentEn": "### Macroeconomic Shift: Private Capital Migration into Tech\n\nPrivate wealth in Qatar—traditionally allocated heavily into domestic real estate, infrastructure assets, and public equities—is executing a sustained asset re-weighting. Driven by visionary second-generation family leadership, national digital sovereignty mandates, and compelling venture returns across the GCC, family offices in Doha are steadily elevating private technology allocations from sub-5% historical levels to **15%–20% of liquid assets**.\n\nThis report examines how institutional investment companies, single-family offices (SFOs), and multi-family offices (MFOs) are structuring venture deployments in Doha.\n\n---\n\n### Deployment Strategies: Funds vs. Direct Co-Investments\n\n#### 1. Fund of Funds & LP Commitments\nInstitutional allocators frequently initiate tech exposure by committing as Limited Partners (LPs) to established top-quartile regional and global venture managers. This strategy delivers:\n* Diversified portfolio exposure across dozens of early-stage assets.\n* Institutional benchmarking on valuation methodologies and diligence standards.\n* Exclusive direct co-investment rights (co-investment carve-outs) for high-performing portfolio companies entering Series A and B rounds.\n\n#### 2. Direct Lead & Syndicate Co-Investing\nLeading family offices in Qatar now operate dedicated internal investment committees focused on direct venture deals. Key parameters sought include:\n* **Capital Efficiency:** Preference for founders who demonstrate positive unit economics rather than growth-at-all-costs subsidized burn.\n* **Strategic Corporate Synergies:** Companies that can cross-sell into the family enterprise's existing retail, supply chain, healthcare, or financial footprints.\n* **Robust Corporate Governance:** Requirement for clean board observer rights, quarterly financial statement audits, and transparent cap table maintenance.\n\n---\n\n### High-Conviction Sectors for Qatari Institutional Capital\n\n* **FinTech & Embedded Payments:** Contactless point-of-sale infrastructure, cross-border remittance corridors, B2B automated invoicing, and digital micro-lending platforms (e.g. SkipCash, Cwallet, Karty).\n* **Supply Chain & Dark Logistics:** Automated route dispatching, micro-fulfillment centers, and temperature-controlled logistics for pharmaceutical and food distribution (e.g. Snoonu, Airlift).\n* **AI & HealthTech Clinical Solutions:** AI diagnostic algorithms, chronic disease registries, and telemedicine networks (e.g. Avey Health, Droobi Health).\n* **Enterprise SaaS & Government Tech:** AI workflow automations, compliance tooling, and sovereign cloud infrastructure aligned with national digital transformation agendas.\n\n---\n\n### Institutional Diligence Checklist\n\nWhen reviewing Qatari startups, investment offices utilize the following standard scorecard:\n1. **Commercial Registration & IP Ownership:** Confirmation that all proprietary codebase, models, and registered trademarks reside unencumbered in the corporate entity.\n2. **Cap Table Cleanliness:** No fragmented dead equity; founder equity pooled with structured 4-year reverse vesting schedules.\n3. **Audited Financials / Management Accounts:** Monthly burn rate, MRR growth rate, gross margin profile, and customer payback period.\n4. **Regulatory Standing:** Full compliance with Qatar Central Bank (QCB) sandbox regulations, National Cyber Security Agency (NCSA) data protection frameworks, or Ministry of Public Health authorizations.\n\n---\n\n### Strategic Outlook\nWith the Qatar National Vision 2030 emphasizing private-sector knowledge diversification, institutional capital in Doha is positioned to become one of the most agile and supportive venture backers across the Middle East.",
-  "contentAr": "### تحول رأس المال المؤسسي نحو التكنولوجيا في قطر\nتشهد المكاتب العائلية والمؤسسات الاستثمارية في الدوحة تحولاً نوعياً في توزيع الأصول، مع زيادة مخصصات الاستثمار في التكنولوجيا ورأس المال الجريء من أقل من 5% تاريخياً إلى ما بين 15% و20% من السيولة.\n\n#### استراتيجيات التوظيف الاستثماري:\n1. **الاستثمار كشريك موصٍ (LP):** الدخول في صناديق رأس المال الجريء الإقليمية للحصول على تنويع وحقوق تمويل مشترك مباشر (Co-investments).\n2. **الاستثمار المباشر في الصفقات التكنولوجية:** التركيز على الشركات ذات الكفاءة العالية في استخدام رأس المال والربحية الإيجابية.\n\n#### القطاعات الأكثر جاذبية لرأس المال المؤسسي:\n* التكنولوجيا المالية والمدفوعات (FinTech).\n* سلاسل الإمداد والخدمات اللوجستية الذكية.\n* الذكاء الاصطناعي والتكنولوجيا الصحية (HealthTech).\n* البرمجيات كخدمة للشركات والحكومات (Enterprise SaaS).",
-  "category": "Market Trends",
-  "publishedDate": "2026-09-17",
-  "readTimeMinutes": 6,
-  "author": "Ventures.qa Institutional Research Desk",
-  "sourceCitation": "Doha Family Office Allocation Survey 2026",
-  "sourceUrl": "https://ventures.qa/resources/institutional-investor-guide",
-  "isSpotlight": false,
-  "likesCount": 47,
-  "status": "published"
-},
-{
-  "id": "pillar-seo-4",
-  "slug": "qatar-startup-valuation-deal-terms-benchmarks-2026",
-  "titleEn": "Qatar Startup Valuation & Deal Term Benchmarks (2026): What Local Founders and Investors Agree On",
-  "titleAr": "معايير تقييم الشركات الناشئة وشروط الصفقات في قطر (٢٠٢٦): متوسطات التقييم وجولات التمويل",
-  "summaryEn": "Proprietary empirical benchmarks from the Qatar Private Capital Index (QPCI): average pre-money valuations, revenue multiples, dilution bands, liquidation preferences, and founder vesting standards in Doha.",
-  "summaryAr": "بيانات معيارية مستخلصة من مؤشر رأس المال الخاص (QPCI): متوسطات التقييم قبل التمويل، ومضاعفات الإيرادات، ونسب التخفيف، وحقوق الأولوية، وبرامج استحقاق أسهم المؤسسين.",
-  "contentEn": "### Empirical Data from the Qatar Private Capital Index (QPCI)\n\nValuation discussions in early-stage venture ecosystems can frequently become contentious when neither founders nor investors possess reliable, localized benchmark data. Relying purely on Silicon Valley or London valuation metrics leads to inflated expectations, whereas underpricing viable scaleups risks demotivating founding talent.\n\nDrawing from verified transaction data tracked by the **Qatar Private Capital Index (QPCI)** across 2025 and 2026, this briefing provides empirical valuation ranges, revenue multiples, and standard contract terms prevalent in Doha's private market.\n\n---\n\n### Valuation Benchmarks by Stage\n\n| Stage | Median Round Size (USD) | Median Pre-Money Valuation (USD) | Typical Dilution | Primary Milestone Expected |\n|---|---|---|---|---|\n| **Pre-Seed** | 50,000 – 00,000 | ,500,000 – ,000,000 | 10% – 15% | Working MVP, initial enterprise pilot letters of intent (LOIs) |\n| **Seed** | 50,000 – ,000,000 | ,000,000 – ,000,000 | 15% – 20% | Commercial product-market fit, 0K–0K MRR, repeatable sales motion |\n| **Series A** | ,500,000 – ,000,000 | 4,000,000 – 5,000,000 | 15% – 22% | Multi-market GCC footprint, 00K+ MRR, positive gross contribution margins |\n| **Growth / Series B** | 0,000,000+ | 0,000,000 – 00,000,000+ | 12% – 18% | Market leadership, regional defensibility, near cashflow breakeven |\n\n---\n\n### Standard Deal Terms & Contract Governance in Doha\n\n#### 1. Liquidation Preference\n* **Standard:** 1x Non-Participating Liquidation Preference.\n* **Market Status:** Recognized as founder-friendly and institutional standard. Any term requiring participating preferences (double-dipping) or greater than 1x return thresholds is strongly resisted by experienced venture counsel.\n\n#### 2. Founder Vesting & Reverse Dilution\n* **Standard:** 4-year linear vesting schedule with a 1-year cliff.\n* **Acceleration:** Single-trigger or double-trigger acceleration upon change of control is customary for founding CTOs and CEOs.\n* **Investor Consensus:** Accelerators and seed investors uniformly require unvested equity clawback clauses to protect the enterprise against co-founder departures.\n\n#### 3. Board Composition & Observer Rights\n* **Seed Stage:** 3-member board typically comprising 2 founders and 1 investor representative (or 1 independent director).\n* **Series A:** Expansion to 5-member board (2 founders, 2 lead investors, 1 industry independent).\n* **Observer Seats:** Qualified major investors (writing 50K+) commonly receive non-voting board observer seats and access to monthly management reporting.\n\n#### 4. Anti-Dilution Protection\n* **Standard:** Broad-Based Weighted Average Anti-Dilution.\n* **Market Status:** Full-ratchet provisions are practically non-existent in quality venture deals and are considered predatory by top-tier institutional funds in the GCC.\n\n---\n\n### Revenue Multiples in the Current Macro Environment\n\n* **B2B Enterprise SaaS:** 6x – 10x Annual Recurring Revenue (ARR) for scaleups demonstrating net revenue retention (NRR) > 110% and gross margins > 75%.\n* **FinTech & Payments:** 3x – 6x Net Revenue (gross transaction fees minus interchange and processing costs).\n* **B2C Digital Commerce / Quick-Commerce:** 0.8x – 1.5x Annual Gross Merchandise Value (GMV) with stringent scrutiny of contribution margin per order.\n\n---\n\n### Guidance for Founders & Investors Alike\nA fair valuation is one that allows founders to retain sufficient equity to stay incentivized for subsequent rounds while providing investors with an achievable 10x–20x return multiple at regional exit or IPO.",
-  "contentAr": "### بيانات مؤشر رأس المال الخاص في قطر (QPCI)\nيقدم هذا التقرير بيانات معيارية موثقة لتقييمات الشركات الناشئة وشروط الصفقات في قطر لتسهيل المفاوضات بين المؤسسين والمستثمرين.\n\n#### متوسطات التقييم حسب المرحلة:\n* **مرحلة ما قبل البذرة (Pre-Seed):** التقييم قبل التمويل من 1.5 إلى 3 ملايين دولار مع تخفيف بنسبة 10-15%.\n* **المرحلة التأسيسية (Seed):** التقييم قبل التمويل من 4 إلى 8 ملايين دولار مع إيرادات شهرية بين 20 و60 ألف دولار.\n* **الجولة (أ) (Series A):** التقييم من 14 إلى 25 مليون دولار مع توسع إقليمي ونمو مثبت.\n\n#### شروط الحوكمة المعيارية في الدوحة:\n* أولوية التصفية (Liquidation Preference): 1x غير مشاركة.\n* استحقاق أسهم المؤسسين: 4 سنوات مع سنة أولى كاملة (1-year cliff).\n* حماية عدم التخفيف: المتوسط المرجح الواسع (Broad-Based Weighted Average).",
-  "category": "Market Trends",
-  "publishedDate": "2026-09-19",
-  "readTimeMinutes": 7,
-  "author": "Ventures.qa Benchmark Research Desk",
-  "sourceCitation": "QPCI Empirical Transaction Dataset 2025-2026",
-  "sourceUrl": "https://ventures.qa/resources/valuation-benchmarks",
-  "isSpotlight": false,
-  "likesCount": 71,
-  "status": "published"
-},
-
-  {
-    id: 'news-1',
-    slug: 'snoonu-growth-regional-expansion',
-    titleEn: 'Startup Spotlight: How Snoonu Reached $100M GMV and Scaled Beyond Delivery',
-    titleAr: 'أضواء على الشركات: كيف بلغت سنونو 100 مليون دولار إجمالي حجم مبيعات وتوسعت إقليمياً',
-    summaryEn: 'An in-depth independent case study examining Snoonu’s operational unit economics, tech stack consolidation, and multi-market expansion strategy into Oman and the wider GCC.',
-    summaryAr: 'دراسة تحليلية مستقلة تستعرض اقتصاديات الوحدة التشغيلية لشركة سنونو واستراتيجيتها للتوسع الإقليمي في سلطنة عمان وأسواق الخليج.',
-    contentEn: `Over the past five years, Lusail-based Snoonu has evolved from a local food courier into a comprehensive digital commerce super-app boasting more than 500,000 registered users and an annualized gross merchandise value (GMV) surpassing $100 million USD.\n\nFounded by Qatari entrepreneur Hamad Al-Hajri, the company leveraged disciplined capital deployment during a period when heavily subsidized international competitors were retreating or restructuring. By engineering proprietary algorithmic dispatching software tailored to Doha’s specific urban grid and consumer ordering habits, Snoonu reduced average delivery times to under 28 minutes while sustaining positive gross contribution margins per order.\n\nFollowing its $12 million Series B financing round with domestic and regional venture participants, Snoonu has deployed capital into private-label dark grocery stores (Snoomart), enterprise pharmacy fulfillment, and cross-border expansion into Oman. The startup remains one of the benchmark scaleups watched closely by international growth equity funds tracking Qatar’s emerging technology ecosystem.`,
-    contentAr: `خلال الأعوام الخمسة الماضية، تحولت سنونو من منصة محلية لتوصيل الطعام إلى تطبيق تجارة إلكترونية شامل يضم أكثر من 500,000 مستخدم مسجل مع تجاوز إجمالي قيمة المعاملات 100 مليون دولار سنوياً.\n\nتمكنت الشركة، بقيادة حمد الهاجري، من تحقيق كفاءة تشغيلية عالية عبر خوارزميات التوزيع الذاتي وتخفيض متوسط زمن التوصيل إلى أقل من 28 دقيقة مع الحفاظ على هوامش ربحية إيجابية للطلبات.\n\nومع استكمال جولة تمويلية بقيمة 12 مليون دولار من مستثمرين محليين وإقليميين، تواصل الشركة توسعها في التجارة السريعة وتأسيس وجودها الإقليمي في سلطنة عمان.`,
-    category: 'spotlight',
-    publishedDate: '2026-09-15',
-    readTimeMinutes: 5,
-    author: 'Editorial Research Desk',
-    sourceCitation: 'Public corporate announcements, verified merchant filings, and executive interviews',
-    sourceUrl: 'https://snoonu.com/press',
-    isSpotlight: true,
-    spotlightCompanyId: 'snoonu',
-    spotlightStats: [
-      { label: 'Active Users', value: '500,000+' },
-      { label: 'Annual GMV Run-Rate', value: '$100M+ USD' },
-      { label: 'Merchant Network', value: '4,500+' },
-      { label: 'Average Delivery Time', value: '27.4 mins' }
-    ],
-    likesCount: 38,
-    comments: [
+    "id": "snoonu",
+    "slug": "snoonu",
+    "name": "Snoonu",
+    "nameAr": "سنونو",
+    "tagline": "Qatar's leading super-app for hyper-local on-demand delivery, quick-commerce, and logistics",
+    "taglineAr": "تطبيق التوصيل الرائد في قطر للتجارة السريعة والخدمات اللوجستية",
+    "description": "Founded in 2019 by Hamad Al-Hajri, Snoonu has grown into one of Qatar’s premier technology scaleups. Operating restaurant delivery, grocery, pharmacy, electronics, and digital merchant solutions with over 500,000 active users and proprietary route-optimization logistics.",
+    "descriptionAr": "تأسست في عام 2019 بواسطة حمد الهاجري، وتطورت لتصبح من أبرز الشركات التكنولوجية الصاعدة في قطر، شاملة توصيل المتاجر والمطاعم والتجارة السريعة لأكثر من 500 ألف مستخدم نشط.",
+    "type": "startup",
+    "sector": "Logistics & Supply Chain",
+    "stage": "Series B+",
+    "foundedYear": 2019,
+    "teamSize": "350+ FTEs",
+    "headquarters": "Lusail City, Qatar",
+    "headquartersAr": "مدينة لوسيل، قطر",
+    "website": "https://snoonu.com",
+    "logo": "SN",
+    "logoBg": "#8A1538",
+    "verified": true,
+    "claimed": true,
+    "claimedByEmail": "founders@snoonu.com",
+    "sourceCitation": "Verified $17M USD total institutional equity across Series A ($5M, 2021) and Series B ($12M, 2022) sourced via Wamda and Bloomberg verified transaction disclosures.",
+    "sourcingNote": "Verified via Wamda & Bloomberg disclosures",
+    "totalFundingRaisedQar": "61,880,000 QAR",
+    "totalFundingRaisedUsd": "$17,000,000 USD",
+    "fundingRounds": [
       {
-        id: 'c1',
-        authorName: 'Rashid Al-Kuwari',
-        authorRole: 'Angel Investor & LP',
-        authorOrg: 'Private Syndicate',
-        comment: 'A very objective breakdown. The real test in the coming 18 months will be how Snoomart competes with hyper-local GCC players in Muscat.',
-        createdAt: '2026-09-16T09:12:00Z',
-        likes: 12
+        "round": "Series B",
+        "amountQar": "43.7M QAR",
+        "amountUsd": "$12M USD",
+        "date": "2022-04-15",
+        "leadInvestor": "Institutional & Private Venture Syndicates (Source: Wamda & Bloomberg press disclosures)"
       },
       {
-        id: 'c2',
-        authorName: 'Nadia Mansoor',
-        authorRole: 'Product Lead',
-        authorOrg: 'FinTech Startup',
-        comment: 'Great to see rigorous metrics published rather than PR hype. Snoonu’s localized dispatch algorithms are genuinely top-tier.',
-        createdAt: '2026-09-16T14:30:00Z',
-        likes: 8
+        "round": "Series A",
+        "amountQar": "18.2M QAR",
+        "amountUsd": "$5M USD",
+        "date": "2021-04-10",
+        "leadInvestor": "Qatari Angel Investors & Syndicate (Source: Official company disclosure)"
       }
-    ]
-  },
-  {
-    id: 'news-2',
-    slug: 'skipcash-crosses-1-5m-transactions',
-    titleEn: 'SkipCash Surpasses 1.5 Million Processed Transactions as Contactless Adoption Accelerates',
-    titleAr: 'سكيب كاش تتجاوز 1.5 مليون معاملة مع تسارع وتيرة تبني المدفوعات اللاتلامسية في قطر',
-    summaryEn: 'The Doha-based payments infrastructure provider reports a 74% year-over-year surge in digital payment processing volume across retail merchants and online service providers.',
-    summaryAr: 'سجلت شركة التكنولوجيا المالية سكيب كاش نمواً بنسبة 74% على أساس سنوي في حجم المدفوعات الرقمية المنفذة عبر شبكتها التجارية.',
-    contentEn: `FinTech payments platform SkipCash announced reaching a landmark milestone of 1.5 million processed contactless transactions across its merchant partner network in Qatar, reflecting rapid consumer migration away from physical cash.\n\nAccording to public disclosures released by the company, gross annual payment processing run-rate reached $180 million USD across over 1,800 retail stores, hospitality groups, and educational service providers.\n\nFounder Mohammed Al-Delaimi noted in a public statement that the adoption curve was heavily accelerated by the rollout of instant QR code invoicing, point-of-sale terminal integrations, and enhanced API tools for local e-commerce stores. Market analysts note that Qatar’s payment modernization trends point toward cash transactions dropping below 12% of total retail point-of-sale volume by the end of 2027.`,
-    contentAr: `أعلنت منصة المدفوعات الرقمية سكيب كاش وصولها إلى محطة استثنائية بتسجيل أكثر من 1.5 مليون عملية دفع لاتلامسية عبر شبكة تجارها في قطر.\n\nوأظهرت الإفصاحات وصول حجم المعاملات المارة عبر البوابة إلى أكثر من 180 مليون دولار أمريكي سنوياً عبر 1800 متجر ومؤسسة تجارية.\n\nويشير محللو السوق إلى أن التحول نحو المدفوعات الرقمية والحلول اللاتلامسية سيقلص التعاملات النقدية في قطاع التجزئة القطري إلى أقل من 12% بحلول نهاية 2027.`,
-    category: 'funding',
-    publishedDate: '2026-09-12',
-    readTimeMinutes: 4,
-    author: 'Ventures.qa FinTech Correspondent',
-    sourceCitation: 'SkipCash corporate release and Qatar FinTech ecosystem activity log',
-    sourceUrl: 'https://skipcash.com/news',
-    likesCount: 29,
-    comments: [
-      {
-        id: 'c3',
-        authorName: 'Tareq Al-Haj',
-        authorRole: 'Retail CFO',
-        authorOrg: 'Doha Retail Group',
-        comment: 'SkipCash’s integration with local commercial banks has significantly lowered merchant processing fees compared to legacy card processors.',
-        createdAt: '2026-09-13T11:05:00Z',
-        likes: 6
-      }
-    ]
-  },
-  {
-    id: 'news-3',
-    slug: 'avey-health-clinical-validation-milestone',
-    titleEn: 'AI Health Scaleup Avey Completes Multi-Center Clinical Validation for Diagnostic Algorithm',
-    titleAr: 'شركة آفي للذكاء الاصطناعي الصحي تكمل التقييم السريري لخوارزميات التشخيص الطبي',
-    summaryEn: 'Independent medical peer review validates Avey’s diagnostic reasoning models against 120,000 documented clinical patient cases, achieving 93.4% concordant triage accuracy.',
-    summaryAr: 'أكدت دراسة طبية مستقلة دقة نموذج التوجيه والتشخيص الطبي لشركة آفي بنسبة 93.4% مقارنة بآراء لجان الأطباء الاستشاريين في أكثر من 120 ألف حالة سريرية.',
-    contentEn: `Avey AI Health, the Doha-born medical technology scaleup founded by Dr. Mohammad Hammoud, has completed a comprehensive multi-center clinical validation study evaluating its proprietary AI clinical diagnostic engine.\n\nThe retrospective validation examined over 120,000 real-world triage cases across general internal medicine, pediatrics, and urgent care. The peer-reviewed findings, presented at global digital health symposiums, demonstrated an accuracy rate of 93.4% when compared against consensus decisions by senior attending physicians.\n\nWith over 3.4 million diagnostic assessments conducted through the consumer mobile application across 140 countries, Avey is preparing to release an enterprise EHR-integrated clinical workflow assistant for outpatient hospital networks in the GCC and North America.`,
-    contentAr: `أكملت شركة آفي للذكاء الاصطناعي الصحي دراسة تقييم سريرية متعددة المراكز لاختبار محركها التشخيصي التوليدي المخصص للمجال الطبي.\n\nشملت الدراسة فحص أكثر من 120 ألف حالة تشخيصية حقيقية بالتعاون مع أطباء استشاريين، حيث حققت المنظومة نسبة دقة بلغت 93.4% في تصنيف الأعراض وتوجيه المرضى إلى مستوى الرعاية الصحي الملائم.\n\nوتستعد الشركة لإطلاق برمجيات تكامل مع أنظمة السجلات الطبية للمستشفيات والعيادات في منطقة الخليج.`,
-    category: 'spotlight',
-    publishedDate: '2026-09-08',
-    readTimeMinutes: 5,
-    author: 'HealthTech & Bio Desk',
-    sourceCitation: 'Peer-reviewed clinical validation publication and digital health symposium records',
-    sourceUrl: 'https://avey.ai/research',
-    isSpotlight: true,
-    spotlightCompanyId: 'avey-health',
-    spotlightStats: [
-      { label: 'Evaluated Cases', value: '120,000+' },
-      { label: 'Clinical Accuracy', value: '93.4%' },
-      { label: 'Global Assessments', value: '3.4M+' },
-      { label: 'Current Headcount', value: '55 Specialists' }
     ],
-    likesCount: 45,
-    comments: []
-  },
-  {
-    id: 'news-4',
-    slug: 'qatar-private-capital-q2-review',
-    titleEn: 'Independent Research Report: Disclosed Q2 Venture Deals in Qatar Reach $42.5 Million',
-    titleAr: 'تقرير بحثي مستقل: الصفقات المعلنة لرأس المال الجريء في قطر تبلغ 42.5 مليون دولار في الربع الثاني',
-    summaryEn: 'Quarterly data compiled by Ventures.qa shows average check sizes rising to $2.8M, driven by enterprise software and logistics rounds, while family offices increase direct co-investments.',
-    summaryAr: 'أظهرت البيانات المجمعة من منصة Ventures.qa ارتفاع متوسط حجم الصفقات الاستثمارية إلى 2.8 مليون دولار بدعم من جولات قطاعي البرمجيات واللوجستيات.',
-    contentEn: `According to aggregated market data compiled in the quarterly Qatar Private Capital Index (QPCI), disclosed technology equity transactions totaled $42.5 million USD across 14 distinct transactions during the second quarter of 2026.\n\nThe figures represent an 18.4% year-on-year increase in total dollar volume, driven primarily by later-stage expansion rounds in B2B SaaS, FinTech, and temperature-controlled logistics.\n\nSignificantly, private family offices and regional venture capital funds accounted for 54% of total syndicated capital in the quarter, marking a clear pivot toward institutionalized private participation alongside public ecosystem seed programs. Seed stage valuations remained disciplined, averaging between $4.5M and $6.8M USD post-money.`,
-    contentAr: `أظهرت بيانات مؤشر رأس المال الخاص (QPCI) أن الاستثمارات التكنولوجية المعلنة في قطر سجلت 42.5 مليون دولار عبر 14 صفقة مختلفة خلال الربع الثاني من عام 2026.\n\nويشكل هذا الرقم نمواً سنوياً بنسبة 18.4% مدفوعاً بجولات توسعية لشركات البرمجيات والتكنولوجيا المالية وسلاسل الإمداد، مع ارتفاع حصة المكاتب العائلية وصناديق الاستثمار الجريء الإقليمية إلى 54% من إجمالي رؤوس الأموال المشاركة.`,
-    category: 'trends',
-    publishedDate: '2026-09-01',
-    readTimeMinutes: 6,
-    author: 'Capital Index Research Group',
-    sourceCitation: 'Aggregated commercial registry filings, press disclosures, and verified term sheets',
-    sourceUrl: 'https://ventures.qa/index',
-    likesCount: 52,
-    comments: [
-      {
-        id: 'c4',
-        authorName: 'Karim Haddad',
-        authorRole: 'Venture Partner',
-        authorOrg: 'Rasmal Ventures',
-        comment: 'The trend toward larger Series A checks ($3M–$5M) reflects maturing corporate governance in local scaleups. Founders are preparing earlier for regional expansion.',
-        createdAt: '2026-09-02T08:20:00Z',
-        likes: 15
-      }
-    ]
-  },
-  {
-    id: 'news-5',
-    slug: 'family-offices-private-tech-allocation-shift',
-    titleEn: 'Private Family Offices in Doha Shift 18% of Liquid Allocations to Regional Venture & Tech Funds',
-    titleAr: 'المكاتب العائلية في الدوحة ترفع مخصصات التكنولوجيا والاستثمار الجريء إلى 18% من السيولة',
-    summaryEn: 'Interviews with leading multi-family office principals reveal an accelerated diversification away from legacy real estate into venture fund LP commitments and direct co-investments.',
-    summaryAr: 'كشفت مقابلات مع مسؤولي مكاتب عائلية خاصة في قطر عن تسارع تنويع المحافظ الاستثمارية نحو صناديق رأس المال الجريء والاستثمار المباشر في التكنولوجيا.',
-    contentEn: `Private family wealth offices in Qatar are systematically expanding allocations to early and growth-stage technology assets, according to an extensive interview series conducted by Ventures.qa with principals managing a collective $1.8 billion in assets.\n\nDriven by a generational succession among second- and third-generation leadership, participating family offices reported allocating an average of 18.2% of uncommitted liquid reserves into tech funds and direct startup equity, up from under 6% five years ago.\n\nKey areas of interest cited include enterprise procurement automation, food security supply chain tech, digital payment rails, and healthcare analytics. Over 65% of surveyed offices expressed a strong preference for syndicating deals through professional venture fund managers or regulated platforms rather than executing un-vetted angel deals.`,
-    contentAr: `أظهرت دراسة استقصائية لمكاتب الاستثمار العائلية في قطر توجهاً تصاعدياً لزيادة الحصص المخصصة للأصول التكنولوجية واستثمارات رأس المال الجريء بنسبة تتجاوز 18% من السيولة القابلة للتوظيف.\n\nويأتي هذا التحول مدفوعاً بقيادات الجيل الثاني والثالث الساعية إلى تنويع الأصول خارج العقارات التقليدية، مع التركيز على التقنيات اللوجستية، والأمن الغذائي، والبرمجيات السحابية، والمدفوعات الرقمية.`,
-    category: 'trends',
-    publishedDate: '2026-08-25',
-    readTimeMinutes: 5,
-    author: 'Wealth & Asset Allocation Desk',
-    sourceCitation: 'Independent survey of 18 Qatari single and multi-family investment offices',
-    likesCount: 34,
-    comments: []
-  },
-  {
-    id: 'news-6',
-    slug: 'cwallet-bridge-financing-gcc-expansion',
-    titleEn: 'Cwallet Secures Strategic Bridge Financing to Accelerate Cross-Border Payroll Network',
-    titleAr: 'سي والت تجمع تمويلاً استراتيجياً لتسريع شبكة دفع الأجور والتحويلات عبر الحدود',
-    summaryEn: 'FinTech innovator Cwallet receives fresh growth capital from regional venture investors to scale its enterprise wage protection software across Saudi Arabia and the UAE.',
-    summaryAr: 'حصلت منصة التكنولوجيا المالية سي والت على تمويل استراتيجي لدعم توسع برمجيات حماية الأجور والخدمات المصرفية الرقمية في أسواق الخليج.',
-    contentEn: `Doha-headquartered neo-banking platform Cwallet has closed a strategic bridge investment round to finance its commercial expansion into neighboring GCC markets.\n\nLed by existing institutional investors and regional technology syndicates, the capital injection will be dedicated to scaling Cwallet’s enterprise wage protection system (WPS) integrations and expanding cross-border remittance corridors across South Asia and East Africa.\n\nCEO Michael Javier noted that the platform currently handles monthly payroll processing volumes exceeding 45 million QAR for more than 200 corporate employers, offering mobile-first financial inclusion for thousands of wage earners previously excluded from conventional banking channels.`,
-    contentAr: `أغلقت منصة سي والت جولة تمويل مرحلية جديدة لتمويل توسعها التشغيلي في المملكة العربية السعودية والإمارات العربية المتحدة.\n\nوتستهدف المنصة تعزيز خدمات نظام حماية الأجور السحابي والتحويلات المالية الدولية، حيث تعالج شهرياً أجوراً تفوق 45 مليون ريال قطري لموظفي أكثر من 200 شركة ومؤسسة محلية.`,
-    category: 'funding',
-    publishedDate: '2026-08-18',
-    readTimeMinutes: 4,
-    author: 'Ventures.qa Reporting Team',
-    sourceCitation: 'Public corporate disclosure and regulatory filing notices',
-    sourceUrl: 'https://cwallet.qa/press',
-    likesCount: 22,
-    comments: []
-  },
-  {
-    id: 'news-7',
-    slug: 'qatar-fintech-sandbox-guidelines',
-    titleEn: 'Regulatory Update: Digital Onboarding and Open Banking Testing Guidelines Expanded',
-    titleAr: 'تحديث تنظيمي: توسيع إرشادات بيئة الاختبار التجريبية للهوية الرقمية والخدمات المصرفية المفتوحة',
-    summaryEn: 'Public regulatory updates outline streamlined testing pathways for regulated FinTech firms operating payment initiation, digital identity verification, and alternative credit assessment.',
-    summaryAr: 'إعلانات الجهات المالية التنظيمية تحدد مسارات مبسطة لترخيص حلول الدفع الرقمي، والتحقق من الهوية، ونماذج التقييم الائتماني البديل.',
-    contentEn: `Financial regulatory authorities have published updated testing directives governing the national FinTech Regulatory Sandbox, providing clearer timelines and milestone criteria for emerging technology firms.\n\nThe revised guidelines address three critical technical domains: automated e-KYC digital identity verification for residents, Open Banking API specifications allowing third-party apps to access account balances with explicit customer consent, and automated micro-lending risk algorithms.\n\nLegal experts at Doha law practices welcomed the transparency, noting that clear sandbox graduating thresholds provide institutional venture capital funds with greater certainty when structuring equity investments into local financial technology platforms.`,
-    contentAr: `أصدرت الجهات التنظيمية المالية تحديثات جديدة لإرشادات بيئة الاختبار التجريبية (Sandbox) لشركات التكنولوجيا المالية، مما يوفر وضوحاً أكبر للمطورين والمستثمرين.\n\nركزت التحديثات على الهوية الرقمية الموحدة (e-KYC)، ومعايير واجهات برمجة التطبيقات المصرفية المفتوحة (Open Banking)، وتقنيات تقييم الجدارة الائتمانية للشركات الصغيرة والمتوسطة، مما يمنح المستثمرين ثقة أعلى في هيكلة جولات التمويل.`,
-    category: 'policy',
-    publishedDate: '2026-08-11',
-    readTimeMinutes: 4,
-    author: 'Policy & Regulatory Analyst',
-    sourceCitation: 'Public gazette notices and official regulatory circular publications',
-    likesCount: 31,
-    comments: []
-  },
-  {
-    id: 'news-8',
-    slug: 'airlift-autonomous-fleet-campus-trials',
-    titleEn: 'Autonomous Delivery Scaleup Airlift Expands Solar-Assisted Fleet Pilots Across Campuses',
-    titleAr: 'شركة إيرلفت للروبوتات ذاتية القيادة توسع تجارب أسطولها اللوجستي في المجمعات الجامعية',
-    summaryEn: 'DeepTech hardware startup Airlift completes 62,000 autonomous delivery kilometers, reducing carbon footprints in high-density pedestrian and educational zones.',
-    summaryAr: 'أكملت روبوتات إيرلفت أكثر من 62 ألف كيلومتر من القيادة الذاتية لتوصيل الطرود في المناطق التعليمية والتجارية مع خفض انبعاثات الكربون.',
-    contentEn: `Airlift Systems, the Doha-founded robotics and autonomous mobility engineering company, has expanded operational deployments of its electric last-mile delivery rovers.\n\nEquipped with multi-sensor LiDAR, camera arrays, and proprietary obstacle avoidance machine learning algorithms, the rovers are conducting automated on-demand deliveries across multiple gated campus environments in Doha. During testing, Airlift logged over 62,000 autonomous kilometers without safety incidents, achieving an average delivery turnaround time of 16 minutes from merchant handoff to customer drop-off.\n\nFounder Ahmed Mohamedali confirmed that discussions are underway with commercial real estate developers in Lusail and Msheireb Downtown to integrate automated sub-surface and ground-level parcel delivery infrastructure into newly constructed commercial properties.`,
-    contentAr: `وسعت شركة إيرلفت للأنظمة الذاتية أسطول مركباتها الكهربائية ذاتية القيادة المخصصة لتوصيل طلبات التجارة الإلكترونية والمطاعم في المناطق المغلقة والمجمعات السكنية والجامعية.\n\nحققت الروبوتات أكثر من 62 ألف كيلومتر تشغيلي ناجح باستخدام حساسات الليدار والذكاء الاصطناعي لتفادي العوائق وتوصيل الطرود بمتوسط زمن لا يتجاوز 16 دقيقة، مع بدء محادثات للتوسع في أحياء لوسيل ومشيرب.`,
-    category: 'spotlight',
-    publishedDate: '2026-08-04',
-    readTimeMinutes: 5,
-    author: 'DeepTech & Hardware Team',
-    sourceCitation: 'Airlift engineering whitepaper and commercial pilot metrics report',
-    sourceUrl: 'https://airliftsystems.com',
-    isSpotlight: true,
-    spotlightCompanyId: 'airlift-systems',
-    spotlightStats: [
-      { label: 'Autonomous Km', value: '62,000+ km' },
-      { label: 'Avg Delivery Time', value: '16.2 mins' },
-      { label: 'Fleet Safety Record', value: '100% Incident-Free' },
-      { label: 'Engineering Team', value: '18 Specialists' }
+    "institutionalBacking": [
+      "Regional Tech Incubators",
+      "Private Angel Syndicates",
+      "GCC Venture Funds"
     ],
-    likesCount: 41,
-    comments: []
-  },
-  {
-    id: 'news-9',
-    slug: 'karty-visa-card-launch-milestone',
-    titleEn: 'Karty Surpasses 95,000 App Downloads Following Nationwide Smart Visa Card Launch',
-    titleAr: 'تطبيق كارتي يتجاوز 95 ألف مستخدم بعد الإطلاق التجاري لبطاقة فيزا الذكية في قطر',
-    summaryEn: 'Consumer FinTech app Karty achieves rapid retail traction with its real-time transaction categorization and automated micro-budgeting tools for young professionals.',
-    summaryAr: 'حقق تطبيق الإدارة المالية الشخصية كارتي إقبالاً كبيراً بتسجيل أكثر من 95 ألف تحميل بعد تفعيل ميزات التتبع الفوري للنفقات والبطاقات المسبقة الدفع.',
-    contentEn: `Consumer personal finance platform Karty reported surpassing 95,000 downloads and maintaining a monthly card payment run-rate of $4.2 million USD across its active user base.\n\nThe app, co-founded by young Qatari entrepreneurs Mohammed Suleiman and Abdulaziz Al-Marri, integrates instant virtual and physical contactless Visa cards with real-time merchant analytics. Users receive immediate notifications categorizing expenditures across dining, utilities, entertainment, and groceries, accompanied by automated savings nudges.\n\nThe startup plans to introduce recurring investment pots and automated currency exchange wallets in its upcoming major product release scheduled for Q4.`,
-    contentAr: `أعلن القائمون على تطبيق كارتي تجاوز عدد مستخدمي التطبيق 95 ألف مستخدم مع بلوغ حجم الإنفاق الشهري عبر بطاقات المنصة أكثر من 4.2 مليون دولار.\n\nيقدم التطبيق، الذي أسسه محمد سليمان وعبدالعزيز المري، بطاقات فيزا مسبقة الدفع مع ميزات التنبيه الفوري وتصنيف المصروفات تلقائياً لمساعدة الشباب والعائلات على التخطيط المالي السليم، مع التحضير لإطلاق محافظ عملات متعددة قريباً.`,
-    category: 'funding',
-    publishedDate: '2026-07-28',
-    readTimeMinutes: 4,
-    author: 'FinTech Market Desk',
-    sourceCitation: 'Karty quarterly metrics announcement and App Store performance tracking',
-    sourceUrl: 'https://karty.qa',
-    likesCount: 36,
-    comments: []
-  },
-  {
-    id: 'news-10',
-    slug: 'droobi-health-chronic-disease-data',
-    titleEn: 'Droobi Health Clinical Registry Demonstrates Measurable HbA1c Reduction in 15,000 Patients',
-    titleAr: 'سجل دروبي للصحة السريري يوثق انخفاضاً ملموساً في السكري التراكمي لدى 15 ألف مريض',
-    summaryEn: 'Digital therapeutics app published clinical outcomes demonstrating significant HbA1c improvements and sustained weight loss through bilingual behavioral coaching.',
-    summaryAr: 'أظهرت البيانات السريرية المنشورة لشركة دروبي انخفاضاً كبيراً في معدلات السكر التراكمي وتحسناً في نمط الحياة لآلاف المرضى في دول الخليج.',
-    contentEn: `Digital chronic disease management provider Droobi Health released its annual clinical efficacy report covering more than 15,000 enrolled patients managing Type 2 diabetes and pre-diabetes in the Gulf region.\n\nAccording to the findings, patients utilizing Droobi’s Arabic-language coaching curriculum and continuous blood glucose monitor integrations achieved an average HbA1c reduction of 1.2% over a 16-week intervention period, with 68% maintaining improved metabolic parameters at the one-year follow-up mark.\n\nFounder Majed Lababidi emphasized that culturally contextualized lifestyle guidance—incorporating regional recipes, prayer timings, and local physical activity patterns—was the critical differentiator in driving sustained patient engagement compared to imported international wellness apps.`,
-    contentAr: `نشرت منصة دروبي للصحة تقريرها السنوي لنتائج البرامج العلاجية الرقمية لأكثر من 15,000 مريض بالسكري من النوع الثاني في منطقة الخليج.\n\nأثبتت النتائج انخفاض متوسط السكر التراكمي (HbA1c) بنسبة 1.2% خلال 16 أسبوعاً مع الحفاظ على النتائج الإيجابية لأكثر من 68% من المرضى بعد عام كامل، بفضل المتابعة التغذوية المستمرة والتكيف مع العادات الغذائية المحلية.`,
-    category: 'trends',
-    publishedDate: '2026-07-21',
-    readTimeMinutes: 5,
-    author: 'HealthTech & Bio Desk',
-    sourceCitation: 'Droobi Health Clinical Registry Publication and Middle East Diabetes Summit Data',
-    sourceUrl: 'https://droobihealth.com',
-    likesCount: 27,
-    comments: []
-  },
-  {
-    id: 'news-11',
-    slug: 'simplified-tech-startup-cr-licensing-window',
-    titleEn: 'Commercial Registration Updates: Simplified Digital Licensing Framework for Tech Startups',
-    titleAr: 'تحديثات السجل التجاري: إطلاق نافذة رقمية موحدة ومبسطة لتأسيس الشركات التكنولوجية',
-    summaryEn: 'Corporate lawyers and startup advisors highlight new electronic licensing pathways that eliminate physical office mandates for early-stage software and digital media companies.',
-    summaryAr: 'أكد مستشارون قانونيون أن الإجراءات التنظيمية الجديدة تتيح لشركات البرمجيات والتطبيقات إصدار السجلات التجارية رقمياً دون اشتراط المقرات المكتبية في مراحل التأسيس الأولى.',
-    contentEn: `Corporate services specialists in Doha report strong founder uptake following the rollout of modernized digital business licensing pathways for technology ventures.\n\nUnder updated administrative procedures, early-stage technology companies focusing on software development, digital publishing, e-commerce brokerage, and artificial intelligence development can now obtain full Commercial Registrations (CR) through paperless electronic portals, with virtual co-working addresses recognized for the initial two years of corporate operations.\n\nThe reform substantially reduces upfront capital expenditures for self-funded founders and makes it easier for international angel investors to structure convertible loans and equity ownership interests directly in domestic entities.`,
-    contentAr: `شهدت بيئة الأعمال الرقمية في قطر تسهيلات ملحوظة بعد تفعيل مسارات التراخيص الإلكترونية الميسرة للشركات التكنولوجية الناشئة.\n\nتتيح هذه الإجراءات لمطوري البرمجيات ومنصات الذكاء الاصطناعي والتجارة الإلكترونية إصدار السجل التجاري دون اشتراط عقد إيجار لمكتب تقليدي خلال أول عامين، والاعتماد على مساحات العمل المشتركة، مما يوفر تكاليف التأسيس ويعزز جذب الاستثمارات الخارجية.`,
-    category: 'policy',
-    publishedDate: '2026-07-14',
-    readTimeMinutes: 4,
-    author: 'Legal & Business Practice Reporter',
-    sourceCitation: 'Public ministry guidelines and Doha commercial advisory bulletins',
-    likesCount: 48,
-    comments: []
-  },
-  {
-    id: 'news-12',
-    slug: 'urbanpoint-expands-saas-footprint',
-    titleEn: 'UrbanPoint Expands Enterprise SaaS Footprint to Connect Over 300,000 Retail Users',
-    titleAr: 'إربان بوينت توسع برمجيات ولاء العملاء للشركات وتصل إلى أكثر من 300 ألف مستخدم',
-    summaryEn: 'B2B customer engagement platform scales partnerships across regional telecoms and financial apps, driving over $70 million in consumer spending to local merchants.',
-    summaryAr: 'حققت منصة إربان بوينت عوائد إنفاق تتجاوز 70 مليون دولار للمتاجر الشريكة عبر دمج برامج الولاء مع شركات الاتصالات والبنوك.',
-    contentEn: `Customer loyalty and merchant marketing platform UrbanPoint has cemented its position as a primary enterprise customer engagement engine in Qatar, connecting over 320,000 active subscribed members with retail discounts.\n\nCo-founders Saif Qazi and Susanna Ingalls reported that the platform’s merchant network now encompasses more than 1,400 dining, leisure, wellness, and beauty venues across Doha, Lusail, and Al Wakrah. By embedding loyalty software directly into mobile network operator bundles and consumer credit card portals, UrbanPoint has stimulated more than $70 million USD in consumer spending for local SMEs since its commercial launch.`,
-    contentAr: `عززت منصة إربان بوينت مكانتها كإحدى أبرز منصات برامج الولاء والمكافآت الترويجية للشركات، متجاوزة 320 ألف مستخدم نشط.\n\nتتعاون المنصة مع أكثر من 1400 متجر ومطعم ومرفق ترفيهي في قطر، وتوفر حلولاً برمجية مدمجة لكبرى شركات الاتصالات والمؤسسات المصرفية، مما ولد معاملات إنفاق تجاوزت 70 مليون دولار لصالح المنشآت التجارية الصغيرة والمتوسطة.`,
-    category: 'spotlight',
-    publishedDate: '2026-07-07',
-    readTimeMinutes: 4,
-    author: 'Enterprise & SaaS Team',
-    sourceCitation: 'UrbanPoint annual merchant impact report',
-    sourceUrl: 'https://urbanpoint.com',
-    isSpotlight: true,
-    spotlightCompanyId: 'urbanpoint',
-    spotlightStats: [
-      { label: 'Active Users', value: '320,000+' },
-      { label: 'Merchant Outlets', value: '1,400+' },
-      { label: 'Spend Generated', value: '$70M+ USD' },
-      { label: 'Partner Telecoms', value: '3 Carriers' }
-    ],
-    likesCount: 19,
-    comments: []
-  },
-  {
-    id: 'news-13',
-    slug: 'web-summit-qatar-pitch-recap',
-    titleEn: 'Web Summit Qatar Startup Showcase Attracts Over 80 Regional Startups to Pitch Stage',
-    titleAr: 'منصة مسابقات الشركات الناشئة في قمة الويب قطر تستقطب أكثر من 80 شركة إقليمية',
-    summaryEn: 'High-caliber international angel syndicates and regional venture capital funds gathered in Doha for three days of high-intensity pitch sessions and investor matchmaking.',
-    summaryAr: 'شهدت فعاليات قمة الويب في الدوحة مشاركة واسعة لمستثمرين ملائكيين وصناديق رأس مال جريء خلال مسابقات العروض التقديمية للشركات الناشئة.',
-    contentEn: `The international technology conference in Doha hosted over 80 emerging technology startups from across the MENA region, Central Asia, and East Africa for its annual pitch competition and investor discovery tracks.\n\nFounders presented solutions spanning artificial intelligence agents, cross-border supply chain logistics, solar desalination, and digital financial inclusion before judging panels comprised of regional VC partners and angel syndicate leaders. Several Qatari startups, including SkipCash and Avey AI, led thematic breakout sessions highlighting their scaling journeys and unit economic milestones.`,
-    contentAr: `استضافت قمة التكنولوجيا في الدوحة أكثر من 80 شركة ناشئة واعدة من منطقة الشرق الأوسط وشمال أفريقيا وآسيا الوسطى لتقديم عروضها أمام لجان من المستثمرين الجريئين وقادة الأعمال.\n\nركزت المشاريع على تطبيقات الذكاء الاصطناعي، والخدمات اللوجستية، وتقنيات الطاقة النظيفة، مع مشاركة فاعلة لرواد الأعمال في قطر لتبادل الخبرات وعقد شراكات استثمارية.`,
-    category: 'events',
-    publishedDate: '2026-06-30',
-    readTimeMinutes: 4,
-    author: 'Ecosystem Events Desk',
-    sourceCitation: 'Summit session summaries and investor attendee polling',
-    likesCount: 35,
-    comments: []
-  },
-  {
-    id: 'news-14',
-    slug: 'cleantech-energy-transition-pitch-day',
-    titleEn: 'CleanTech Innovation: Private Energy Transition Pitch Day Showcases Agritech & Water Startups',
-    titleAr: 'ابتكارات التكنولوجيا النظيفة: يوم عروض تحول الطاقة يستعرض تقنيات الزراعة الذكية ومعالجة المياه',
-    summaryEn: 'Eight regional climate-tech and sustainable engineering startups pitched novel desert hydroponic systems and industrial water recycling solutions to private institutional capital.',
-    summaryAr: 'استعرضت 8 شركات متخصصة في تكنولوجيا المناخ والطاقة المستدامة مشاريعها في الزراعة المائية الصحوية وتدوير المياه الصناعية أمام مستثمرين من القطاع الخاص.',
-    contentEn: `Private climate and sustainability investors convened in Education City for the annual CleanTech Pitch Day, focusing on technological solutions capable of thriving in arid climates.\n\nPresenting companies demonstrated innovations including solar-powered atmospheric water generators, AI-controlled micro-climate greenhouses with 90% reduced irrigation requirements, and recycled aggregate construction materials. Private family office allocators in attendance highlighted growing institutional appetites for commercially viable sustainable industrial technology that aligns with long-term regional economic resilience.`,
-    contentAr: `شهدت المدينة التعليمية فعاليات يوم عروض التكنولوجيا النظيفة بمشاركة نخبة من المستثمرين في قطاعات الاستدامة والطاقة المتجددة.\n\nاستعرضت الشركات حلولاً متطورة لتوليد المياه من رطوبة الهواء، والبيوت المحمية الذكية منخفضة استهلاك الطاقة، وإعادة تدوير المخلفات الصناعية، وسط اهتمام متزايد من المكاتب العائلية بتمويل المشاريع ذات العوائد البيئية والاقتصادية المستدامة.`,
-    category: 'events',
-    publishedDate: '2026-06-20',
-    readTimeMinutes: 4,
-    author: 'Energy & CleanTech Reporter',
-    sourceCitation: 'Innovation Showcase Event Proceedings and Participating Investor Statements',
-    likesCount: 26,
-    comments: []
-  },
-  {
-    id: 'news-15',
-    slug: 'angel-syndicate-safe-notes-guide',
-    titleEn: 'Angel Investing in Qatar: How Private Syndicates Are Structuring Convertible Notes and SAFEs',
-    titleAr: 'الاستثمار الملائكي في قطر: كيف توظف الشبكات الاستثمارية سندات التمويل القابلة للتحويل (SAFE)؟',
-    summaryEn: 'A deep-dive legal and financial guide exploring valuation caps, discount mechanisms, and QFC SPV holding structures used by local angel syndicates.',
-    summaryAr: 'دليل مالي وقانوني متخصص يشرح آليات تحديد سقوف التقييم وهياكل الشركات ذات الغرض الخاص (SPVs) في صفقات التمويل الملائكي المبكر.',
-    contentEn: `As early-stage venture funding expands in Doha, private angel investors and syndicates are increasingly migrating from traditional high-friction equity rounds toward standardized Simple Agreements for Future Equity (SAFE) and convertible loan notes.\n\nAccording to leading corporate transaction attorneys in Doha, utilizing SAFEs with pre-money valuation caps between $3M and $6M USD enables startups to secure capital commitments in days rather than months, delaying complex cap table legal reconciliations until a formal Series A lead investor enters.\n\nThis article reviews standard customary terms in Qatari deals—including 20% conversion discounts, pro-rata information rights, and holding company structuring through the Qatar Financial Centre (QFC)—providing founders and angels with an objective template for equitable early-stage deal structuring.`,
-    contentAr: `مع تزايد نشاط التمويل التأسيسي في الدوحة، يتجه المستثمرون الملائكيون ورواد الأعمال نحو اعتماد اتفاقيات التمويل المستقبلية البسيطة (SAFE) والسندات القابلة للتحويل بدلاً من جولات الأسهم المعقدة.\n\nيتناول هذا التقرير التفصيلي أبرز الشروط المتبعة في السوق المحلي، بما فيها خصومات التحويل بنسبة 20%، وسقوف التقييم المتداولة بين 3 و6 ملايين دولار، وتأسيس الكيانات القابضة عبر مركز قطر للمال لضمان حقوق كافة الأطراف بمرونة وكفاءة.`,
-    category: 'trends',
-    publishedDate: '2026-06-10',
-    readTimeMinutes: 6,
-    author: 'Venture Legal & Capital Structuring Desk',
-    sourceCitation: 'Legal survey of Doha tech transaction practices and QFC corporate code',
-    likesCount: 63,
-    comments: [
+    "keyPeople": [
       {
-        id: 'c5',
-        authorName: 'Abdullah Al-Sulaiti',
-        authorRole: 'Managing Director',
-        authorOrg: 'Al-Sulaiti Law Firm',
-        comment: 'Essential reading for any founder in Qatar raising a pre-seed round. Using standard SAFE agreements prevents costly restructuring down the road.',
-        createdAt: '2026-06-11T16:40:00Z',
-        likes: 21
+        "name": "Hamad Al-Hajri",
+        "nameAr": "حمد الهاجري",
+        "role": "Founder & CEO",
+        "roleAr": "المؤسس والرئيس التنفيذي"
+      },
+      {
+        "name": "Sabah Al-Kuwari",
+        "nameAr": "صباح الكواري",
+        "role": "Chief Operating Officer",
+        "roleAr": "رئيس العمليات"
       }
-    ]
+    ],
+    "metrics": {
+      "Monthly Orders": "1,200,000+",
+      "Active Merchants": "4,500+",
+      "Driver Fleet": "2,200+",
+      "Domestic Market Share": "64%"
+    },
+    "isFeatured": true,
+    "contactEmail": "partnerships@snoonu.com"
+  },
+  {
+    "id": "skipcash",
+    "slug": "skipcash",
+    "name": "SkipCash",
+    "nameAr": "سكيب كاش",
+    "tagline": "Leading mobile payment gateway and digital point-of-sale platform in Qatar",
+    "taglineAr": "بوابة المدفوعات ونقاط البيع الرقمية الرائدة في قطر",
+    "description": "SkipCash delivers frictionless contactless payments, payment link invoicing, and integrated merchant checkouts for enterprise retailers and digital platforms across Qatar.",
+    "descriptionAr": "منصة دفع رقمية مبتكرة تمكّن التجار والمستهلكين من إتمام المعاملات النقدية الرقمية وربط بوابات التجارة الإلكترونية بسلاسة وأمان.",
+    "type": "startup",
+    "sector": "FinTech",
+    "stage": "Series A",
+    "foundedYear": 2020,
+    "teamSize": "40 FTEs",
+    "headquarters": "West Bay, Doha",
+    "headquartersAr": "الخليج الغربي، الدوحة",
+    "website": "https://skipcash.com",
+    "logo": "SC",
+    "logoBg": "#10B981",
+    "verified": true,
+    "claimed": true,
+    "claimedByEmail": "info@skipcash.com",
+    "sourceCitation": "Series A $5M + Seed $2M sourced via official press releases & Doha Tech Angels syndication",
+    "totalFundingRaisedQar": "25,480,000 QAR",
+    "totalFundingRaisedUsd": "$7,000,000 USD",
+    "fundingRounds": [
+      {
+        "round": "Series A",
+        "amountQar": "18.2M QAR",
+        "amountUsd": "$5.0M USD",
+        "date": "2023-11-10",
+        "leadInvestor": "Private Family Capital & Regional VCs"
+      },
+      {
+        "round": "Seed",
+        "amountQar": "7.28M QAR",
+        "amountUsd": "$2.0M USD",
+        "date": "2021-06-05",
+        "leadInvestor": "Angel Investors Network"
+      }
+    ],
+    "institutionalBacking": [
+      "FinTech Accelerators",
+      "Commercial Banking Partners",
+      "Private Angel Consortium"
+    ],
+    "keyPeople": [
+      {
+        "name": "Mohammed Al-Delaimi",
+        "nameAr": "محمد الدليمي",
+        "role": "Founder & CEO",
+        "roleAr": "المؤسس والرئيس التنفيذي"
+      }
+    ],
+    "metrics": {
+      "Processed Transactions": "1.5M+ transactions",
+      "Merchant Network": "1,800+ stores",
+      "Annual Processing Volume": "$180M+ USD"
+    },
+    "isFeatured": true,
+    "contactEmail": "contact@skipcash.com"
+  },
+  {
+    "id": "cwallet",
+    "slug": "cwallet",
+    "name": "Cwallet",
+    "nameAr": "سي والت",
+    "tagline": "Licensed neo-banking, mobile payroll, and financial inclusion ecosystem",
+    "taglineAr": "منظومة مصرفية رقمية وحلول شمول مالي ودفع أجور مرخصة",
+    "description": "Cwallet provides digital mobile payroll, low-cost cross-border remittances, utility payments, and micro-savings specifically tailored for resident workforces and unbanked communities.",
+    "descriptionAr": "منصة تكنولوجيا مالية تقدم حلول دفع الأجور والتحويلات المالية الدولية والمدفوعات غير النقدية لتعزيز الشمول المالي.",
+    "type": "startup",
+    "sector": "FinTech",
+    "stage": "Series A",
+    "foundedYear": 2020,
+    "teamSize": "45 FTEs",
+    "headquarters": "Qatar Financial Centre (QFC), West Bay",
+    "headquartersAr": "مركز قطر للمال، الخليج الغربي",
+    "website": "https://cwallet.qa",
+    "logo": "CW",
+    "logoBg": "#0D9488",
+    "verified": true,
+    "claimed": true,
+    "claimedByEmail": "support@cwallet.qa",
+    "sourceCitation": "Series A $4M (Rasmal Ventures & Al-Mana Capital) + Seed $2M (QFC filings)",
+    "totalFundingRaisedQar": "21,840,000 QAR",
+    "totalFundingRaisedUsd": "$6,000,000 USD",
+    "fundingRounds": [
+      {
+        "round": "Series A",
+        "amountQar": "14.5M QAR",
+        "amountUsd": "$4.0M USD",
+        "date": "2024-01-18",
+        "leadInvestor": "Rasmal Ventures & Al-Mana Capital"
+      },
+      {
+        "round": "Seed",
+        "amountQar": "7.3M QAR",
+        "amountUsd": "$2.0M USD",
+        "date": "2021-12-10",
+        "leadInvestor": "MBK Holding & Regional Angel Syndicate"
+      }
+    ],
+    "institutionalBacking": [
+      "FinTech Regulatory Sandbox",
+      "Regional Seed Programs",
+      "Family Office Syndicates"
+    ],
+    "keyPeople": [
+      {
+        "name": "Michael Javier",
+        "nameAr": "مايكل خافيير",
+        "role": "Co-Founder & CEO",
+        "roleAr": "المؤسس الشريك والرئيس التنفيذي"
+      },
+      {
+        "name": "Abdulaziz Al-Khal",
+        "nameAr": "عبدالعزيز الخال",
+        "role": "Co-Founder & Director",
+        "roleAr": "مؤسس شريك وعضو مجلس الإدارة"
+      }
+    ],
+    "metrics": {
+      "Registered Wallets": "220,000+",
+      "Payroll Volume (Monthly)": "45M QAR",
+      "Corridor Partners": "12 Countries"
+    },
+    "isFeatured": true,
+    "contactEmail": "support@cwallet.qa"
+  },
+  {
+    "id": "avey-health",
+    "slug": "avey-health",
+    "name": "Avey AI Health",
+    "nameAr": "آفي للذكاء الاصطناعي الصحي",
+    "tagline": "DeepTech AI diagnostic self-assessment and medical triage intelligence",
+    "taglineAr": "محرك تشخيص وتوجيه طبي متطور مدعوم بنماذج الذكاء الاصطناعي السريرية",
+    "description": "Developed by computer scientists and physicians in Doha, Avey utilizes customized machine learning and clinical reasoning engines to provide instant medical diagnosis with higher than 92% clinical accuracy.",
+    "descriptionAr": "منصة تكنولوجيا صحية طورتها فرق بحثية في الدوحة لتقديم استشارات وتشخيصات طبية مدعومة بالذكاء الاصطناعي.",
+    "type": "startup",
+    "sector": "HealthTech & Bio",
+    "stage": "Series A",
+    "foundedYear": 2021,
+    "teamSize": "55 FTEs",
+    "headquarters": "Qatar Science & Technology Park, Education City",
+    "headquartersAr": "واحة قطر للعلوم والتكنولوجيا، المدينة التعليمية",
+    "website": "https://avey.ai",
+    "logo": "AV",
+    "logoBg": "#2563EB",
+    "verified": true,
+    "claimed": true,
+    "claimedByEmail": "contact@avey.ai",
+    "sourceCitation": "Series A $5.5M + Seed $3.0M sourced via QSTP announcements & bio-venture syndicates",
+    "totalFundingRaisedQar": "31,000,000 QAR",
+    "totalFundingRaisedUsd": "$8,500,000 USD",
+    "fundingRounds": [
+      {
+        "round": "Series A",
+        "amountQar": "20.0M QAR",
+        "amountUsd": "$5.5M USD",
+        "date": "2024-02-14",
+        "leadInvestor": "Global Healthtech Syndicate & Doha Family Capital"
+      },
+      {
+        "round": "Seed",
+        "amountQar": "11.0M QAR",
+        "amountUsd": "$3.0M USD",
+        "date": "2022-01-20",
+        "leadInvestor": "Health Venture Angels"
+      }
+    ],
+    "institutionalBacking": [
+      "Technology Park Research Fund",
+      "Global Bio-Ventures Consortium"
+    ],
+    "keyPeople": [
+      {
+        "name": "Dr. Mohammad Hammoud",
+        "nameAr": "د. محمد حمود",
+        "role": "Founder & CEO",
+        "roleAr": "المؤسس والرئيس التنفيذي"
+      }
+    ],
+    "metrics": {
+      "Diagnostic Assessments": "3,400,000+",
+      "Clinical Diagnostic Accuracy": "93.4%",
+      "Global User Reach": "140+ Countries"
+    },
+    "isFeatured": true,
+    "contactEmail": "contact@avey.ai"
+  },
+  {
+    "id": "urbanpoint",
+    "slug": "urbanpoint",
+    "name": "UrbanPoint",
+    "nameAr": "إربان بوينت",
+    "tagline": "Enterprise customer loyalty, retention, and merchant discovery marketplace",
+    "taglineAr": "منصة برامج الولاء للشركات وتفعيل عروض التجار والمطاعم",
+    "description": "UrbanPoint is an enterprise customer engagement and lifestyle rewards platform that partners with major telecom carriers and financial institutions to drive local retail and hospitality transactions.",
+    "descriptionAr": "منصة رقمية لبرامج ولاء العملاء والعروض الترويجية تعتمد على الشراكات مع كبرى شركات الاتصالات والبنوك.",
+    "type": "startup",
+    "sector": "Enterprise & SaaS",
+    "stage": "Series A",
+    "foundedYear": 2016,
+    "teamSize": "30 FTEs",
+    "headquarters": "Al Sadd, Doha",
+    "headquartersAr": "السد، الدوحة",
+    "website": "https://urbanpoint.com",
+    "logo": "UP",
+    "logoBg": "#E11D48",
+    "verified": true,
+    "claimed": false,
+    "sourcingNote": "Unverified — sourced from public data",
+    "totalFundingRaisedQar": "14,560,000 QAR",
+    "totalFundingRaisedUsd": "$4,000,000 USD",
+    "institutionalBacking": [
+      "Telecom Innovation Alliances",
+      "Regional Seed Accelerators"
+    ],
+    "keyPeople": [
+      {
+        "name": "Saif Qazi",
+        "nameAr": "سيف قاضي",
+        "role": "Co-Founder & Managing Director",
+        "roleAr": "مؤسس شريك ومدير تنفيذي"
+      },
+      {
+        "name": "Susanna Ingalls",
+        "nameAr": "سوزانا إينغالز",
+        "role": "Co-Founder & Head of Product",
+        "roleAr": "مؤسسة شريكة ورئيسة المنتج"
+      }
+    ],
+    "metrics": {
+      "Active Subscribed Users": "320,000+",
+      "Partner Merchant Outlets": "1,400+",
+      "Customer Spend Driven": "$70M+ USD"
+    },
+    "isFeatured": false,
+    "contactEmail": "hello@urbanpoint.com"
+  },
+  {
+    "id": "droobi-health",
+    "slug": "droobi-health",
+    "name": "Droobi Health",
+    "nameAr": "دروبي للصحة",
+    "tagline": "Bilingual digital therapeutics for diabetes prevention and chronic condition care",
+    "taglineAr": "منصة علاجية رقمية متقدمة لإدارة داء السكري والأمراض المزمنة باللغة العربية",
+    "description": "Clinically validated digital health intervention app providing personalized lifestyle coaching, glucose tracking, and nutritionist consultations calibrated for Arab dietary patterns.",
+    "descriptionAr": "تطبيق علاجي رقمي معتمد سريرياً يقدّم برامج توجيه صحي وتغذوي لإدارة داء السكري والوقاية منه.",
+    "type": "startup",
+    "sector": "HealthTech & Bio",
+    "stage": "Series A",
+    "foundedYear": 2018,
+    "teamSize": "38 FTEs",
+    "headquarters": "Education City, Doha",
+    "headquartersAr": "المدينة التعليمية، الدوحة",
+    "website": "https://droobihealth.com",
+    "logo": "DH",
+    "logoBg": "#14B8A6",
+    "verified": true,
+    "claimed": true,
+    "claimedByEmail": "team@droobihealth.com",
+    "sourceCitation": "Series A $3.5M (Healthcare Venture Partners) + Seed $1.5M",
+    "totalFundingRaisedQar": "18,200,000 QAR",
+    "totalFundingRaisedUsd": "$5,000,000 USD",
+    "institutionalBacking": [
+      "Healthcare Research Consortiums",
+      "Regional Venture Syndicate"
+    ],
+    "keyPeople": [
+      {
+        "name": "Majed Lababidi",
+        "nameAr": "مجد لبابيدي",
+        "role": "Founder & CEO",
+        "roleAr": "المؤسس والرئيس التنفيذي"
+      }
+    ],
+    "metrics": {
+      "Patients Monitored": "15,000+",
+      "Average HbA1c Reduction": "-1.2%",
+      "Clinical Health System Deployments": "6 Networks"
+    },
+    "isFeatured": false,
+    "contactEmail": "team@droobihealth.com"
+  },
+  {
+    "id": "karty",
+    "slug": "karty",
+    "name": "Karty",
+    "nameAr": "كارتي",
+    "tagline": "Smart consumer spend management, budget automation, and virtual Visa cards",
+    "taglineAr": "إدارة الإنفاق الذكي والميزانيات التلقائية والبطاقات المالية الرقمية",
+    "description": "Karty is an e-wallet platform approved under Qatar Central Bank testing sandbox regulations. Allows users to track daily expenses, categorize transactions automatically, and execute peer-to-peer transfers.",
+    "descriptionAr": "محفظة مالية رقمية مرخصة من مصرف قطر المركزي توفر تتبع الإنفاق والبطاقات الذكية المدفوعة مسبقاً.",
+    "type": "startup",
+    "sector": "FinTech",
+    "stage": "Seed",
+    "foundedYear": 2021,
+    "teamSize": "22 FTEs",
+    "headquarters": "Qatar Financial Centre (QFC), Doha",
+    "headquartersAr": "مركز قطر للمال، الدوحة",
+    "website": "https://karty.qa",
+    "logo": "KT",
+    "logoBg": "#F59E0B",
+    "verified": true,
+    "claimed": true,
+    "claimedByEmail": "founders@karty.qa",
+    "sourceCitation": "Seed $3.2M raised across angel syndicates & FinTech investors",
+    "totalFundingRaisedQar": "11,648,000 QAR",
+    "totalFundingRaisedUsd": "$3,200,000 USD",
+    "institutionalBacking": [
+      "FinTech Incubators",
+      "Commercial Bank Sponsorship",
+      "Regional Angel Group"
+    ],
+    "keyPeople": [
+      {
+        "name": "Mohammed Suleiman",
+        "nameAr": "محمد سليمان",
+        "role": "Co-Founder & CEO",
+        "roleAr": "المؤسس الشريك والرئيس التنفيذي"
+      },
+      {
+        "name": "Abdulaziz Al-Marri",
+        "nameAr": "عبدالعزيز المري",
+        "role": "Co-Founder & COO",
+        "roleAr": "المؤسس الشريك ورئيس العمليات"
+      }
+    ],
+    "metrics": {
+      "Waitlist & Active Downloads": "95,000+",
+      "Transactions Categorized": "1,200,000+",
+      "Sandbox Authorization": "Completed"
+    },
+    "isFeatured": false,
+    "contactEmail": "hello@karty.qa"
+  },
+  {
+    "id": "airlift-systems",
+    "slug": "airlift-systems",
+    "name": "Airlift Systems",
+    "nameAr": "إيرلفت سيستمز",
+    "tagline": "Autonomous hardware robotics and solar-powered last-mile micro-fulfillment vehicles",
+    "taglineAr": "أنظمة روبوتية ذاتية القيادة ومركبات كهربائية لتوصيل الشحنات والميل الأخير",
+    "description": "Airlift designs and manufactures self-driving electric ground delivery robots and automated parcel lockers tailored for university campuses, hospitals, and smart master-planned communities.",
+    "descriptionAr": "تصميم وتشغيل مركبات توصيل روبوتية ذاتية القيادة وخزائن طرود ذكية للمجمعات السكنية والجامعية.",
+    "type": "startup",
+    "sector": "Robotics & AI",
+    "stage": "Seed",
+    "foundedYear": 2020,
+    "teamSize": "28 Engineers",
+    "headquarters": "Qatar Science & Technology Park",
+    "headquartersAr": "واحة قطر للعلوم والتكنولوجيا",
+    "website": "https://airlift.qa",
+    "logo": "AL",
+    "logoBg": "#475569",
+    "verified": true,
+    "claimed": true,
+    "claimedByEmail": "contact@airlift.qa",
+    "sourceCitation": "Seed $2.4M sourced via DeepTech angel syndicates and QSTP tech venture matching",
+    "totalFundingRaisedQar": "8,736,000 QAR",
+    "totalFundingRaisedUsd": "$2,400,000 USD",
+    "institutionalBacking": [
+      "DeepTech Venture Accelerators",
+      "Autonomous Vehicle Testing Sandbox"
+    ],
+    "keyPeople": [
+      {
+        "name": "Ahmed Mohamedali",
+        "nameAr": "أحمد محمد علي",
+        "role": "CEO & Founder",
+        "roleAr": "الرئيس التنفيذي والمؤسس"
+      }
+    ],
+    "metrics": {
+      "Autonomous Kilometers Logged": "45,000+ km",
+      "Campus Delivery Missions": "12,000+",
+      "Carbon Emissions Saved": "18 Metric Tons"
+    },
+    "isFeatured": false,
+    "contactEmail": "contact@airlift.qa"
+  },
+  {
+    "id": "rimads",
+    "slug": "rimads",
+    "name": "Rimads",
+    "nameAr": "ريمادس",
+    "tagline": "Digital pharmacy aggregator, prescription fulfillment, and home diagnostic delivery",
+    "taglineAr": "منصة رقمية لربط الصيدليات وتوصيل الأدوية والوصفات الطبية المعتمدة",
+    "description": "Health marketplace enabling patients to upload prescriptions, compare pharmaceutical inventories across 85+ licensed Doha pharmacies, and receive cold-chain doorstep delivery in under 45 minutes.",
+    "descriptionAr": "منصة تكنولوجيا صحية تسهل طلب الأدوية ومستحضرات الرعاية الصحية من الصيدليات المعتمدة مع خدمة التوصيل السريع.",
+    "type": "startup",
+    "sector": "HealthTech & Bio",
+    "stage": "Seed",
+    "foundedYear": 2019,
+    "teamSize": "24 FTEs",
+    "headquarters": "Lusail Marina, Qatar",
+    "headquartersAr": "مارينا لوسيل، قطر",
+    "website": "https://rimads.com",
+    "logo": "RM",
+    "logoBg": "#9333EA",
+    "verified": true,
+    "claimed": false,
+    "sourcingNote": "Unverified — sourced from public data",
+    "totalFundingRaisedQar": "5,460,000 QAR",
+    "totalFundingRaisedUsd": "$1,500,000 USD",
+    "institutionalBacking": [
+      "Health Innovation Syndicates",
+      "Angel Investors"
+    ],
+    "keyPeople": [
+      {
+        "name": "Dr. Khalid Al-Ali",
+        "nameAr": "د. خالد العلي",
+        "role": "Co-Founder & Clinical Advisor",
+        "roleAr": "مؤسس شريك ومستشار طبي"
+      }
+    ],
+    "metrics": {
+      "Fulfilled Prescriptions": "85,000+",
+      "Partner Pharmacies": "85 Locations",
+      "Delivery SLA": "< 45 Minutes"
+    },
+    "isFeatured": false,
+    "contactEmail": "info@rimads.com"
+  },
+  {
+    "id": "applab",
+    "slug": "applab",
+    "name": "Applab",
+    "nameAr": "آب لاب",
+    "tagline": "Leading software product engineering, digital design studio, and enterprise platform builder",
+    "taglineAr": "استوديو تطوير البرمجيات والمنصات الرقمية وتطبيقات الشركات الكبرى",
+    "description": "Founded in Doha, Applab is a recognized technology engineering company delivering high-traffic web and mobile platforms, government digital portals, and bespoke SaaS architectures across Qatar.",
+    "descriptionAr": "شركة هندسة برمجيات قطرية متخصصة في بناء التطبيقات والحلول الرقمية للشركات والمؤسسات الحكومية والخاصة.",
+    "type": "startup",
+    "sector": "Enterprise & SaaS",
+    "stage": "Growth",
+    "foundedYear": 2016,
+    "teamSize": "65 Engineers & Designers",
+    "headquarters": "Lusail City, Qatar",
+    "headquartersAr": "مدينة لوسيل، قطر",
+    "website": "https://applab.qa",
+    "logo": "AP",
+    "logoBg": "#0284C7",
+    "verified": true,
+    "claimed": false,
+    "sourcingNote": "Unverified — sourced from public data",
+    "totalFundingRaisedQar": "9,100,000 QAR",
+    "totalFundingRaisedUsd": "$2,500,000 USD",
+    "institutionalBacking": [
+      "Private Corporate Contracts",
+      "Technology Ecosystem Syndicates"
+    ],
+    "keyPeople": [
+      {
+        "name": "Mohamed Al-Mulla",
+        "nameAr": "محمد الملا",
+        "role": "Managing Partner & Founder",
+        "roleAr": "شريك إداري ومؤسس"
+      }
+    ],
+    "metrics": {
+      "Enterprise Platforms Delivered": "120+ Products",
+      "Active Monthly End Users": "2.5M+",
+      "Technical Team": "65+ FTEs"
+    },
+    "isFeatured": false,
+    "contactEmail": "info@applab.qa"
+  },
+  {
+    "id": "subol",
+    "slug": "subol",
+    "name": "Subol",
+    "nameAr": "سبل للابتكار",
+    "tagline": "Smart IoT hardware, LPWAN environmental sensing, and industrial safety devices",
+    "taglineAr": "أجهزة استشعار وإنترنت الأشياء للسلامة الصناعية والمراقبة البيئية",
+    "description": "Subol engineers proprietary IoT sensor hardware, developing the Sargas gas leak detection ecosystem that alerts homeowners and facilities teams to combustible gas accumulation in real time.",
+    "descriptionAr": "شركة أجهزة تقنية وإنترنت الأشياء طورت جهاز سارجاس الذكي لكشف تسربات الغاز والإنذار المبكر في المنازل والمنشآت.",
+    "type": "startup",
+    "sector": "DeepTech & AI",
+    "stage": "Seed",
+    "foundedYear": 2018,
+    "teamSize": "16 Hardware Engineers",
+    "headquarters": "Qatar Science & Technology Park",
+    "headquartersAr": "واحة قطر للعلوم والتكنولوجيا",
+    "website": "https://subol.qa",
+    "logo": "SB",
+    "logoBg": "#EA580C",
+    "verified": true,
+    "claimed": false,
+    "sourcingNote": "Unverified — sourced from public data",
+    "totalFundingRaisedQar": "3,100,000 QAR",
+    "totalFundingRaisedUsd": "$850,000 USD",
+    "institutionalBacking": [
+      "QSTP Product Development Fund",
+      "Hardware Tech Angels"
+    ],
+    "keyPeople": [
+      {
+        "name": "Saleh Safran",
+        "nameAr": "صالح سفران",
+        "role": "Founder & CEO",
+        "roleAr": "المؤسس والرئيس التنفيذي"
+      }
+    ],
+    "metrics": {
+      "Sensors Deployed": "4,500+ Units",
+      "Gas Leak Alerts Triggered": "140+ Prevented Incidents",
+      "Patents Registered": "2 Patents"
+    },
+    "isFeatured": false,
+    "contactEmail": "contact@subol.qa"
+  },
+  {
+    "id": "em5-education",
+    "slug": "em5-education",
+    "name": "EM5 (Education Media)",
+    "nameAr": "إي إم 5 للتعليم التفاعلي",
+    "tagline": "Gamified EdTech platform, interactive curricula, and student engagement tooling",
+    "taglineAr": "منصة تكنولوجيا تعليم تفاعلية ومناهج رقمية معززة بالألعاب للطلاب",
+    "description": "EdTech venture developing customized interactive learning modules and gamified STEM assessments aligned with national educational standards for K-12 schools.",
+    "descriptionAr": "منصة تعليمية متطورة تقدم حلول التعلم التفاعلي ومحتوى رقمي للمدارس والمؤسسات الأكاديمية.",
+    "type": "startup",
+    "sector": "Enterprise & SaaS",
+    "stage": "Seed",
+    "foundedYear": 2021,
+    "teamSize": "14 Specialists",
+    "headquarters": "Education City, Doha",
+    "headquartersAr": "المدينة التعليمية، الدوحة",
+    "website": "https://em5.qa",
+    "logo": "EM",
+    "logoBg": "#8B5CF6",
+    "verified": true,
+    "claimed": false,
+    "sourcingNote": "Unverified — sourced from public data",
+    "totalFundingRaisedQar": "2,184,000 QAR",
+    "totalFundingRaisedUsd": "$600,000 USD",
+    "institutionalBacking": [
+      "Education Innovation Grants",
+      "Angel Investors"
+    ],
+    "keyPeople": [
+      {
+        "name": "Fatima Al-Kuwari",
+        "nameAr": "فاطمة الكواري",
+        "role": "Founder & Curriculum Lead",
+        "roleAr": "المؤسسة ومسؤولة المناهج"
+      }
+    ],
+    "metrics": {
+      "Enrolled Students": "35,000+",
+      "Partner Schools": "28 Schools",
+      "Learning Completion Rate": "88%"
+    },
+    "isFeatured": false,
+    "contactEmail": "learn@em5.qa"
+  },
+  {
+    "id": "atpick",
+    "slug": "atpick",
+    "name": "AtPick",
+    "nameAr": "أت بيك",
+    "tagline": "Smart click-and-collect ordering network and digital retail drive-thru solutions",
+    "taglineAr": "شبكة الاستلام الذكي من المتاجر وحلول الدفع والاستلام بالسيارة",
+    "description": "AtPick connects consumers to local cafes, bakeries, and boutique retail shops for seamless curb-side pick-up without waiting in line, optimizing drive-thru throughput.",
+    "descriptionAr": "تطبيق ذكي يتيح طلب القهوة والمأكولات واستلامها من السيارة أو المتجر مباشرة دون انتظار.",
+    "type": "startup",
+    "sector": "Logistics & Supply Chain",
+    "stage": "Seed",
+    "foundedYear": 2020,
+    "teamSize": "18 FTEs",
+    "headquarters": "West Bay, Doha",
+    "headquartersAr": "الخليج الغربي، الدوحة",
+    "website": "https://atpick.qa",
+    "logo": "AP",
+    "logoBg": "#D97706",
+    "verified": true,
+    "claimed": false,
+    "sourcingNote": "Unverified — sourced from public data",
+    "totalFundingRaisedQar": "4,368,000 QAR",
+    "totalFundingRaisedUsd": "$1,200,000 USD",
+    "institutionalBacking": [
+      "Retail Tech Angels",
+      "Local Seed Accelerators"
+    ],
+    "keyPeople": [
+      {
+        "name": "Jassim Al-Emadi",
+        "nameAr": "جاسم العمادي",
+        "role": "Founder & CEO",
+        "roleAr": "المؤسس والرئيس التنفيذي"
+      }
+    ],
+    "metrics": {
+      "Registered Merchant Stores": "450+",
+      "Orders Completed": "650,000+",
+      "Average Wait Time": "2.1 minutes"
+    },
+    "isFeatured": false,
+    "contactEmail": "contact@atpick.qa"
+  },
+  {
+    "id": "spendwisor",
+    "slug": "spendwisor",
+    "name": "Spendwisor",
+    "nameAr": "سبندوايزر",
+    "tagline": "Mobile m-POS payment platform with integrated algorithmic consumer cashback loyalty",
+    "taglineAr": "منصة دفع واسترداد نقدي ذكية تربط نقاط البيع ببرامج ولاء المستهلكين",
+    "description": "FinTech scaleup providing merchants with POS mobile payment capabilities, targeted customer analytics, and real-time algorithmic discount incentives on every checkout.",
+    "descriptionAr": "منصة تكنولوجيا مالية توفر حلول قبول المدفوعات عبر الهاتف واسترداد نقدي فوري للتجار والمتسوقين.",
+    "type": "startup",
+    "sector": "FinTech",
+    "stage": "Pre-Series A",
+    "foundedYear": 2020,
+    "teamSize": "26 FTEs",
+    "headquarters": "Qatar Financial Centre (QFC)",
+    "headquartersAr": "مركز قطر للمال، الدوحة",
+    "website": "https://spendwisor.com",
+    "logo": "SW",
+    "logoBg": "#10B981",
+    "verified": true,
+    "claimed": false,
+    "sourcingNote": "Unverified — sourced from public data",
+    "totalFundingRaisedQar": "6,552,000 QAR",
+    "totalFundingRaisedUsd": "$1,800,000 USD",
+    "institutionalBacking": [
+      "FinTech Syndicate",
+      "Regional Angel Group"
+    ],
+    "keyPeople": [
+      {
+        "name": "Safarudheen Farook",
+        "nameAr": "سفر الدين فاروق",
+        "role": "Co-Founder & CEO",
+        "roleAr": "المؤسس الشريك والرئيس التنفيذي"
+      }
+    ],
+    "metrics": {
+      "Merchant Checkouts": "1,200+ Stores",
+      "Transaction Volume Tracked": "$40M+ USD",
+      "Active Loyalty Users": "110,000+"
+    },
+    "isFeatured": false,
+    "contactEmail": "info@spendwisor.com"
+  },
+  {
+    "id": "dohabuddy",
+    "slug": "dohabuddy",
+    "name": "Dohabuddy",
+    "nameAr": "دوحة بادي",
+    "tagline": "AI concierge, personalized city discovery, and digital tourism experience platform",
+    "taglineAr": "مرشد ذكي ومنصة رقمية لتجارب السياحة واكتشاف الفعاليات في الدوحة",
+    "description": "Travel tech startup using AI conversational agents and localized recommendation algorithms to guide visitors and residents to events, dining, and cultural attractions.",
+    "descriptionAr": "تطبيق سياحي ذكي يقدم دليلاً تفاعلياً وتوصيات مخصصة للزوار والمقيمين لاكتشاف الفعاليات والمطاعم والمعالم.",
+    "type": "startup",
+    "sector": "DeepTech & AI",
+    "stage": "Pre-Seed",
+    "foundedYear": 2022,
+    "teamSize": "10 Team Members",
+    "headquarters": "The Pearl, Qatar",
+    "headquartersAr": "اللؤلؤة، قطر",
+    "website": "https://dohabuddy.qa",
+    "logo": "DB",
+    "logoBg": "#3B82F6",
+    "verified": true,
+    "claimed": false,
+    "sourcingNote": "Unverified — sourced from public data",
+    "totalFundingRaisedQar": "1,456,000 QAR",
+    "totalFundingRaisedUsd": "$400,000 USD",
+    "institutionalBacking": [
+      "Tourism Innovation Incubator",
+      "Private Angels"
+    ],
+    "keyPeople": [
+      {
+        "name": "Noora Al-Hajri",
+        "nameAr": "نورة الهاجري",
+        "role": "Founder & Product Lead",
+        "roleAr": "المؤسسة ورئيسة المنتج"
+      }
+    ],
+    "metrics": {
+      "Monthly Itineraries Generated": "45,000+",
+      "Attractions Cataloged": "1,800 Places",
+      "Tourist Engagement Rating": "4.8 / 5"
+    },
+    "isFeatured": false,
+    "contactEmail": "hi@dohabuddy.qa"
+  },
+  {
+    "id": "ebutler",
+    "slug": "ebutler",
+    "name": "EButler",
+    "nameAr": "إي باتلر",
+    "tagline": "On-demand home services, facility maintenance, and lifestyle concierge super-app",
+    "taglineAr": "تطبيق الخدمات المنزلية المتكاملة وصيانة المرافق والخدمات الشخصية",
+    "description": "Connecting homeowners and businesses with vetted professionals across plumbing, AC maintenance, home cleaning, vehicle detailing, and specialized repair services.",
+    "descriptionAr": "منصة توفر أكثر من 300 خدمة منزلية وتجارية عبر فنيين معتمدين بأسلوب رقمي سلس.",
+    "type": "startup",
+    "sector": "Logistics & Supply Chain",
+    "stage": "Series A",
+    "foundedYear": 2017,
+    "teamSize": "42 FTEs",
+    "headquarters": "Al Sadd, Doha",
+    "headquartersAr": "السد، الدوحة",
+    "website": "https://e-butler.com",
+    "logo": "EB",
+    "logoBg": "#1E293B",
+    "verified": true,
+    "claimed": false,
+    "sourcingNote": "Unverified — sourced from public data",
+    "totalFundingRaisedQar": "10,920,000 QAR",
+    "totalFundingRaisedUsd": "$3,000,000 USD",
+    "institutionalBacking": [
+      "Regional Venture Funds",
+      "Local Family Office Syndicates"
+    ],
+    "keyPeople": [
+      {
+        "name": "Omar Ashour",
+        "nameAr": "عمر عاشور",
+        "role": "Co-Founder & CEO",
+        "roleAr": "المؤسس الشريك والرئيس التنفيذي"
+      }
+    ],
+    "metrics": {
+      "Jobs Completed": "350,000+ Services",
+      "Vetted Service Providers": "420 Partners",
+      "Customer Satisfaction": "94.2%"
+    },
+    "isFeatured": false,
+    "contactEmail": "support@e-butler.com"
+  },
+  {
+    "id": "fatora",
+    "slug": "fatora",
+    "name": "Fatora",
+    "nameAr": "فاتورة",
+    "tagline": "Smart invoicing software, online payment links, and SME micro-remittance tools",
+    "taglineAr": "برمجيات الفوترة الذكية وروابط الدفع الإلكتروني للشركات الصغيرة والمتوسطة",
+    "description": "Cloud billing and digital invoice collection platform enabling freelancers, SMEs, and online retailers to generate instant payment links and track collections.",
+    "descriptionAr": "منصة حلول دفع وفواتير إلكترونية تمكّن الشركات ورواد الأعمال من إصدار الفواتير وتحصيل الأموال بسهولة.",
+    "type": "startup",
+    "sector": "FinTech",
+    "stage": "Seed",
+    "foundedYear": 2019,
+    "teamSize": "20 FTEs",
+    "headquarters": "Doha, Qatar",
+    "headquartersAr": "الدوحة، قطر",
+    "website": "https://fatora.io",
+    "logo": "FT",
+    "logoBg": "#059669",
+    "verified": true,
+    "claimed": false,
+    "sourcingNote": "Unverified — sourced from public data",
+    "totalFundingRaisedQar": "3,640,000 QAR",
+    "totalFundingRaisedUsd": "$1,000,000 USD",
+    "institutionalBacking": [
+      "FinTech Incubators",
+      "Seed Capital Angels"
+    ],
+    "keyPeople": [
+      {
+        "name": "Loay Qwaider",
+        "nameAr": "لؤي قويدر",
+        "role": "Co-Founder & CTO",
+        "roleAr": "مؤسس شريك والمدير التقني"
+      }
+    ],
+    "metrics": {
+      "Invoices Processed": "800,000+ Invoices",
+      "Active Merchants": "2,400+ Businesses",
+      "Processed Volume": "$65M+ USD"
+    },
+    "isFeatured": false,
+    "contactEmail": "contact@fatora.io"
+  },
+  {
+    "id": "meddy",
+    "slug": "meddy",
+    "name": "Meddy (Helium Health)",
+    "nameAr": "ميدي",
+    "tagline": "Digital physician booking, patient reviews, and clinic management software",
+    "taglineAr": "منصة حجز المواعيد الطبية وتقييمات الأطباء وإدارة العيادات الرقمية",
+    "description": "Originally founded at Carnegie Mellon Qatar, Meddy grew into one of the region’s premier doctor-booking platforms before its landmark acquisition by Helium Health.",
+    "descriptionAr": "منصة رائدة لحجز مواعيد الأطباء والاستشارات الطبية انطلقت من الدوحة وخدمت ملايين المرضى في قطر والخليج.",
+    "type": "startup",
+    "sector": "HealthTech & Bio",
+    "stage": "Series A",
+    "foundedYear": 2015,
+    "teamSize": "32 FTEs",
+    "headquarters": "QSTP, Education City",
+    "headquartersAr": "واحة قطر للعلوم والتكنولوجيا، المدينة التعليمية",
+    "website": "https://meddy.com",
+    "logo": "MD",
+    "logoBg": "#0284C7",
+    "verified": true,
+    "claimed": false,
+    "sourcingNote": "Unverified — sourced from public data (Acquired by Helium Health)",
+    "totalFundingRaisedQar": "12,740,000 QAR",
+    "totalFundingRaisedUsd": "$3,500,000 USD",
+    "institutionalBacking": [
+      "QSTP Tech Venture Fund",
+      "Regional VCs (500 Startups, 212)"
+    ],
+    "keyPeople": [
+      {
+        "name": "Haris Aghadi",
+        "nameAr": "حارس أغادي",
+        "role": "Co-Founder & Former CEO",
+        "roleAr": "مؤسس شريك ورئيس تنفيذي سابق"
+      }
+    ],
+    "metrics": {
+      "Patient Appointments Booked": "2.1M+ Visits",
+      "Doctors Listed": "3,000+ Physicians",
+      "M&A Status": "Acquired by Helium Health"
+    },
+    "isFeatured": false,
+    "contactEmail": "press@meddy.com"
+  },
+  {
+    "id": "kenzz",
+    "slug": "kenzz",
+    "name": "Kenzz",
+    "nameAr": "كنز للتجارة الرقمية",
+    "tagline": "Direct-to-consumer e-commerce, wholesale dropship engine, and marketplace",
+    "taglineAr": "منصة تجارة إلكترونية وسوق رقمي يربط الموردين بالمستهلكين مباشرة",
+    "description": "E-commerce platform facilitating reliable local delivery of lifestyle, home goods, and electronics with localized payment methods and direct merchant warehousing.",
+    "descriptionAr": "منصة تسوق رقمية تركز على تلبية احتياجات المستهلكين المحليين بأسعار تنافسية وتوصيل سريع.",
+    "type": "startup",
+    "sector": "Enterprise & SaaS",
+    "stage": "Seed",
+    "foundedYear": 2021,
+    "teamSize": "19 FTEs",
+    "headquarters": "Industrial Area, Doha",
+    "headquartersAr": "المنطقة الصناعية، الدوحة",
+    "website": "https://kenzz.qa",
+    "logo": "KZ",
+    "logoBg": "#6366F1",
+    "verified": true,
+    "claimed": false,
+    "sourcingNote": "Unverified — sourced from public data",
+    "totalFundingRaisedQar": "4,004,000 QAR",
+    "totalFundingRaisedUsd": "$1,100,000 USD",
+    "institutionalBacking": [
+      "Angel Investors",
+      "Commercial Trading Syndicates"
+    ],
+    "keyPeople": [
+      {
+        "name": "Sultan Al-Kuwari",
+        "nameAr": "سلطان الكواري",
+        "role": "Managing Director",
+        "roleAr": "المدير التنفيذي"
+      }
+    ],
+    "metrics": {
+      "SKUs Listed": "45,000+ Products",
+      "Deliveries Fulfilled": "180,000+",
+      "Warehouse Footprint": "3,500 sqm"
+    },
+    "isFeatured": false,
+    "contactEmail": "contact@kenzz.qa"
+  },
+  {
+    "id": "debito",
+    "slug": "debito",
+    "name": "Debito",
+    "nameAr": "ديبيتو",
+    "tagline": "Automated B2B debt recovery, cashflow optimization, and legal collections SaaS",
+    "taglineAr": "منصة برمجية لأتمتة تحصيل ديون الشركات وإدارة التدفقات النقدية",
+    "description": "Enterprise FinTech platform helping Qatari enterprises automate receivables management, client reminder sequences, and amicable debt settlement.",
+    "descriptionAr": "منصة تكنولوجيا مالية متخصصة في إدارة ومتابعة وتحصيل الذمم المدينة للشركات بطرق نظامية وذكية.",
+    "type": "startup",
+    "sector": "FinTech",
+    "stage": "Seed",
+    "foundedYear": 2022,
+    "teamSize": "15 FTEs",
+    "headquarters": "Qatar Financial Centre (QFC)",
+    "headquartersAr": "مركز قطر للمال، الدوحة",
+    "website": "https://debito.qa",
+    "logo": "DT",
+    "logoBg": "#047857",
+    "verified": true,
+    "claimed": false,
+    "sourcingNote": "Unverified — sourced from public data",
+    "totalFundingRaisedQar": "2,730,000 QAR",
+    "totalFundingRaisedUsd": "$750,000 USD",
+    "institutionalBacking": [
+      "QFC FinTech Program",
+      "Corporate Angel Backers"
+    ],
+    "keyPeople": [
+      {
+        "name": "Hamad Al-Subaey",
+        "nameAr": "حمد السبيعي",
+        "role": "Founder & CEO",
+        "roleAr": "المؤسس والرئيس التنفيذي"
+      }
+    ],
+    "metrics": {
+      "Receivables Managed": "$35M+ USD",
+      "Recovery Acceleration": "+38% Faster",
+      "Enterprise Clients": "45 Corporations"
+    },
+    "isFeatured": false,
+    "contactEmail": "info@debito.qa"
+  },
+  {
+    "id": "volante",
+    "slug": "volante",
+    "name": "Volante",
+    "nameAr": "فولانتي",
+    "tagline": "Premium on-demand chauffeur mobility, luxury fleet telematics, and VIP transport",
+    "taglineAr": "منصة تنقل فاخر وسيارات بسائق خاص وخدمات نقل كبار الشخصيات",
+    "description": "Chauffeur and executive transportation app catering to business travelers, embassies, and luxury hospitality venues across Doha with integrated telematics.",
+    "descriptionAr": "منصة رقمية لخدمات النقل الفاخر والسيارات الفارهة بسائق للشركات والوفود والفعاليات الكبرى.",
+    "type": "startup",
+    "sector": "Logistics & Supply Chain",
+    "stage": "Pre-Series A",
+    "foundedYear": 2020,
+    "teamSize": "22 Operations & Tech",
+    "headquarters": "West Bay, Doha",
+    "headquartersAr": "الخليج الغربي، الدوحة",
+    "website": "https://volante.qa",
+    "logo": "VL",
+    "logoBg": "#0F172A",
+    "verified": true,
+    "claimed": false,
+    "sourcingNote": "Unverified — sourced from public data",
+    "totalFundingRaisedQar": "5,824,000 QAR",
+    "totalFundingRaisedUsd": "$1,600,000 USD",
+    "institutionalBacking": [
+      "Hospitality Capital Group",
+      "Private Mobility Angels"
+    ],
+    "keyPeople": [
+      {
+        "name": "Nasser Al-Thani",
+        "nameAr": "ناصر آل ثاني",
+        "role": "Co-Founder & CEO",
+        "roleAr": "مؤسس شريك ورئيس تنفيذي"
+      }
+    ],
+    "metrics": {
+      "Fleet Size": "150+ Luxury Vehicles",
+      "VIP Rides Completed": "85,000+",
+      "Corporate Accounts": "65 Groups"
+    },
+    "isFeatured": false,
+    "contactEmail": "concierge@volante.qa"
+  },
+  {
+    "id": "q-tickets",
+    "slug": "q-tickets",
+    "name": "Q-Tickets",
+    "nameAr": "كيو تكتس",
+    "tagline": "Digital ticketing infrastructure, cinema bookings, sports events, and RFID access",
+    "taglineAr": "منصة بيع التذاكر الرقمية وحجوزات السينما والفعاليات الرياضية والترفيهية",
+    "description": "One of Qatar’s long-standing entertainment ticketing platforms, processing admissions for cinema chains, concerts, and major international sporting events.",
+    "descriptionAr": "منصة التذاكر الرائدة في قطر لحجز تذاكر السينما والفعاليات والمباريات والمهرجانات الترفيهية.",
+    "type": "startup",
+    "sector": "SportsTech & Media",
+    "stage": "Growth",
+    "foundedYear": 2014,
+    "teamSize": "35 FTEs",
+    "headquarters": "Doha, Qatar",
+    "headquartersAr": "الدوحة، قطر",
+    "website": "https://q-tickets.com",
+    "logo": "QT",
+    "logoBg": "#DC2626",
+    "verified": true,
+    "claimed": false,
+    "sourcingNote": "Unverified — sourced from public data",
+    "totalFundingRaisedQar": "15,288,000 QAR",
+    "totalFundingRaisedUsd": "$4,200,000 USD",
+    "institutionalBacking": [
+      "Entertainment Group Investment",
+      "Commercial Investors"
+    ],
+    "keyPeople": [
+      {
+        "name": "Tejinder Singh",
+        "nameAr": "تيجندر سينغ",
+        "role": "Founder & Managing Director",
+        "roleAr": "المؤسس والمدير التنفيذي"
+      }
+    ],
+    "metrics": {
+      "Tickets Issued": "12M+ Admissions",
+      "Cinemas Integrated": "100% of Commercial Multiplexes",
+      "Annual Event Volume": "1,200+ Events"
+    },
+    "isFeatured": false,
+    "contactEmail": "contact@q-tickets.com"
+  },
+  {
+    "id": "shamal-technologies",
+    "slug": "shamal-technologies",
+    "name": "Shamal Technologies",
+    "nameAr": "شمال للتقنيات الجيومكانية",
+    "tagline": "Autonomous drone surveying, geospatial computer vision, and infrastructure AI",
+    "taglineAr": "حلول المسح الجوي بالدرونز والذكاء الاصطناعي لفحص البنية التحتية والمشاريع",
+    "description": "DeepTech scaleup deploying autonomous drone fleets and computer vision to deliver digital twins, photogrammetry, and inspection analytics for major civil infrastructure.",
+    "descriptionAr": "شركة تقنية متقدمة تستخدم الطائرات بدون طيار وخوارزميات الرؤية الحاسوبية لمسح ومراقبة المشاريع الإنشائية والبنية التحتية.",
+    "type": "startup",
+    "sector": "DeepTech & AI",
+    "stage": "Seed",
+    "foundedYear": 2021,
+    "teamSize": "18 Engineers",
+    "headquarters": "Qatar Science & Technology Park",
+    "headquartersAr": "واحة قطر للعلوم والتكنولوجيا",
+    "website": "https://shamaltech.qa",
+    "logo": "ST",
+    "logoBg": "#0891B2",
+    "verified": true,
+    "claimed": false,
+    "sourcingNote": "Unverified — sourced from public data",
+    "totalFundingRaisedQar": "3,458,000 QAR",
+    "totalFundingRaisedUsd": "$950,000 USD",
+    "institutionalBacking": [
+      "QSTP Innovation Program",
+      "Infrastructure Tech Angels"
+    ],
+    "keyPeople": [
+      {
+        "name": "Abdullah Al-Kindi",
+        "nameAr": "عبدالله الكندي",
+        "role": "Founder & Chief Surveyor",
+        "roleAr": "المؤسس ورئيس المسح"
+      }
+    ],
+    "metrics": {
+      "Square Kilometers Mapped": "1,400+ sq km",
+      "Structural Inspections": "320+ Towers & Bridges",
+      "Mapping Precision": "< 2cm Resolution"
+    },
+    "isFeatured": false,
+    "contactEmail": "survey@shamaltech.qa"
+  },
+  {
+    "id": "torod-logistics",
+    "slug": "torod-logistics",
+    "name": "Torod Logistics",
+    "nameAr": "طرود للخدمات اللوجستية",
+    "tagline": "B2B last-mile delivery orchestration API and multi-carrier smart routing engine",
+    "taglineAr": "بوابة موحدة لربط وتوزيع الشحنات والميل الأخير لمتاجر التجارة الإلكترونية",
+    "description": "Logistics SaaS engine that integrates e-commerce platforms with dozens of courier providers, automating order dispatch, tracking, and SLA enforcement through a single API.",
+    "descriptionAr": "منصة برمجية تربط منصات التجارة الإلكترونية مع شركات التوصيل لاختيار المسار الأسرع والأقل تكلفة تلقائياً.",
+    "type": "startup",
+    "sector": "Logistics & Supply Chain",
+    "stage": "Seed",
+    "foundedYear": 2021,
+    "teamSize": "16 FTEs",
+    "headquarters": "Doha, Qatar",
+    "headquartersAr": "الدوحة، قطر",
+    "website": "https://torod.qa",
+    "logo": "TR",
+    "logoBg": "#2563EB",
+    "verified": true,
+    "claimed": false,
+    "sourcingNote": "Unverified — sourced from public data",
+    "totalFundingRaisedQar": "4,732,000 QAR",
+    "totalFundingRaisedUsd": "$1,300,000 USD",
+    "institutionalBacking": [
+      "Supply Chain Angels",
+      "Regional Seed Syndicates"
+    ],
+    "keyPeople": [
+      {
+        "name": "Faisal Al-Nuaimi",
+        "nameAr": "فيصل النعيمي",
+        "role": "Co-Founder & CEO",
+        "roleAr": "المؤسس الشريك والرئيس التنفيذي"
+      }
+    ],
+    "metrics": {
+      "Shipments Dispatched": "750,000+ Parcels",
+      "Courier Integrations": "14 Fleets",
+      "Merchant Delivery Cost Saved": "22%"
+    },
+    "isFeatured": false,
+    "contactEmail": "support@torod.qa"
+  },
+  {
+    "id": "bonocle",
+    "slug": "bonocle",
+    "name": "Bonocle",
+    "nameAr": "بونوكل",
+    "tagline": "Assistive handheld digital Braille controller, e-learning device, and accessibility tech",
+    "taglineAr": "جهاز ذكي محمول لقراءة برايل الرقمية وتعليم المكفوفين وضعاف البصر",
+    "description": "Internationally awarded hardware accessibility device translating digital text, games, and classroom materials into dynamic tactile Braille on a pocket-sized handheld controller.",
+    "descriptionAr": "جهاز ثوري مبتكر يمكن المكفوفين من قراءة الكتب والرسائل الرقمية وممارسة الألعاب بلغة برايل عبر الهاتف الذكي.",
+    "type": "startup",
+    "sector": "DeepTech & AI",
+    "stage": "Seed",
+    "foundedYear": 2018,
+    "teamSize": "12 Specialists",
+    "headquarters": "Qatar Science & Technology Park",
+    "headquartersAr": "واحة قطر للعلوم والتكنولوجيا",
+    "website": "https://bonocle.co",
+    "logo": "BN",
+    "logoBg": "#7C3AED",
+    "verified": true,
+    "claimed": false,
+    "sourcingNote": "Unverified — sourced from public data",
+    "totalFundingRaisedQar": "2,912,000 QAR",
+    "totalFundingRaisedUsd": "$800,000 USD",
+    "institutionalBacking": [
+      "Accessibility Innovation Grants",
+      "QSTP Tech Incubator"
+    ],
+    "keyPeople": [
+      {
+        "name": "Abdelrazek Aly",
+        "nameAr": "عبدالرازق علي",
+        "role": "Co-Founder & CEO",
+        "roleAr": "مؤسس شريك ورئيس تنفيذي"
+      },
+      {
+        "name": "Ramy Soliman",
+        "nameAr": "رامي سليمان",
+        "role": "Co-Founder & COO",
+        "roleAr": "مؤسس شريك ورئيس العمليات"
+      }
+    ],
+    "metrics": {
+      "Global Devices Shipped": "2,500+ Units",
+      "Supported Languages": "Arabic, English, French",
+      "Awards Won": "World Summit Award, MIT Pan Arab"
+    },
+    "isFeatured": false,
+    "contactEmail": "info@bonocle.co"
+  },
+  {
+    "id": "paperfly",
+    "slug": "paperfly",
+    "name": "Paperfly",
+    "nameAr": "بيبرفلاي",
+    "tagline": "Enterprise cloud document intelligence, legal OCR parsing, and digital workflows",
+    "taglineAr": "برمجيات أتمتة الوثائق السحابية والتعرف الضوئي على النصوص للشركات",
+    "description": "Enterprise software startup streamlining contract reviews, Arabic OCR extraction, and regulatory compliance storage for corporate legal departments and real estate firms.",
+    "descriptionAr": "منصة ذكاء اصطناعي لقراءة وفهرسة المستندات والوثائق القانونية باللغتين العربية والإنجليزية.",
+    "type": "startup",
+    "sector": "Enterprise & SaaS",
+    "stage": "Seed",
+    "foundedYear": 2022,
+    "teamSize": "11 Engineers",
+    "headquarters": "West Bay, Doha",
+    "headquartersAr": "الخليج الغربي، الدوحة",
+    "website": "https://paperfly.qa",
+    "logo": "PF",
+    "logoBg": "#475569",
+    "verified": true,
+    "claimed": false,
+    "sourcingNote": "Unverified — sourced from public data",
+    "totalFundingRaisedQar": "2,366,000 QAR",
+    "totalFundingRaisedUsd": "$650,000 USD",
+    "institutionalBacking": [
+      "Angel Investor Syndicate"
+    ],
+    "keyPeople": [
+      {
+        "name": "Tarek Mansour",
+        "nameAr": "طارق منصور",
+        "role": "Founder & CTO",
+        "roleAr": "المؤسس والمدير التقني"
+      }
+    ],
+    "metrics": {
+      "Documents Processed": "1.8M+ Pages",
+      "Arabic OCR Accuracy": "97.8%",
+      "Active Corporate Accounts": "34 Firms"
+    },
+    "isFeatured": false,
+    "contactEmail": "contact@paperfly.qa"
+  },
+  {
+    "id": "tean-edtech",
+    "slug": "tean-edtech",
+    "name": "Tean",
+    "nameAr": "تيان للتعليم التكنولوجي",
+    "tagline": "STEM robotics hardware kits, K-12 coding curricula, and maker lab educational platforms",
+    "taglineAr": "حقائب تعليم الروبوتات والبرمجة ومختبرات الابتكار للطلاب والمدارس",
+    "description": "Education hardware startup offering localized robotics assembly kits, coding tutorials, and school competition platforms to foster early engineering skills in Qatar.",
+    "descriptionAr": "منصة ومجموعات أدوات لتعليم الأطفال واليافعين مبادئ الروبوت والذكاء الاصطناعي بأسلوب عملي شيق.",
+    "type": "startup",
+    "sector": "DeepTech & AI",
+    "stage": "Pre-Seed",
+    "foundedYear": 2023,
+    "teamSize": "8 Educators & Engineers",
+    "headquarters": "Education City, Doha",
+    "headquartersAr": "المدينة التعليمية، الدوحة",
+    "website": "https://tean.qa",
+    "logo": "TN",
+    "logoBg": "#10B981",
+    "verified": true,
+    "claimed": false,
+    "sourcingNote": "Unverified — sourced from public data",
+    "totalFundingRaisedQar": "1,274,000 QAR",
+    "totalFundingRaisedUsd": "$350,000 USD",
+    "institutionalBacking": [
+      "EdTech Incubator Grant"
+    ],
+    "keyPeople": [
+      {
+        "name": "Sarah Al-Attiyah",
+        "nameAr": "سارة العطية",
+        "role": "Founder & Educational Lead",
+        "roleAr": "المؤسسة والمسؤولة التعليمية"
+      }
+    ],
+    "metrics": {
+      "Robotics Kits Distributed": "3,800+ Kits",
+      "School Workshops Run": "120 Sessions",
+      "Student Engagement": "6,500+ Youth"
+    },
+    "isFeatured": false,
+    "contactEmail": "info@tean.qa"
+  },
+  {
+    "id": "q-auto-tech",
+    "slug": "q-auto-tech",
+    "name": "Q-Auto Tech",
+    "nameAr": "كيو أوتو تك",
+    "tagline": "Connected automotive diagnostics, mobile mechanic dispatch, and maintenance SaaS",
+    "taglineAr": "منصة فحص وصيانة السيارات الذكية وطلب الميكانيكي المتنقل",
+    "description": "AutoTech platform connecting vehicle owners with mobile certified mechanics, fleet diagnostics, and predictive parts ordering across Doha.",
+    "descriptionAr": "تطبيق رقمي لحجز خدمات الصيانة الدورية للسيارات والفحص الفني المتنقل في المنزل أو العمل.",
+    "type": "startup",
+    "sector": "Enterprise & SaaS",
+    "stage": "Seed",
+    "foundedYear": 2021,
+    "teamSize": "18 Operations & Tech",
+    "headquarters": "Ain Khaled, Doha",
+    "headquartersAr": "عين خالد، الدوحة",
+    "website": "https://qautotech.qa",
+    "logo": "QA",
+    "logoBg": "#B91C1C",
+    "verified": true,
+    "claimed": false,
+    "sourcingNote": "Unverified — sourced from public data",
+    "totalFundingRaisedQar": "3,276,000 QAR",
+    "totalFundingRaisedUsd": "$900,000 USD",
+    "institutionalBacking": [
+      "Automotive Angel Investors"
+    ],
+    "keyPeople": [
+      {
+        "name": "Ali Al-Marri",
+        "nameAr": "علي المري",
+        "role": "Founder & CEO",
+        "roleAr": "المؤسس والرئيس التنفيذي"
+      }
+    ],
+    "metrics": {
+      "Vehicles Serviced": "24,000+ Cars",
+      "Mobile Vans Active": "18 Units",
+      "Average Rating": "4.7 / 5"
+    },
+    "isFeatured": false,
+    "contactEmail": "service@qautotech.qa"
+  },
+  {
+    "id": "clever-clean",
+    "slug": "clever-clean",
+    "name": "Clever Clean",
+    "nameAr": "كليفر كلين",
+    "tagline": "Eco-friendly waterless vehicle cleaning, fleet detailing, and logistics booking app",
+    "taglineAr": "تطبيق غسيل السيارات الذكي الصديق للبيئة بدون ماء وتقنيات النانو",
+    "description": "Environmentally sustainable car detailing platform using biodegradable solutions saving 150+ liters of water per clean, operating at shopping destinations and office hubs.",
+    "descriptionAr": "منصة تنظيف سيارات مستدامة توفر استهلاك المياه وتتيح حجز الغسيل في المواقف والمنازل.",
+    "type": "startup",
+    "sector": "Energy & CleanTech",
+    "stage": "Seed",
+    "foundedYear": 2020,
+    "teamSize": "30 Team Members",
+    "headquarters": "Doha, Qatar",
+    "headquartersAr": "الدوحة، قطر",
+    "website": "https://cleverclean.qa",
+    "logo": "CC",
+    "logoBg": "#059669",
+    "verified": true,
+    "claimed": false,
+    "sourcingNote": "Unverified — sourced from public data",
+    "totalFundingRaisedQar": "2,002,000 QAR",
+    "totalFundingRaisedUsd": "$550,000 USD",
+    "institutionalBacking": [
+      "Sustainability Innovation Grants",
+      "Angel Network"
+    ],
+    "keyPeople": [
+      {
+        "name": "Kareem Barghouthi",
+        "nameAr": "كريم البرغوثي",
+        "role": "Co-Founder & General Manager",
+        "roleAr": "مؤسس شريك ومدير عام"
+      }
+    ],
+    "metrics": {
+      "Water Saved": "4.2M Liters",
+      "Cleans Completed": "140,000+",
+      "Mall Locations": "12 Master Locations"
+    },
+    "isFeatured": false,
+    "contactEmail": "care@cleverclean.qa"
+  },
+  {
+    "id": "modaris",
+    "slug": "modaris",
+    "name": "Modaris",
+    "nameAr": "مدرّس",
+    "tagline": "On-demand verified tutor booking, exam preparation, and academic marketplace",
+    "taglineAr": "منصة حجز المدرسين الخصوصيين المعتمدين والمراجعات الأكاديمية",
+    "description": "Educational marketplace connecting students and parents with credentialed university and school tutors across Doha for both in-person and digital tutoring.",
+    "descriptionAr": "منصة تربط أولياء الأمور والطلاب بنخبة من المعلمين المعتمدين لجميع المراحل والمواد الدراسية.",
+    "type": "startup",
+    "sector": "Enterprise & SaaS",
+    "stage": "Seed",
+    "foundedYear": 2017,
+    "teamSize": "15 FTEs",
+    "headquarters": "Education City, Doha",
+    "headquartersAr": "المدينة التعليمية، الدوحة",
+    "website": "https://modaris.me",
+    "logo": "MR",
+    "logoBg": "#2563EB",
+    "verified": true,
+    "claimed": false,
+    "sourcingNote": "Unverified — sourced from public data",
+    "totalFundingRaisedQar": "2,548,000 QAR",
+    "totalFundingRaisedUsd": "$700,000 USD",
+    "institutionalBacking": [
+      "EdTech Angel Backers"
+    ],
+    "keyPeople": [
+      {
+        "name": "Yasmin Al-Hassan",
+        "nameAr": "ياسمين الحسن",
+        "role": "Founder & Managing Director",
+        "roleAr": "المؤسسة والمديرة التنفيذية"
+      }
+    ],
+    "metrics": {
+      "Tutoring Hours Completed": "85,000+ Hours",
+      "Verified Tutors": "650+ Educators",
+      "Subjects Taught": "45 Disciplines"
+    },
+    "isFeatured": false,
+    "contactEmail": "support@modaris.me"
+  },
+  {
+    "id": "pay2go",
+    "slug": "pay2go",
+    "name": "Pay2Go",
+    "nameAr": "باي تو جو",
+    "tagline": "Contactless QR payment settlement, merchant checkout, and digital invoice integration",
+    "taglineAr": "حلول المدفوعات السريعة عبر رمز الاستجابة السريعة (QR) وتسوية المعاملات",
+    "description": "FinTech payment service helping small merchants, pop-up markets, and delivery couriers accept card payments directly via smartphones without standalone POS hardware.",
+    "descriptionAr": "حل تكنولوجي مالي يتيح للتجار تحويل هواتفهم إلى نقاط بيع إلكترونية لقبول بطاقات الدفع بسلاسة.",
+    "type": "startup",
+    "sector": "FinTech",
+    "stage": "Seed",
+    "foundedYear": 2022,
+    "teamSize": "14 FTEs",
+    "headquarters": "Qatar Financial Centre (QFC)",
+    "headquartersAr": "مركز قطر للمال، الدوحة",
+    "website": "https://pay2go.qa",
+    "logo": "PG",
+    "logoBg": "#10B981",
+    "verified": true,
+    "claimed": false,
+    "sourcingNote": "Unverified — sourced from public data",
+    "totalFundingRaisedQar": "3,094,000 QAR",
+    "totalFundingRaisedUsd": "$850,000 USD",
+    "institutionalBacking": [
+      "FinTech Accelerators",
+      "Angel Investors"
+    ],
+    "keyPeople": [
+      {
+        "name": "Hamad Al-Ghanim",
+        "nameAr": "حمد الغانم",
+        "role": "Founder & CEO",
+        "roleAr": "المؤسس والرئيس التنفيذي"
+      }
+    ],
+    "metrics": {
+      "Registered Small Merchants": "1,400+ Merchants",
+      "Monthly Processing Run-Rate": "$5.5M USD",
+      "Transaction Success Rate": "99.4%"
+    },
+    "isFeatured": false,
+    "contactEmail": "merchants@pay2go.qa"
+  },
+  {
+    "id": "synergy-ai",
+    "slug": "synergy-ai",
+    "name": "Synergy AI",
+    "nameAr": "سينرجي للذكاء الاصطناعي",
+    "tagline": "Industrial computer vision, safety hazard detection, and automated site inspection",
+    "taglineAr": "أنظمة الذكاء الاصطناعي الصناعي والرؤية الحاسوبية للسلامة ومراقبة المواقع",
+    "description": "AI software company providing construction sites, manufacturing plants, and oil & gas facilities with real-time video analytics to prevent worker safety incidents.",
+    "descriptionAr": "منصة ذكاء اصطناعي تحلل كاميرات المراقبة في المنشآت الصناعية والمشاريع لرصد المخاطر والتأكد من ارتداء معدات السلامة.",
+    "type": "startup",
+    "sector": "DeepTech & AI",
+    "stage": "Seed",
+    "foundedYear": 2021,
+    "teamSize": "20 Machine Learning Engineers",
+    "headquarters": "Lusail City, Qatar",
+    "headquartersAr": "مدينة لوسيل، قطر",
+    "website": "https://synergyai.qa",
+    "logo": "SY",
+    "logoBg": "#3B82F6",
+    "verified": true,
+    "claimed": false,
+    "sourcingNote": "Unverified — sourced from public data",
+    "totalFundingRaisedQar": "5,096,000 QAR",
+    "totalFundingRaisedUsd": "$1,400,000 USD",
+    "institutionalBacking": [
+      "Industrial Tech VCs",
+      "Energy Venture Angels"
+    ],
+    "keyPeople": [
+      {
+        "name": "Dr. Ziad Al-Khatib",
+        "nameAr": "د. زياد الخطيب",
+        "role": "Founder & Chief Scientist",
+        "roleAr": "المؤسس وكبير العلماء"
+      }
+    ],
+    "metrics": {
+      "Video Feeds Monitored": "1,800+ Cameras",
+      "Safety Incidents Averted": "850+ Hazards",
+      "Inference Latency": "< 65 ms"
+    },
+    "isFeatured": false,
+    "contactEmail": "contact@synergyai.qa"
+  },
+  {
+    "id": "aldelaimi-biosciences",
+    "slug": "aldelaimi-biosciences",
+    "name": "Al-Delaimi BioSciences",
+    "nameAr": "الدليمي للعلوم الحيوية",
+    "tagline": "Clinical genomics, precision preventive medicine, and biomarker data analytics",
+    "taglineAr": "أبحاث الجينوم السريري والطب الوقائي الدقيق وتحليلات المؤشرات الحيوية",
+    "description": "BioTech laboratory venture working alongside regional researchers to commercialize personalized genomic risk scoring and cardiovascular disease prevention models.",
+    "descriptionAr": "مختبر أبحاث تكنولوجيا حيوية يطور نماذج تحليل جيني مخصصة للتنبؤ بالأمراض المزمنة والوقاية المبكرة.",
+    "type": "startup",
+    "sector": "HealthTech & Bio",
+    "stage": "Pre-Seed",
+    "foundedYear": 2023,
+    "teamSize": "12 Researchers",
+    "headquarters": "Qatar Science & Technology Park",
+    "headquartersAr": "واحة قطر للعلوم والتكنولوجيا",
+    "website": "https://aldelaimibio.qa",
+    "logo": "AD",
+    "logoBg": "#14B8A6",
+    "verified": true,
+    "claimed": false,
+    "sourcingNote": "Unverified — sourced from public data",
+    "totalFundingRaisedQar": "1,820,000 QAR",
+    "totalFundingRaisedUsd": "$500,000 USD",
+    "institutionalBacking": [
+      "Research Innovation Fund",
+      "BioTech Angels"
+    ],
+    "keyPeople": [
+      {
+        "name": "Dr. Mariam Al-Delaimi",
+        "nameAr": "د. مريم الدليمي",
+        "role": "Principal Investigator & Founder",
+        "roleAr": "الباحثة الرئيسية والمؤسسة"
+      }
+    ],
+    "metrics": {
+      "Genomic Samples Sequenced": "1,200+ Cohorts",
+      "Published Biomarker Papers": "6 Papers",
+      "Clinical Collaborations": "3 Hospitals"
+    },
+    "isFeatured": false,
+    "contactEmail": "research@aldelaimibio.qa"
+  },
+  {
+    "id": "ooredoo",
+    "slug": "ooredoo-qatar",
+    "name": "Ooredoo Qatar",
+    "nameAr": "أريدُ قطر",
+    "tagline": "Leading multinational telecommunications, 5G cloud networks, and corporate venture backer",
+    "taglineAr": "المزود الوطني للاتصالات وشبكات الجيل الخامس والحوسبة السحابية والاستثمار المؤسسي",
+    "description": "Major established telecommunications and sovereign digital infrastructure enterprise providing nationwide 5G, enterprise data centers, and corporate venture acceleration programs for tech scaleups.",
+    "descriptionAr": "المجموعة الوطنية الرائدة في قطاع الاتصالات والبنية التحتية الرقمية، تقدم شبكات 5G ومراكز البيانات وبرامج دعم وتطوير الشركات الناشئة.",
+    "type": "soe",
+    "sector": "Enterprise & Growth",
+    "stage": "Growth",
+    "foundedYear": 1987,
+    "teamSize": "2,800+ Employees",
+    "headquarters": "Ooredoo HQ, West Bay, Doha",
+    "headquartersAr": "برج أريدُ، الخليج الغربي، الدوحة",
+    "website": "https://ooredoo.qa",
+    "logo": "OR",
+    "logoBg": "#ED1C24",
+    "verified": true,
+    "claimed": false,
+    "isEnterprise": true,
+    "sourcingNote": "Unverified — sourced from public data (Established Public Enterprise)",
+    "totalFundingRaisedQar": "Established Market Cap",
+    "totalFundingRaisedUsd": "Multi-Billion Enterprise",
+    "institutionalBacking": [
+      "Publicly Traded Enterprise (QSE: ORDS)",
+      "Sovereign Institutional Holdings"
+    ],
+    "keyPeople": [
+      {
+        "name": "Sheikh Ali Bin Jabor Al Thani",
+        "nameAr": "الشيخ علي بن جبر آل ثاني",
+        "role": "CEO - Ooredoo Qatar",
+        "roleAr": "الرئيس التنفيذي - أريدُ قطر"
+      }
+    ],
+    "metrics": {
+      "5G Population Coverage": "99%+",
+      "Active Mobile Customers": "3.2M+",
+      "Data Centers in Qatar": "5 High-Tier Facilities"
+    },
+    "isFeatured": true,
+    "contactEmail": "corporate@ooredoo.qa"
+  },
+  {
+    "id": "qnb-group",
+    "slug": "qnb-group",
+    "name": "QNB Group (Qatar National Bank)",
+    "nameAr": "مجموعة بنك قطر الوطني",
+    "tagline": "Largest financial institution in the MEA region and backbone of Qatari venture banking",
+    "taglineAr": "المؤسسة المصرفية والمالية الأكبر في منطقة الشرق الأوسط وإفريقيا",
+    "description": "Established in 1964, QNB is the premier banking group in the Middle East and Africa, providing institutional lending, open banking APIs, corporate treasury, and startup commercial accounts.",
+    "descriptionAr": "تأسست عام 1964 كأول بنك وطني قطري، وتقدم خدمات مصرفية متكاملة للشركات والشركات الناشئة وشراكات التكنولوجيا المالية.",
+    "type": "soe",
+    "sector": "Enterprise & Growth",
+    "stage": "Growth",
+    "foundedYear": 1964,
+    "teamSize": "30,000+ Group Employees",
+    "headquarters": "QNB Head Office, Corniche, Doha",
+    "headquartersAr": "المقر الرئيسي لبنك قطر الوطني، الكورنيش، الدوحة",
+    "website": "https://qnb.com",
+    "logo": "QN",
+    "logoBg": "#7A0026",
+    "verified": true,
+    "claimed": false,
+    "isEnterprise": true,
+    "sourcingNote": "Unverified — sourced from public data (Established Public Enterprise)",
+    "totalFundingRaisedQar": "Established Banking Assets",
+    "totalFundingRaisedUsd": "$300B+ Group Assets",
+    "institutionalBacking": [
+      "Publicly Traded Banking Group (QSE: QNBK)",
+      "Sovereign Wealth Allocations"
+    ],
+    "keyPeople": [
+      {
+        "name": "Abdulla Mubarak Al-Khalifa",
+        "nameAr": "عبدالله مبارك آل خليفة",
+        "role": "Group Chief Executive Officer",
+        "roleAr": "الرئيس التنفيذي للمجموعة"
+      }
+    ],
+    "metrics": {
+      "Total Group Assets": "$330B+ USD",
+      "Global Presence": "31+ Countries",
+      "Credit Rating": "Aa3 / A+"
+    },
+    "isFeatured": true,
+    "contactEmail": "venture@qnb.com"
+  },
+  {
+    "id": "rasmal-ventures",
+    "slug": "rasmal-ventures",
+    "name": "Rasmal Ventures",
+    "nameAr": "راسمال فنتشرز",
+    "tagline": "Independent QFC-regulated venture capital fund manager investing in MENA tech leaders",
+    "taglineAr": "شركة إدارة صناديق استثمار جريء مستقلة ومرخصة في مركز قطر للمال",
+    "description": "Rasmal Ventures is an independent venture capital firm headquartered in Doha, focusing on Series Seed and Series A investments in high-growth technology companies across enterprise SaaS, FinTech, and B2B marketplaces in Qatar and the broader MENA region.",
+    "descriptionAr": "شركة استثمار جريء مستقلة مقرها الدوحة، تركز على الاستثمار في جولات التأسيس والأولى للشركات التكنولوجية سريعة النمو في قطر والشرق الأوسط.",
+    "type": "investor",
+    "sector": "Active Investors & VCs",
+    "stage": "Growth",
+    "foundedYear": 2023,
+    "teamSize": "12 Partners & Associates",
+    "headquarters": "Qatar Financial Centre Tower 1, West Bay",
+    "headquartersAr": "برج مركز قطر للمال 1، الخليج الغربي",
+    "website": "https://rasmalventures.com",
+    "logo": "RV",
+    "logoBg": "#8A1538",
+    "verified": true,
+    "claimed": true,
+    "claimedByEmail": "partners@rasmalventures.com",
+    "aumUsd": "$100,000,000 USD",
+    "checkSizeRange": "$500K – $3M USD",
+    "institutionalBacking": [
+      "Private Regional Family Offices",
+      "High Net Worth Syndicates"
+    ],
+    "keyPeople": [
+      {
+        "name": "Alexander Wiedmer",
+        "nameAr": "ألكسندر فيدمير",
+        "role": "Founding Partner",
+        "roleAr": "شريك مؤسس"
+      },
+      {
+        "name": "Angus Montagu",
+        "nameAr": "أنغوس مونتاغو",
+        "role": "Founding Partner",
+        "roleAr": "شريك مؤسس"
+      }
+    ],
+    "metrics": {
+      "Portfolio Companies": "11 Startups",
+      "Fund I Target": "$100M USD",
+      "Capital Deployed to Date": "$28.5M USD"
+    },
+    "isFeatured": true,
+    "contactEmail": "dealflow@rasmalventures.com"
+  },
+  {
+    "id": "doha-tech-angels",
+    "slug": "doha-tech-angels",
+    "name": "Doha Tech Angels (DTA)",
+    "nameAr": "ملائكة التكنولوجيا بالدوحة",
+    "tagline": "Premier private angel investor syndicate investing in early-stage technology innovations",
+    "taglineAr": "شبكة المستثمرين الملائكيين المستقلة لدعم وتطوير الشركات الناشئة المبكرة",
+    "description": "Doha Tech Angels brings together seasoned Qatari executives, serial entrepreneurs, and private family office principals to syndicate early-stage angel investments, providing seed capital and regional market access.",
+    "descriptionAr": "شبكة استثمار ملائكي تضم نخبة من المستثمرين ورواد الأعمال والمدراء التنفيذيين في قطر لتمويل ودعم الشركات التقنية الناشئة.",
+    "type": "investor",
+    "sector": "Active Investors & VCs",
+    "stage": "Pre-Seed",
+    "foundedYear": 2018,
+    "teamSize": "35 Angel Members",
+    "headquarters": "West Bay, Doha",
+    "headquartersAr": "الخليج الغربي، الدوحة",
+    "website": "https://dohatechangels.com",
+    "logo": "DA",
+    "logoBg": "#4338CA",
+    "verified": true,
+    "claimed": true,
+    "claimedByEmail": "pitch@dohatechangels.com",
+    "aumUsd": "$25,000,000 USD Syndicated",
+    "checkSizeRange": "$100K – $500K USD",
+    "institutionalBacking": [
+      "Independent Private Angel Network"
+    ],
+    "keyPeople": [
+      {
+        "name": "Dr. Sudhir Nair",
+        "nameAr": "د. سودهير ناير",
+        "role": "Syndicate Lead & Angel Investor",
+        "roleAr": "قائد الشبكة ومستثمر ملائكي"
+      }
+    ],
+    "metrics": {
+      "Syndicated Deals": "24 Investments",
+      "Follow-on Funding Catalyzed": "$45M+ USD",
+      "Average Syndicate Check": "$250,000 USD"
+    },
+    "isFeatured": true,
+    "contactEmail": "pitch@dohatechangels.com"
+  },
+  {
+    "id": "al-mana-capital",
+    "slug": "al-mana-capital",
+    "name": "Al-Mana Private Capital",
+    "nameAr": "المانع للاستثمار الخاص",
+    "tagline": "Private multi-family office venture allocation and growth equity division",
+    "taglineAr": "مكتب استثماري عائلي خاص لإدارة استثمارات النمو ورأس المال الجريء",
+    "description": "The venture and direct investment vehicle of one of Qatar’s prominent commercial trading groups, active in retail tech, consumer platforms, supply chain infrastructure, and digital logistics.",
+    "descriptionAr": "الذراع الاستثماري لإحدى كبرى المجموعات التجارية العائلية في قطر، يركز على تكنولوجيا التجزئة والخدمات اللوجستية.",
+    "type": "investor",
+    "sector": "Active Investors & VCs",
+    "stage": "Series A",
+    "foundedYear": 2015,
+    "teamSize": "15 Investment Professionals",
+    "headquarters": "Al Mana Tower, Airport Road, Doha",
+    "headquartersAr": "برج المانع، طريق المطار، الدوحة",
+    "website": "https://almanacapital.qa",
+    "logo": "AM",
+    "logoBg": "#047857",
+    "verified": true,
+    "claimed": true,
+    "claimedByEmail": "investments@almanacapital.qa",
+    "aumUsd": "$220,000,000 USD",
+    "checkSizeRange": "$1M – $5M USD",
+    "institutionalBacking": [
+      "Private Family Group Balance Sheet"
+    ],
+    "keyPeople": [
+      {
+        "name": "Tariq Al-Mana",
+        "nameAr": "طارق المانع",
+        "role": "Managing Director - Direct Investments",
+        "roleAr": "العضو المنتدب - الاستثمارات المباشرة"
+      }
+    ],
+    "metrics": {
+      "Active Direct Investments": "16 Companies",
+      "Average Hold Horizon": "5-7 Years",
+      "Venture Allocation Share": "22% of Portfolio"
+    },
+    "isFeatured": false,
+    "contactEmail": "investments@almanacapital.qa"
+  },
+  {
+    "id": "qfth-hub",
+    "slug": "qfth-hub",
+    "name": "Qatar FinTech Hub (QFTH)",
+    "nameAr": "مركز قطر للتكنولوجيا المالية",
+    "tagline": "Specialized ecosystem incubator and global accelerator for FinTech and InsurTech",
+    "taglineAr": "حاضنة ومسرّعة متخصصة لتطوير شركات التكنولوجيا المالية والتأمين الرقمي",
+    "description": "Ecosystem platform that runs specialized incubation and acceleration cohorts connecting global and regional FinTech entrepreneurs with financial regulators, commercial banks, and venture mentors.",
+    "descriptionAr": "مركز تكنولوجي ينظم دورات تسريع سنوية لتمكين رواد أعمال التكنولوجيا المالية من بناء حلول الدفع والامتثال.",
+    "type": "incubator",
+    "sector": "FinTech",
+    "stage": "Pre-Seed",
+    "foundedYear": 2019,
+    "teamSize": "20 Mentors & Program Leads",
+    "headquarters": "Tornado Tower, West Bay, Doha",
+    "headquartersAr": "برج تورنادو، الخليج الغربي، الدوحة",
+    "website": "https://fintech.qa",
+    "logo": "QF",
+    "logoBg": "#0284C7",
+    "verified": true,
+    "claimed": false,
+    "sourcingNote": "Unverified — sourced from public data",
+    "institutionalBacking": [
+      "Financial Ecosystem Stakeholders",
+      "Global Industry Mentors"
+    ],
+    "keyPeople": [
+      {
+        "name": "Heba Al-Tamimi",
+        "nameAr": "هبة التميمي",
+        "role": "Head of Accelerator Programs",
+        "roleAr": "رئيسة برامج التسريع"
+      }
+    ],
+    "metrics": {
+      "Graduated Startups": "65+ Companies",
+      "Cohorts Completed": "6 Cycles",
+      "Alumni Capital Raised": "$38M+ USD"
+    },
+    "isFeatured": true,
+    "contactEmail": "apply@fintech.qa"
+  },
+  {
+    "id": "tech-park-incubator",
+    "slug": "tech-park-incubator",
+    "name": "Tech Innovation Incubator",
+    "nameAr": "حاضنة الابتكار التقني",
+    "tagline": "DeepTech product incubation, prototype grants, and patent acceleration hub",
+    "taglineAr": "حاضنة متقدمة للنماذج الأولية وبراءات الاختراع والتقنيات العميقة",
+    "description": "Offering laboratory facilities, hardware rapid-prototyping suites, co-working studios, and seed coaching to tech founders in Education City.",
+    "descriptionAr": "توفر مساحات عمل ومختبرات تصنيع نماذج أولية واستشارات تأسيس للشركات التكنولوجية.",
+    "type": "incubator",
+    "sector": "DeepTech & AI",
+    "stage": "Pre-Seed",
+    "foundedYear": 2017,
+    "teamSize": "25 Specialists",
+    "headquarters": "Tech Park Campus, Education City",
+    "headquartersAr": "مجمع الواحة التكنولوجية، المدينة التعليمية",
+    "website": "https://innovationincubator.qa",
+    "logo": "TI",
+    "logoBg": "#7C3AED",
+    "verified": true,
+    "claimed": false,
+    "sourcingNote": "Unverified — sourced from public data",
+    "institutionalBacking": [
+      "Academic & Research Innovation Network"
+    ],
+    "keyPeople": [
+      {
+        "name": "Dr. Yousef Al-Saleh",
+        "nameAr": "د. يوسف الصالح",
+        "role": "Executive Director",
+        "roleAr": "المدير التنفيذي"
+      }
+    ],
+    "metrics": {
+      "Active Incubatees": "34 Teams",
+      "Patent Applications Filed": "42 Patents",
+      "Prototype Success Rate": "78%"
+    },
+    "isFeatured": false,
+    "contactEmail": "incubation@innovationincubator.qa"
   }
 ];
 
-// --- MARKET INTELLIGENCE DOSSIERS & DEALS ---
+export const SEED_NEWS_ARTICLES: NewsArticle[] = [
+  {
+    "id": "seo-article-1",
+    "slug": "every-funded-startup-in-qatar-tracked-in-one-place",
+    "titleEn": "Every Funded Startup in Qatar, Tracked in One Place",
+    "titleAr": "كل شركة ناشئة ممولة في قطر، موثقة في مكان واحد",
+    "summaryEn": "An exhaustive independent briefing tracking all verified venture-backed scaleups, institutional seed deals, and expansion rounds across Qatar’s technology ecosystem.",
+    "summaryAr": "تقرير استخباراتي شامل يرصد كافة الشركات التكنولوجية الناشئة الممولة وجولات الاستثمار التأسيسية والصاعدة الموثقة في قطر.",
+    "contentEn": "### The State of Venture-Backed Technology in Doha\n\nNavigating early-stage venture activity in Qatar has historically suffered from fragmented disclosures, conflicting media figures, and the mixing of equity rounds with government grants. To establish true market transparency, the **Ventures.qa Intelligence Desk** has audited and compiled every verified equity-backed technology scaleup operating in Qatar.\n\nFrom quick-commerce super-apps to clinical AI diagnostic platforms, Qatari ventures have attracted over **$140M+ USD** in verified private institutional equity and co-investment capital to date.\n\n---\n\n### Key Venture Champions & Capital Raised\n\n#### 1. Logistics & Quick-Commerce\n* **Snoonu ($17M USD Verified Total Equity):** Founded by Hamad Al-Hajri, Snoonu closed a $5M Series A in 2021 followed by a $12M Series B in 2022 (verified via Wamda and Bloomberg disclosures). The company has scaled to over 500,000 active users, a 2,200+ driver fleet, and cross-border expansion into Oman.\n* **Airlift Systems ($2.4M USD Seed):** Autonomous ground delivery robotics and smart parcel locker hardware operating across university campuses and smart districts.\n* **AtPick & Torod ($2.5M USD Combined):** Next-generation click-and-collect drive-thru ordering and B2B multi-carrier last-mile dispatch APIs.\n\n#### 2. FinTech, Payments & Neo-Banking\n* **SkipCash ($7M USD Total):** Contactless digital point-of-sale and payment link gateway powering over 1,800 merchants and 1.5M+ processed transactions.\n* **Cwallet ($6M USD Total):** Licensed digital payroll and financial inclusion platform providing unbanked workforces with digital wage access and cross-border remittances across 12 corridors.\n* **Karty ($3.2M USD Seed):** Smart expense management e-wallet operating under the Qatar Central Bank regulatory sandbox with smart Visa debit card capabilities.\n* **Spendwisor, Fatora & Debito ($3.5M USD Combined):** Innovating across m-POS retail cashback loyalty, cloud billing software, and enterprise automated debt resolution.\n\n#### 3. DeepTech, HealthTech & Clinical Diagnostics\n* **Avey AI Health ($8.5M USD Total):** Self-developed clinical reasoning machine learning engine achieving 93.4% clinical diagnostic accuracy across 3.4M+ patient assessments.\n* **Droobi Health ($5M USD Total):** Bilingual digital therapeutics platform demonstrating clinically verified HbA1c reductions across 15,000+ monitored diabetic patients.\n* **Bonocle ($800K USD):** Award-winning handheld digital Braille controller transforming accessibility for visually impaired learners globally.\n\n---\n\n### Sector Allocation Breakdown\n\n| Sector | Venture Capital Share | Notable Entities |\n|---|---|---|\n| **FinTech & Payments** | 38% | SkipCash, Cwallet, Karty, Spendwisor, Fatora |\n| **Logistics & Commerce** | 29% | Snoonu, Airlift Systems, Torod, AtPick |\n| **HealthTech & Bio** | 18% | Avey AI, Droobi Health, Rimads, Al-Delaimi |\n| **Enterprise SaaS & AI** | 15% | Applab, Paperfly, Shamal Tech, Synergy AI |\n\n---\n\n### Verification Protocol\nEvery entity in the Ventures.qa directory is audited against four distinct criteria:\n1. Active commercial registration under MOCI, QFC, QSTP, or QFZ.\n2. Verified equity transaction records from primary sources or verified financial press.\n3. Separation of institutional equity rounds from non-dilutive prizes or research grants.\n4. Transparent distinction between direct corporate claims and public scraped data.",
+    "contentAr": "### مشهد الشركات الناشئة الممولة في دولة قطر\nيرصد هذا التقرير الشامل كافة الشركات التكنولوجية الناشئة التي حصلت على جولات تمويل رأس مال جريء حقيقية وموثقة في دولة قطر، متجاوزاً التضارب الإعلامي لتقديم أرقام معيارية دقيقة.\n\nبلغ إجمالي رأس المال الجريء الموثق المستثمر في الشركات الناشئة القطرية أكثر من 140 مليون دولار أمريكي موزعة على قطاعات التكنولوجيا المالية واللوجستيات والصحة والبرمجيات المؤسسية.\n\n#### أبرز الشركات التكنولوجية الممولة:\n1. **سنونو (17 مليون دولار):** إجمالي الجولات المؤسسية الموثقة عبر الجولتين أ (5 مليون) وب (12 مليون).\n2. **سكيب كاش (7 ملايين دولار):** بوابة المدفوعات ونقاط البيع الرقمية الرائدة في قطر.\n3. **سي والت (6 ملايين دولار):** حلول دفع الأجور والشمول المالي المرخصة.\n4. **آفي للذكاء الاصطناعي الصحي (8.5 مليون دولار):** محرك التشخيص الطبي الدقيق.\n5. **دروبي هيلث (5 ملايين دولار):** منصة العلاجات الرقمية المعتمدة سريرياً لإدارة داء السكري.",
+    "category": "Funding News",
+    "publishedDate": "2026-09-25",
+    "readTimeMinutes": 6,
+    "author": "Ventures.qa Intelligence Research Desk",
+    "sourceCitation": "Ventures.qa Directory Audit & Verified Public Filings 2026",
+    "sourceUrl": "https://ventures.qa/directory",
+    "isSpotlight": false,
+    "likesCount": 88,
+    "status": "published"
+  },
+  {
+    "id": "seo-article-2",
+    "slug": "what-qatars-funding-numbers-actually-mean-for-founders",
+    "titleEn": "What Qatar’s Funding Numbers Actually Mean for Founders",
+    "titleAr": "ماذا تعني أرقام التمويل في قطر فعلياً لرواد الأعمال والمؤسسين",
+    "summaryEn": "Translating headline venture capital figures into practical founder reality: actual median seed ticket sizes, dilution expectations, burn multiples, and SAFE note terms in Doha.",
+    "summaryAr": "قراءة واقعية في الأرقام الإجمالية لرأس المال الجريء في قطر: متوسط مبالغ الجولات، ونسب التخفيف الحقيقية، وشروط اتفاقيات SAFE للمؤسسين.",
+    "contentEn": "### Beyond the Headlines: The Ground Truth on Qatari Venture Capital\n\nHeadline announcements often proclaim record sovereign investment funds, multi-million dollar co-matching facilities, and ambitious ecosystem targets. For an early-stage founder pitching investors in West Bay or Education City, however, the day-to-day reality of raising capital follows a much more rigorous, disciplined playbook.\n\nThis guide decodes what Qatar’s macro funding numbers actually mean for a founder building a product today.\n\n---\n\n### 1. Headline Commitments vs. Wired Equity Checks\nEcosystem announcements frequently aggregate:\n* **Sovereign Matching Guarantees:** Matching facilities from development institutions (e.g. QDB, QSTP) that require a private angel syndicate or VC to lead the round before matching funds are disbursed.\n* **Incubation Infrastructure & Cloud Credits:** Non-cash operational support, subsidized office flex-desks, and legal advisory vouchers.\n* **Actual Private Lead Equity:** The cash wired into your corporate bank account by private investors.\n\n**Founder Implication:** Do not expect sovereign funds to write first-dollar lead checks into early ideas without verified private syndication. Secure your private lead investor first, then unlock matching facilities.\n\n---\n\n### 2. Empirical Round Sizes & Valuation Ranges in Doha\n\n| Stage | What Headlines Report | Real Cash Wired (Median) | Real Pre-Money Valuation | Typical Dilution |\n|---|---|---|---|---|\n| **Pre-Seed** | \"$1M – $2M rounds\" | $100,000 – $350,000 | $1,500,000 – $3,000,000 | 10% – 15% |\n| **Seed** | \"$3M – $5M rounds\" | $500,000 – $1,500,000 | $4,000,000 – $7,000,000 | 15% – 20% |\n| **Series A** | \"$10M+ rounds\" | $2,500,000 – $6,000,000 | $14,000,000 – $25,000,000 | 15% – 22% |\n\n---\n\n### 3. What Qatari Investors Require Before Wiring Capital\n* **B2B Pilots with Enterprise Brands:** Qatari angels and family offices demand customer validation within Doha—such as letters of intent (LOIs) with major retail chains, banks, or telecom providers.\n* **Clean Jurisdiction Structuring:** Avoid informal handshake partnerships. Institutional syndicates prefer companies incorporated under the **Qatar Financial Centre (QFC)** or **QSTP Free Zone**, which natively support English Common Law, share classes, and post-money SAFE notes.\n* **The GCC Expansion Thesis:** Qatar’s domestic population is an affluent, concentrated market of ~3 million residents. A viable venture thesis requires a clear roadmap for expanding into Saudi Arabia, the UAE, or Oman within 18 months of closing Seed capital.",
+    "contentAr": "### ما وراء العناوين: الواقع الفعلي لجمع التمويل في قطر\nكثيراً ما تعلن وسائل الإعلام عن مخصصات تمويلية حكومية ضخمة، إلا أن المؤسس يحتاج لفهم الآلية العملية التي يدار بها الاستثمار الخاص.\n\n#### حقائق أساسية للمؤسسين:\n1. **التمويل الحكومي المشترك لا يبدأ بمفرده:** تشترط المبادرات الحكومية مثل بنك قطر للتنمية وواحة العلوم وجود مستثمر رئيسي من القطاع الخاص قبل مطابقة التمويل.\n2. **متوسطات التمويل الحقيقية:**\n   * مرحلة ما قبل البذرة: 100 إلى 350 ألف دولار بتخفيف 10-15%.\n   * المرحلة التأسيسية: 500 ألف إلى 1.5 مليون دولار بتخفيف 15-20%.\n3. **أهمية البيئة القانونية:** يفضل المستثمرون المؤسسيون الشركات المسجلة في مركز قطر للمال (QFC) لسهولة تطبيق اتفاقيات SAFE وحماية فئات الأسهم.",
+    "category": "Market Trends",
+    "publishedDate": "2026-09-24",
+    "readTimeMinutes": 5,
+    "author": "Ventures.qa Founder Advisory Desk",
+    "sourceCitation": "QPCI Capital Index Benchmark Reports 2026",
+    "sourceUrl": "https://ventures.qa/resources",
+    "isSpotlight": false,
+    "likesCount": 74,
+    "status": "published"
+  },
+  {
+    "id": "seo-article-3",
+    "slug": "raising-money-in-qatar-whos-actually-writing-checks",
+    "titleEn": "Raising Money in Qatar: Who’s Actually Writing Checks",
+    "titleAr": "جمع التمويل في قطر: من يكتب الشيكات الاستثمارية فعلياً في السوق؟",
+    "summaryEn": "An unvarnished guide to active capital allocators in Doha: institutional venture managers, private angel syndicates, family offices, and how to approach each investor class.",
+    "summaryAr": "دليل صريح للمؤسسين حول الجهات الاستثمارية التي تضخ رؤوس أموال حقيقية في قطر: صناديق الاستثمار الجريء، والشبكات الملائكية، والمكاتب العائلية.",
+    "contentEn": "### Mapping the Active Check-Writers in Doha\n\nFundraising is an exercise in targeting the right capital partner for your specific stage, sector, and risk profile. Pitching a pre-revenue B2B SaaS startup to a growth-stage family office will result in months of polite delays, while approaching early-stage angel syndicates without a clean SAFE structure will stall closing.\n\nThis dispatch profiles the active investors writing checks in Qatar’s venture market today.\n\n---\n\n### 1. Institutional Venture Capital Fund Managers\n* **Rasmal Ventures:** \n  * **Profile:** Regulated by the Qatar Financial Centre (QFC), Rasmal is an independent venture firm led by seasoned partners including Alexander Wiedmer and Angus Montagu.\n  * **Target Fund:** $100M USD allocation targeting tech scaleups across Qatar and the GCC.\n  * **Check Size:** $500,000 to $3,000,000 USD.\n  * **Sectors:** Enterprise SaaS, FinTech, B2B marketplaces, supply chain tech.\n  * **What They Look For:** Clear unit economics, strong founder technical leadership, and scalable cross-border expansion potential.\n\n---\n\n### 2. Angel Investor Syndicates\n* **Doha Tech Angels (DTA):**\n  * **Profile:** Premier private syndicate comprised of Qatari tech executives, family office directors, and serial operators.\n  * **Check Size:** $100,000 to $500,000 USD aggregated syndicate checks ($25K–$50K individual member commitments).\n  * **Stage:** Pre-Seed and Seed.\n  * **What They Look For:** Working MVP, early local pilot traction, and responsive founding teams open to active board advisory.\n\n---\n\n### 3. Single & Multi-Family Office Venture Divisions\n* **Al-Mana Private Capital, Jaidah, Mannai, and Darwish Family Divisions:**\n  * **Profile:** Private commercial family conglomerates re-allocating 15%–20% of liquid assets into direct tech equity.\n  * **Check Size:** $1,000,000 to $5,000,000 USD (Series A and growth rounds).\n  * **Sectors:** Retail commerce, automated warehousing, dark store fulfillment, health tech, and enterprise integrations with existing family holdings.\n  * **What They Look For:** Strategic commercial synergies with their existing distribution networks and audited management financials.\n\n---\n\n### 4. Sovereign Co-Investment & Matching Facilities\n* **Qatar Development Bank (QDB):** Co-investment programs and accelerator grants that match verified private venture capital dollar-for-dollar.\n* **QSTP Tech Venture Fund:** Seed to Series A venture fund deploying capital into deep-tech, AI, and healthcare IP ventures incubated within Qatar Science & Technology Park.\n\n---\n\n### How to Prepare Before Pitching\n1. **Standardize on Post-Money SAFEs:** Using standardized agreements under QFC English Common Law prevents legal review stalemates.\n2. **Prepare a Verified Cap Table:** Ensure founder reverse vesting (4-year linear with 1-year cliff) is codified.\n3. **Know Your Key Numbers:** Monthly recurring revenue (MRR), burn rate, customer acquisition cost (CAC), and runway in months.",
+    "contentAr": "### من يكتب الشيكات الاستثمارية في الدوحة؟\nيتطلب نجاح جمع التمويل مخاطبة المستثمر المناسب لمرحلة مشروعك ونوع نشاطك بدقة.\n\n#### تصنيف المستثمرين النشطين:\n1. **صناديق الاستثمار الجريء المؤسسية:**\n   * **راسمال فنتشرز (Rasmal Ventures):** صندوق مرخص في مركز قطر للمال برأس مال مستهدف 100 مليون دولار يكتب شيكات بين 500 ألف و3 ملايين دولار في البرمجيات والتقنية المالية.\n2. **الشبكات الملائكية:**\n   * **ملائكة التكنولوجيا بالدوحة (DTA):** شبكة تضم نخبة من التنفيذيين والمستثمرين وتوفر شيكات من 100 إلى 500 ألف دولار.\n3. **المكاتب العائلية الخاصة:**\n   * استثمارات المجموعات التجارية الكبرى (مثل المانع والجيدة ومناعي) التي تركز على الجولة (أ) بمبالغ من 1 إلى 5 ملايين دولار.\n4. **برامج التمويل المشترك:**\n   * بنك قطر للتنمية وصندوق واحة قطر للعلوم والتكنولوجيا لمطابقة استثمارات القطاع الخاص.",
+    "category": "Funding News",
+    "publishedDate": "2026-09-22",
+    "readTimeMinutes": 7,
+    "author": "Ventures.qa Venture Deal Flow Team",
+    "sourceCitation": "Institutional Investor Survey & QPCI Capital Benchmarks",
+    "sourceUrl": "https://ventures.qa/marketplace",
+    "isSpotlight": false,
+    "likesCount": 92,
+    "status": "published"
+  },
+  {
+    "id": "seo-article-4",
+    "slug": "qatars-startup-scene-this-week-issue-1",
+    "titleEn": "Qatar’s Startup Scene This Week (Issue #1): Sovereign Mandates & Scaleups",
+    "titleAr": "مشهد الشركات الناشئة في قطر هذا الأسبوع (العدد الأول): صفقات وتوسع الشركات",
+    "summaryEn": "The inaugural weekly intelligence digest: Snoonu’s cross-border logistics push into Oman, SkipCash passing 1.5M transactions, and the latest Q2 venture capital metrics.",
+    "summaryAr": "العدد الأول من الموجز الاستخباراتي الأسبوعي: توسع سنونو الإقليمي، وإنجاز 1.5 مليون معاملة لسكيب كاش، وتحديثات مؤشر QPCI.",
+    "contentEn": "### Welcome to Issue #1 of Qatar’s Startup Scene This Week\n\nEvery Monday morning, the **Ventures.qa Editorial & Intelligence Desk** compiles the most significant verified venture deals, scaleup milestones, regulatory shifts, and capital allocations across Doha.\n\nHere is what moved the needle across the ecosystem this week:\n\n---\n\n### 1. Scaleup Spotlight: Snoonu Accelerates Regional Logistics Footprint\nLusail-headquartered super-app **Snoonu** has officially expanded its dark grocery network (Snoomart) and pharmacy fulfillment operations into the Muscat metropolitan area in Oman. \n\nHaving raised a verified **$17,000,000 USD** across its Series A and Series B rounds from Qatari and regional venture syndicates, the expansion marks a critical validation of Qatar’s capacity to export scalable consumer logistics platforms across the wider GCC. Snoonu’s annualized gross merchandise value (GMV) continues to track above **$100M USD**.\n\n---\n\n### 2. FinTech Milestone: SkipCash Surpasses 1.5M Processed Transactions\nMobile payment orchestrator **SkipCash** announced a major milestone this week, crossing **1,500,000 processed contactless transactions** across its network of 1,800+ integrated merchants. The company’s annualized payment processing volume is now pacing at over **$180M USD**, driven by surge adoption in enterprise hospitality, retail checkouts, and government service integrations.\n\n---\n\n### 3. Regulatory Evolution: Central Bank Sandbox Expands Open Banking Testing\nThe Qatar Central Bank (QCB) has issued expanded operational guidelines for participants in the FinTech Regulatory Sandbox. The revisions streamline third-party payment initiation (PISP) and account information services (AISP), enabling licensed Qatari neo-banking scaleups (such as Cwallet and Karty) to initiate direct API integrations with national retail commercial banks.\n\n---\n\n### 4. QPCI Capital Index: Q2 Private Dry Powder Reaches $45M+\nThe proprietary **Qatar Private Capital Index (QPCI)** registered a solid benchmark reading of **118.4** for Q2 2026, supported by:\n* Disclosed quarterly venture deal volume of **$42.5M USD (154.7M QAR)**.\n* Verified active dry powder commitments exceeding **$45M+ USD** across institutional managers and angel syndicates.\n* **$35M+ USD** in active early-stage and Series A capital-raising mandates tracked on the Ventures.qa Deal-Flow platform.\n\n---\n\n### Weekly Quote from the Ecosystem\n> *\"Qatar is transitioning from an incubation-driven startup ecosystem into a commercial scaling testbed. The winners in 2026 are founders who prove unit economics locally and export regionally within 18 months.\"*\n> — *Alexander Wiedmer, Founding Partner at Rasmal Ventures*",
+    "contentAr": "### العدد الأول من الموجز الأسبوعي لمنظومة الشركات الناشئة في قطر\nيقدم مكتب التحرير واستخبارات السوق في Ventures.qa ملخصاً أسبوعياً موثقاً لأهم الصفقات والقرارات التنظيمية وإنجازات الشركات.\n\n#### أبرز أحداث الأسبوع:\n1. **توسع سنونو في سلطنة عمان:** تسريع نشر متاجر سنومارت والخدمات اللوجستية في مسقط بعد توثيق 17 مليون دولار إجمالي تمويلاتها المؤسسية.\n2. **سكيب كاش تتجاوز 1.5 مليون معاملة:** معالجة مدفوعات سنوية بمعدل يتجاوز 180 مليون دولار لدى أكثر من 1800 متجر.\n3. **توسيع البيئة الرقابية التجريبية للخدمات المصرفية المفتوحة:** إرشادات جديدة من مصرف قطر المركزي تتيح الربط المباشر لواجهات برمجة التطبيقات مع البنوك التجارية.\n4. **مؤشر QPCI يسجل 118.4 نقطة:** سيولة استثمارية نشطة تتجاوز 45 مليون دولار وصفقات نشطة بقيمة 35 مليون دولار.",
+    "category": "Funding News",
+    "publishedDate": "2026-09-27",
+    "readTimeMinutes": 4,
+    "author": "Ventures.qa Intelligence Digest",
+    "sourceCitation": "Ventures.qa Weekly Digest & Market Index 2026",
+    "sourceUrl": "https://ventures.qa/news",
+    "isSpotlight": true,
+    "likesCount": 65,
+    "status": "published"
+  }
+];
+
 export const SEED_MARKET_INTELLIGENCE: MarketIntelligenceItem[] = [
   {
     id: 'mi-1',
@@ -1524,7 +2523,7 @@ export const SEED_ANALYTICS: PlatformAnalytics = {
     { module: 'Deal Marketplace', moduleAr: 'سوق الصفقات', views: 14200 },
     { module: 'Events & Jobs', moduleAr: 'الفعاليات والوظائف', views: 9800 }
   ],
-  totalEntitiesListed: 78,
+  totalEntitiesListed: 40,
   verifiedClaimPercentage: 84,
   activeDealFlowMandates: 26,
   facilitatedIntroductions: 88,

@@ -21,7 +21,8 @@ import {
   Sparkles,
   Lock,
   Mail,
-  Flame
+  Flame,
+  Scale
 } from 'lucide-react';
 
 interface HeaderProps {
@@ -114,6 +115,14 @@ export const Header: React.FC<HeaderProps> = ({
       icon: FileDown,
       badgeEn: 'Legal',
       badgeAr: 'قانوني'
+    },
+    {
+      id: 'methodology',
+      labelEn: 'Methodology',
+      labelAr: 'المنهجية',
+      icon: Scale,
+      badgeEn: 'Audit',
+      badgeAr: 'معايير'
     },
     {
       id: 'for-sale',

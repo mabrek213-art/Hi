@@ -205,9 +205,17 @@ export const EntityDetailModal: React.FC<EntityDetailModalProps> = ({
                   </div>
                   <div className="p-3 rounded-xl bg-white border border-[#E8DFC8]">
                     <span className="text-[11px] text-[#7A6D6D] block">{isAr ? 'حالة التوثيق' : 'Claim Verification'}</span>
-                    <span className="font-bold text-emerald-700 text-xs">
-                      {entity.claimed ? (isAr ? 'موثق رسمياً' : 'Verified Claim') : (isAr ? 'غير موثق' : 'Unclaimed')}
-                    </span>
+                    {entity.claimed ? (
+                      <span className="font-bold text-emerald-700 text-xs flex items-center gap-1 mt-0.5">
+                        <CheckCircle2 className="w-3.5 h-3.5" />
+                        <span>{isAr ? `موثق من قبل ${entity.nameAr}` : `Claimed by ${entity.name}`}</span>
+                      </span>
+                    ) : (
+                      <span className="font-semibold text-amber-800 text-[11px] flex items-center gap-1 mt-0.5">
+                        <span className="w-1.5 h-1.5 rounded-full bg-amber-500" />
+                        <span>{isAr ? 'غير موثق — بيانات عامة' : 'Unverified — public data'}</span>
+                      </span>
+                    )}
                   </div>
                 </div>
               </div>
@@ -286,6 +294,17 @@ export const EntityDetailModal: React.FC<EntityDetailModalProps> = ({
                   </div>
                 )}
               </div>
+
+              {/* Source Verification Citation */}
+              {entity.sourceCitation && (
+                <div className="p-3.5 rounded-xl bg-emerald-50 border border-emerald-200 text-xs text-emerald-900 flex items-start gap-2.5">
+                  <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" />
+                  <div>
+                    <strong className="font-bold block">{isAr ? 'بيانات التمويل الموثقة ومصدر الإفصاح:' : 'Verified Funding Sourcing & Citation:'}</strong>
+                    <span className="text-[11px] text-emerald-800 leading-relaxed mt-0.5 block">{entity.sourceCitation}</span>
+                  </div>
+                </div>
+              )}
 
               {/* Funding Rounds Timeline */}
               {entity.fundingRounds && entity.fundingRounds.length > 0 ? (

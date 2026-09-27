@@ -22,6 +22,7 @@ import { Footer } from './components/Footer';
 import { ArticlePage } from './components/ArticlePage';
 import { AcquisitionProspectusModal } from './components/AcquisitionProspectusModal';
 import { ContactAndSaleModule } from './components/ContactAndSaleModule';
+import { MethodologyPage } from './components/MethodologyPage';
 
 import { 
   SEED_ENTITIES, 
@@ -298,6 +299,7 @@ export function App() {
             onViewNews={() => setActiveModule('news')}
             onSelectArticleSlug={(slug) => navigateToArticle(slug)}
             onOpenProspectus={() => setIsProspectusModalOpen(true)}
+            onNavigateMethodology={() => setActiveModule('methodology')}
             searchQuery={searchQuery}
             onSearchChange={setSearchQuery}
             totalEntitiesCount={entities.length}
@@ -400,6 +402,14 @@ export function App() {
               report={SEED_STATE_OF_CAPITAL_REPORT}
               language={language}
               onOpenReportModal={() => setIsReportModalOpen(true)}
+            />
+          )}
+
+          {activeModule === 'methodology' && (
+            <MethodologyPage
+              language={language}
+              onNavigateTab={(tab) => setActiveModule(tab as any)}
+              onOpenProspectus={() => setIsProspectusModalOpen(true)}
             />
           )}
 

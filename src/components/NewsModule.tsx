@@ -422,8 +422,8 @@ export const NewsModule: React.FC<NewsModuleProps> = ({
           </h3>
           <p className="text-xs text-white/90 leading-relaxed">
             {isAr
-              ? 'احصل على ملخص تحليلي أسبوعي يضم صفقات التمويل الجديدة، وأضواء على الشركات الصاعدة، ورؤى مؤشر رأس المال الخاص (QPCI) مباشرة في بريدك.'
-              : 'Every Monday morning: verified Qatari funding rounds, regulatory changes, startup spotlights, and QPCI index metrics delivered directly to 2,400+ investors and founders.'}
+              ? 'انضم إلى نشرتنا الأسبوعية: تغطية موثقة لجولات التمويل والتغييرات التنظيمية وأضواء الشركات ومؤشرات QPCI صباح كل اثنين.'
+              : 'Join our weekly digest: verified Qatari funding rounds, regulatory changes, startup spotlights, and QPCI index metrics delivered directly every Monday morning.'}
           </p>
 
           <form onSubmit={handleNewsletterSubmit} className="pt-2 flex flex-col sm:flex-row gap-2 max-w-md">

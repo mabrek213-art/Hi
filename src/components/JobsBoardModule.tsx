@@ -408,7 +408,7 @@ export const JobsBoardModule: React.FC<JobsBoardModuleProps> = ({
                     </strong>
                     <span className="text-[11px] text-[#7A6D6D] block">
                       {isAr
-                        ? 'ظهور مثبت في صدارة القائمة وإبراز في النشرة البريدية الأسبوعية لـ 2400+ مشترك.'
+                        ? 'ظهور مثبت في صدارة القائمة وإبراز في النشرة البريدية الأسبوعية.'
                         : 'Pinned to top of jobs board & highlighted in the weekly newsletter dispatch.'}
                     </span>
                   </div>

@@ -151,6 +151,15 @@ export const Footer: React.FC<FooterProps> = ({
                   <span>{isAr ? 'منصة الصفقات' : 'Deal-Flow Marketplace'}</span>
                 </button>
               </li>
+              <li>
+                <button
+                  onClick={() => onNavigate('methodology')}
+                  className="hover:text-white transition-colors flex items-center gap-1.5 text-[#C5A059]"
+                >
+                  <FileText className="w-3.5 h-3.5 text-[#C5A059]" />
+                  <span>{isAr ? 'منهجية المؤشر والتحقق' : 'Data & Index Methodology'}</span>
+                </button>
+              </li>
             </ul>
           </div>
 
@@ -226,8 +235,8 @@ export const Footer: React.FC<FooterProps> = ({
             </h4>
             <p className="text-[11px] text-[#A69999] leading-relaxed">
               {isAr
-                ? 'ملخص صفقات التمويل والمؤشرات التحليلية صباح كل اثنين.'
-                : 'Direct to 2,400+ investors and founders every Monday morning.'}
+                ? 'انضم إلى موجزنا الأسبوعي: يرسل صباح كل اثنين.'
+                : 'Join our weekly digest: delivered directly every Monday morning.'}
             </p>
             <form onSubmit={handleNewsletter} className="space-y-2">
               <input
