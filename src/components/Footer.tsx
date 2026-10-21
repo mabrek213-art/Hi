@@ -305,7 +305,15 @@ export const Footer: React.FC<FooterProps> = ({
             </p>
           </div>
 
-          <div className="flex items-center gap-3">
+          <div className="flex flex-wrap items-center gap-2.5">
+            {onOpenProspectus && (
+              <button
+                onClick={onOpenProspectus}
+                className="px-3.5 py-2 rounded-xl bg-white/10 hover:bg-white/20 text-[#FAF8F5] text-xs font-bold transition-all border border-white/20"
+              >
+                {isAr ? 'النشرة الاستثمارية (M&A)' : 'M&A Prospectus'}
+              </button>
+            )}
             <button
               onClick={() => onNavigate('for-sale')}
               className="px-4 py-2 rounded-xl bg-[#C5A059] hover:bg-[#D4AF67] text-[#1E1919] text-xs font-black transition-all shadow-md"

@@ -132,15 +132,6 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
                 </span>
               </div>
 
-              {onOpenProspectus && (
-                <button
-                  onClick={onOpenProspectus}
-                  className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-[#C5A059]/15 hover:bg-[#C5A059]/25 text-[#9E7A32] text-xs font-bold border border-[#C5A059]/40 transition-colors"
-                >
-                  <Sparkles className="w-3.5 h-3.5 text-[#C5A059]" />
-                  <span>{isAr ? 'نشرة الاستحواذ والأصول (M&A)' : 'Asset Prospectus & Acquisition'}</span>
-                </button>
-              )}
             </div>
 
             <h1 className="text-3xl sm:text-5xl lg:text-6xl font-black text-[#1E1919] tracking-tight leading-[1.12]">

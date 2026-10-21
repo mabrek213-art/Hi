@@ -18,10 +18,7 @@ import {
   X,
   FileText,
   User as UserIcon,
-  Sparkles,
   Lock,
-  Mail,
-  Flame,
   Scale,
   Landmark,
   Rocket
@@ -141,50 +138,11 @@ export const Header: React.FC<HeaderProps> = ({
       icon: Scale,
       badgeEn: 'Audit',
       badgeAr: 'معايير'
-    },
-    {
-      id: 'for-sale',
-      labelEn: 'For Sale',
-      labelAr: 'المنصة للبيع',
-      icon: Flame,
-      badgeEn: 'Acquire',
-      badgeAr: 'استحواذ'
     }
   ];
 
   return (
     <header className="sticky top-0 z-40 bg-[#FAF8F5]/95 backdrop-blur-md border-b border-[#E8DFC8]">
-      {/* Top Asset Sale Announcement Banner */}
-      <div className="bg-gradient-to-r from-[#50081C] via-[#8A1538] to-[#360513] text-white px-4 py-1.5 text-xs border-b border-[#C5A059]/40">
-        <div className="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-2">
-          <div className="flex items-center gap-2">
-            <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded text-[10px] font-black bg-[#C5A059] text-[#1E1919] uppercase tracking-wider font-mono shadow-sm">
-              <span className="w-1.5 h-1.5 rounded-full bg-red-600 animate-ping" />
-              {isAr ? 'معروض للبيع' : 'FOR SALE'}
-            </span>
-            <p className="text-white/95 text-xs font-medium">
-              {isAr
-                ? 'منصة ونطاق Ventures.qa معروضة رسمياً للبيع والاستحواذ الكامل — التواصل المباشر مع البائع: '
-                : 'Ventures.qa domain, full-stack platform & QPCI index officially FOR SALE — Contact seller: '}
-              <a 
-                href="mailto:articleelkhalil@gmail.com?subject=Ventures.qa%20Acquisition%20Inquiry"
-                className="underline font-mono font-bold text-[#C5A059] hover:text-white"
-              >
-                articleelkhalil@gmail.com
-              </a>
-            </p>
-          </div>
-          <div className="flex items-center gap-2">
-            <button
-              onClick={() => onTabChange('for-sale')}
-              className="px-2.5 py-0.5 rounded bg-white/10 hover:bg-white/20 text-[#C5A059] font-bold text-[11px] transition-colors flex items-center gap-1 border border-[#C5A059]/30"
-            >
-              <span>{isAr ? 'صفحة البيع والتواصل ←' : 'Sale & Contact Details →'}</span>
-            </button>
-          </div>
-        </div>
-      </div>
-
       {/* Top Independent Market Dispatch Bar */}
       <div className="bg-[#1A1415] text-[#FAF8F5] px-4 py-1.5 text-xs font-medium border-b border-[#2D2425]">
         <div className="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-2">
@@ -199,14 +157,6 @@ export const Header: React.FC<HeaderProps> = ({
             </p>
           </div>
           <div className="flex items-center gap-3 text-xs">
-            <button
-              onClick={() => onTabChange('for-sale')}
-              className="hover:text-[#C5A059] transition-colors flex items-center gap-1.5 text-[#C5A059] font-bold"
-            >
-              <Sparkles className="w-3.5 h-3.5" />
-              <span>{isAr ? 'شراء المنصة (M&A)' : 'Acquire Platform'}</span>
-            </button>
-            <span className="text-white/30 hidden sm:inline">|</span>
             <button
               onClick={onOpenReportModal}
               className="hover:text-[#C5A059] transition-colors flex items-center gap-1.5 underline underline-offset-2"
@@ -299,14 +249,6 @@ export const Header: React.FC<HeaderProps> = ({
               </span>
             </button>
 
-            {/* For Sale CTA Button */}
-            <button
-              onClick={() => onTabChange('for-sale')}
-              className="px-3.5 py-1.5 rounded-xl bg-gradient-to-r from-[#C5A059] to-[#DFBA73] hover:from-[#B89248] hover:to-[#C5A059] text-[#1E1919] text-xs font-black shadow-sm transition-all flex items-center gap-1.5 border border-[#8A1538]/20"
-            >
-              <Flame className="w-3.5 h-3.5 text-[#8A1538] fill-[#8A1538]" />
-              <span>{isAr ? 'المنصة للبيع' : 'For Sale'}</span>
-            </button>
 
             {/* Claim / Submit Entity Button */}
             <button
