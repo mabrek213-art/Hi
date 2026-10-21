@@ -22,7 +22,9 @@ import {
   Lock,
   Mail,
   Flame,
-  Scale
+  Scale,
+  Landmark,
+  Rocket
 } from 'lucide-react';
 
 interface HeaderProps {
@@ -60,6 +62,22 @@ export const Header: React.FC<HeaderProps> = ({
   const isAr = language === 'ar';
 
   const navItems = [
+    {
+      id: 'invest-qatar',
+      labelEn: 'Invest Qatar',
+      labelAr: 'استثمر في قطر',
+      icon: Landmark,
+      badgeEn: 'FDI Hub',
+      badgeAr: 'بوابة الاستثمار'
+    },
+    {
+      id: 'startups-qatar',
+      labelEn: 'Startups Qatar',
+      labelAr: 'الشركات الناشئة',
+      icon: Rocket,
+      badgeEn: 'Top 40',
+      badgeAr: 'أفضل ٤٠'
+    },
     {
       id: 'directory',
       labelEn: 'Directory',

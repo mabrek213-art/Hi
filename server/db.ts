@@ -158,6 +158,13 @@ class DatabaseStore {
         if (parsed.entities && parsed.news && parsed.deals) {
           // Normalize news articles in parsed database
           parsed.news = parsed.news.map(normalizeNewsArticle);
+          // Merge any seed news articles that are missing by slug
+          const existingSlugs = new Set(parsed.news.map((n: any) => n.slug));
+          for (const seedItem of SEED_NEWS_ARTICLES) {
+            if (!existingSlugs.has(seedItem.slug)) {
+              parsed.news.unshift(normalizeNewsArticle(seedItem));
+            }
+          }
           return parsed;
         }
       }

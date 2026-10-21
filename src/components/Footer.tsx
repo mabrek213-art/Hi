@@ -16,7 +16,9 @@ import {
   Rss, 
   Lock, 
   CheckCircle2,
-  ExternalLink
+  ExternalLink,
+  Landmark,
+  Rocket
 } from 'lucide-react';
 
 interface FooterProps {
@@ -115,6 +117,24 @@ export const Footer: React.FC<FooterProps> = ({
               {isAr ? 'وحدات المنصة' : 'Platform Modules'}
             </h4>
             <ul className="space-y-2">
+              <li>
+                <button
+                  onClick={() => onNavigate('invest-qatar')}
+                  className="hover:text-white transition-colors flex items-center gap-1.5 text-[#C5A059] font-bold"
+                >
+                  <Landmark className="w-3.5 h-3.5 text-[#C5A059]" />
+                  <span>{isAr ? 'استثمر في قطر (Invest Qatar)' : 'Invest in Qatar (FDI Hub)'}</span>
+                </button>
+              </li>
+              <li>
+                <button
+                  onClick={() => onNavigate('startups-qatar')}
+                  className="hover:text-white transition-colors flex items-center gap-1.5 text-white font-medium"
+                >
+                  <Rocket className="w-3.5 h-3.5 text-[#8A1538]" />
+                  <span>{isAr ? 'الشركات الناشئة في قطر (Startups)' : 'Startups in Qatar (Index)'}</span>
+                </button>
+              </li>
               <li>
                 <button
                   onClick={() => onNavigate('directory')}

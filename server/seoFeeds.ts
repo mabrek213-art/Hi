@@ -43,22 +43,24 @@ export function generateSitemapXml(): string {
   const news = db.getNews();
 
   const staticPages = [
-    '',
-    '/directory',
-    '/news',
-    '/intelligence',
-    '/deals',
-    '/events',
-    '/jobs',
-    '/resources',
-    '/methodology',
-    '/for-sale'
+    { path: '', priority: '1.0' },
+    { path: '/invest-qatar', priority: '1.0' },
+    { path: '/startups-qatar', priority: '1.0' },
+    { path: '/directory', priority: '0.9' },
+    { path: '/news', priority: '0.9' },
+    { path: '/intelligence', priority: '0.9' },
+    { path: '/deals', priority: '0.9' },
+    { path: '/events', priority: '0.8' },
+    { path: '/jobs', priority: '0.8' },
+    { path: '/resources', priority: '0.8' },
+    { path: '/methodology', priority: '0.8' },
+    { path: '/for-sale', priority: '0.8' }
   ];
 
   const staticXml = staticPages.map(page => `  <url>
-    <loc>${siteUrl}${page}</loc>
+    <loc>${siteUrl}${page.path}</loc>
     <changefreq>daily</changefreq>
-    <priority>${page === '' ? '1.0' : '0.8'}</priority>
+    <priority>${page.priority}</priority>
   </url>`).join('\n');
 
   const entitiesXml = entities.map(e => `  <url>

@@ -27,6 +27,8 @@ export type Sector = (typeof SECTORS)[number];
 
 export type ActiveModule = 
   | 'directory' 
+  | 'invest-qatar'
+  | 'startups-qatar'
   | 'news' 
   | 'intelligence' 
   | 'deals' 

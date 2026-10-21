@@ -19,7 +19,8 @@ import {
   Scale,
   DollarSign,
   HelpCircle,
-  ExternalLink
+  ExternalLink,
+  Landmark
 } from 'lucide-react';
 
 interface HeroSectionProps {
@@ -31,6 +32,8 @@ interface HeroSectionProps {
   onSelectArticleSlug?: (slug: string) => void;
   onOpenProspectus?: () => void;
   onNavigateMethodology?: () => void;
+  onNavigateInvestQatar?: () => void;
+  onNavigateStartupsQatar?: () => void;
   searchQuery: string;
   onSearchChange: (query: string) => void;
   totalEntitiesCount: number;
@@ -46,6 +49,8 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
   onSelectArticleSlug,
   onOpenProspectus,
   onNavigateMethodology,
+  onNavigateInvestQatar,
+  onNavigateStartupsQatar,
   searchQuery,
   onSearchChange,
   totalEntitiesCount,
@@ -56,6 +61,24 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
 
   const seoGuides = [
     {
+      slug: 'invest-in-qatar-guide-foreign-investors-vcs-family-offices',
+      badgeEn: 'Invest Qatar',
+      badgeAr: 'استثمر في قطر',
+      titleEn: 'Invest in Qatar: The Complete 2026 Guide to Venture Capital & Foreign Equity',
+      titleAr: 'استثمر في قطر: الدليل الشامل لعام ٢٠٢٦ لرأس المال الجريء والملكية الأجنبية',
+      readTime: '8 min read',
+      tag: '100% Foreign Ownership & Sovereign Matching'
+    },
+    {
+      slug: 'startups-in-qatar-top-funded-companies-ecosystem-guide',
+      badgeEn: 'Startups Qatar',
+      badgeAr: 'الشركات الناشئة',
+      titleEn: 'Startups in Qatar: Top Funded Companies, Accelerators & Ecosystem Map',
+      titleAr: 'الشركات الناشئة في قطر: قائمة الأكثر تمويلاً وخريطة المنظومة التكنولوجية',
+      readTime: '7 min read',
+      tag: 'Top 10 Funded Scaleups & Grants'
+    },
+    {
       slug: 'every-funded-startup-in-qatar-tracked-in-one-place',
       badgeEn: 'Directory Intel',
       badgeAr: 'دليل التمويل',
@@ -65,15 +88,6 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
       tag: 'Verified Capital Database'
     },
     {
-      slug: 'what-qatars-funding-numbers-actually-mean-for-founders',
-      badgeEn: 'Founders Intel',
-      badgeAr: 'رؤى المؤسسين',
-      titleEn: 'What Qatar’s Funding Numbers Actually Mean for Founders',
-      titleAr: 'ماذا تعني أرقام التمويل في قطر فعلياً لرواد الأعمال والمؤسسين',
-      readTime: '5 min read',
-      tag: 'Seed Benchmarks & Reality'
-    },
-    {
       slug: 'raising-money-in-qatar-whos-actually-writing-checks',
       badgeEn: 'Check Writers',
       badgeAr: 'كتاب الشيكات',
@@ -81,15 +95,6 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
       titleAr: 'جمع التمويل في قطر: من يكتب الشيكات الاستثمارية فعلياً في السوق؟',
       readTime: '7 min read',
       tag: 'Active VCs & Angels'
-    },
-    {
-      slug: 'qatars-startup-scene-this-week-issue-1',
-      badgeEn: 'Weekly Digest',
-      badgeAr: 'الموجز الأسبوعي',
-      titleEn: 'Qatar’s Startup Scene This Week (Issue #1): Sovereign Mandates & Scaleups',
-      titleAr: 'مشهد الشركات الناشئة في قطر هذا الأسبوع (العدد الأول): صفقات وتوسع الشركات',
-      readTime: '4 min read',
-      tag: 'Ecosystem Dispatches'
     }
   ];
 
@@ -184,11 +189,24 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
               {/* Trending Filter Pills */}
               <div className="flex flex-wrap items-center gap-1.5 mt-2.5 text-xs text-[#7A6D6D]">
                 <span className="font-semibold text-[#8A1538]">{isAr ? 'الأكثر بحثاً:' : 'Trending:'}</span>
-                {['Snoonu', 'FinTech', 'Rasmal Ventures', 'Avey AI', 'Series A', 'HealthTech', 'SAFE Notes'].map((term) => (
+                {['Invest Qatar', 'Startups Qatar', 'Snoonu', 'FinTech', 'Rasmal Ventures', 'Avey AI', 'Series A', 'SAFE Notes'].map((term) => (
                   <button
                     key={term}
-                    onClick={() => { onSearchChange(term); onExploreDirectory(); }}
-                    className="px-2 py-0.5 rounded-md bg-white border border-[#E8DFC8] hover:border-[#8A1538] text-[#4A3F3F] text-[11px] transition-colors"
+                    onClick={() => {
+                      if (term === 'Invest Qatar' && onNavigateInvestQatar) {
+                        onNavigateInvestQatar();
+                      } else if (term === 'Startups Qatar' && onNavigateStartupsQatar) {
+                        onNavigateStartupsQatar();
+                      } else {
+                        onSearchChange(term);
+                        onExploreDirectory();
+                      }
+                    }}
+                    className={`px-2 py-0.5 rounded-md border text-[11px] transition-colors ${
+                      term === 'Invest Qatar' || term === 'Startups Qatar'
+                        ? 'bg-[#8A1538]/10 border-[#8A1538] text-[#8A1538] font-bold hover:bg-[#8A1538] hover:text-white'
+                        : 'bg-white border-[#E8DFC8] hover:border-[#8A1538] text-[#4A3F3F]'
+                    }`}
                   >
                     {term}
                   </button>
@@ -198,30 +216,50 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
 
             {/* Action Buttons */}
             <div className="flex flex-wrap items-center gap-3 pt-3">
+              {onNavigateInvestQatar && (
+                <button
+                  onClick={onNavigateInvestQatar}
+                  className="px-5 py-2.5 rounded-xl bg-[#8A1538] hover:bg-[#6E0D29] text-white font-bold text-xs shadow-md transition-all flex items-center gap-2 border border-[#C5A059]/40 group"
+                >
+                  <Landmark className="w-4 h-4 text-[#C5A059]" />
+                  <span>{isAr ? 'استثمر في قطر' : 'Invest in Qatar'}</span>
+                  <Arrow className="w-3.5 h-3.5 group-hover:translate-x-1 rtl:group-hover:-translate-x-1 transition-transform" />
+                </button>
+              )}
+
+              {onNavigateStartupsQatar && (
+                <button
+                  onClick={onNavigateStartupsQatar}
+                  className="px-5 py-2.5 rounded-xl bg-white hover:bg-[#F2ECE4] text-[#1E1919] font-bold text-xs border border-[#8A1538]/40 shadow-sm transition-all flex items-center gap-2"
+                >
+                  <Rocket className="w-4 h-4 text-[#8A1538]" />
+                  <span>{isAr ? 'الشركات الناشئة في قطر' : 'Startups in Qatar'}</span>
+                </button>
+              )}
+
               <button
                 onClick={onExploreDirectory}
-                className="px-5 py-2.5 rounded-xl bg-[#8A1538] hover:bg-[#6E0D29] text-white font-bold text-xs shadow-md transition-all flex items-center gap-2 border border-[#C5A059]/40 group"
+                className="px-4 py-2.5 rounded-xl bg-white hover:bg-[#F2ECE4] text-[#1E1919] font-bold text-xs border border-[#D5C9B8] shadow-sm transition-all flex items-center gap-2"
               >
-                <span>{isAr ? `تصفح الدليل (${totalEntitiesCount} جهة)` : `Explore Directory (${totalEntitiesCount})`}</span>
-                <Arrow className="w-4 h-4 text-[#C5A059] group-hover:translate-x-1 rtl:group-hover:-translate-x-1 transition-transform" />
+                <span>{isAr ? `تصفح الدليل (${totalEntitiesCount})` : `Directory (${totalEntitiesCount})`}</span>
               </button>
               
               {onViewNews && (
                 <button
                   onClick={onViewNews}
-                  className="px-5 py-2.5 rounded-xl bg-white hover:bg-[#F2ECE4] text-[#1E1919] font-bold text-xs border border-[#D5C9B8] shadow-sm transition-all flex items-center gap-2"
+                  className="px-4 py-2.5 rounded-xl bg-white hover:bg-[#F2ECE4] text-[#1E1919] font-bold text-xs border border-[#D5C9B8] shadow-sm transition-all flex items-center gap-2"
                 >
                   <Newspaper className="w-4 h-4 text-[#C5A059]" />
-                  <span>{isAr ? 'الأخبار وأدلة التأسيس' : 'News & Founder Guides'}</span>
+                  <span>{isAr ? 'الأخبار وأدلة التأسيس' : 'News & Guides'}</span>
                 </button>
               )}
 
               <button
                 onClick={onViewMarketplace}
-                className="px-5 py-2.5 rounded-xl bg-white hover:bg-[#F2ECE4] text-[#1E1919] font-bold text-xs border border-[#D5C9B8] shadow-sm transition-all flex items-center gap-2"
+                className="px-4 py-2.5 rounded-xl bg-white hover:bg-[#F2ECE4] text-[#1E1919] font-bold text-xs border border-[#D5C9B8] shadow-sm transition-all flex items-center gap-2"
               >
                 <TrendingUp className="w-4 h-4 text-[#8A1538]" />
-                <span>{isAr ? 'منصة الصفقات' : 'Deal-Flow Marketplace'}</span>
+                <span>{isAr ? 'منصة الصفقات' : 'Deal-Flow'}</span>
               </button>
 
               <button
@@ -229,7 +267,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
                 className="px-4 py-2.5 rounded-xl bg-[#FAF8F5] hover:bg-[#EDE6DC] text-[#8A1538] font-bold text-xs border border-[#8A1538]/30 transition-all flex items-center gap-1.5"
               >
                 <FileText className="w-4 h-4 text-[#C5A059]" />
-                <span>{isAr ? 'تقرير رأس المال (PDF)' : 'State of Capital (PDF)'}</span>
+                <span>{isAr ? 'تقرير رأس المال (PDF)' : 'Capital Report'}</span>
               </button>
             </div>
           </div>

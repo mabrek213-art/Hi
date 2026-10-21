@@ -127,8 +127,8 @@ export const ContactAndSaleModule: React.FC<ContactAndSaleModuleProps> = ({
 
           <p className="text-sm sm:text-base text-[#E8DFC8] leading-relaxed max-w-3xl">
             {isAr
-              ? 'فرصة استثمارية واستراتيجية نادرة للاستحواذ الكامل على نطاق Ventures.qa، والنظام البرمجي المتكامل، وقاعدة البيانات المعتمدة لـ 14+ جهة وشركة ناشئة، ومؤشر رأس المال الخاص (QPCI)، ومحرك التوليد الآلي للأخبار بنموذج الذكاء الاصطناعي، ومنصة وساطة الصفقات.'
-              : 'A strategic, turnkey asset acquisition opportunity. Includes the category-killer domain Ventures.qa, proprietary full-stack application, audited scaleup registry, Qatar Private Capital Index (QPCI), automated Gemini AI bilingual newsroom, and verified deal-flow matchmaking system.'}
+              ? 'فرصة استثمارية واستراتيجية نادرة للاستحواذ الكامل على نطاق Ventures.qa، والنظام البرمجي المتكامل، وقاعدة البيانات المعتمدة لـ 40 جهة وشركة ناشئة ومؤسسة استثمارية، ومؤشر رأس المال الخاص (QPCI)، ومحرك التوليد الآلي للأخبار بنموذج الذكاء الاصطناعي، ومنصة وساطة الصفقات.'
+              : 'A strategic, turnkey asset acquisition opportunity. Includes the category-killer domain Ventures.qa, proprietary full-stack application, audited 40-entity scaleup registry, Qatar Private Capital Index (QPCI), automated Gemini AI bilingual newsroom, and verified deal-flow matchmaking system.'}
           </p>
 
           {/* Direct Seller Contact Box */}
@@ -238,8 +238,14 @@ export const ContactAndSaleModule: React.FC<ContactAndSaleModuleProps> = ({
               <li className="flex items-start gap-2.5">
                 <CheckCircle2 className="w-4 h-4 text-[#8A1538] shrink-0 mt-0.5" />
                 <div>
-                  <strong className="block font-bold">{isAr ? 'تصدر نتائج محركات البحث (SEO Moat):' : 'High-Intent Search Traffic Moat:'}</strong>
-                  <span className="text-[#6B5E5E]">{isAr ? 'أدلة شاملة مهيأة لمحركات البحث لتأسيس الشركات وعقود SAFE والاستثمار الجريء في الدوحة.' : 'Dominates organic search terms for startup incorporation, angel SAFEs, and family offices in Doha.'}</span>
+                  <strong className="block font-bold">
+                    {isAr ? 'المرتبة الأولى في Google واقتباس Google AI Overview:' : 'Rank #1 in Google & Google AI Overview Citation:'}
+                  </strong>
+                  <span className="text-[#6B5E5E]">
+                    {isAr
+                      ? 'تتصدر المنصة نتائج البحث لكلمة "ventures qatar" بالمرتبة الأولى، ويتم الاستشهاد بها مباشرة في Google AI Overview كمنصة رئيسية لتدفق صفقات الشركات الناشئة في قطر.'
+                      : 'Ranks #1 on Google for "ventures qatar" and is directly cited in Google AI Overview as Qatar’s primary platform for startup deal-flow and resources.'}
+                  </span>
                 </div>
               </li>
             </ul>
@@ -386,7 +392,7 @@ export const ContactAndSaleModule: React.FC<ContactAndSaleModuleProps> = ({
           <div className="p-4 rounded-xl bg-white border border-[#E8DFC8] space-y-2">
             <Database className="w-5 h-5 text-emerald-700" />
             <h4 className="font-bold text-[#1E1919]">{isAr ? 'قاعدة بيانات ومؤشر QPCI' : 'Verified Database & QPCI Index'}</h4>
-            <p className="text-[#6B5E5E]">{isAr ? 'سجلات دقيقة لـ 14+ جهة موثقة وتتبع صفقات تتجاوز 42.5 مليون دولار.' : '14+ audited scaleups with CR numbers and historical venture rounds.'}</p>
+            <p className="text-[#6B5E5E]">{isAr ? 'سجلات دقيقة لـ 40 جهة وشركة ناشئة ومؤسسة استثمارية موثقة وتتبع صفقات تتجاوز 42.5 مليون دولار.' : '40 audited scaleups, investors, and institutions with verified funding rounds.'}</p>
           </div>
 
           <div className="p-4 rounded-xl bg-white border border-[#E8DFC8] space-y-2">

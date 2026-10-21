@@ -23,6 +23,8 @@ import { ArticlePage } from './components/ArticlePage';
 import { AcquisitionProspectusModal } from './components/AcquisitionProspectusModal';
 import { ContactAndSaleModule } from './components/ContactAndSaleModule';
 import { MethodologyPage } from './components/MethodologyPage';
+import { InvestQatarHub } from './components/InvestQatarHub';
+import { StartupsQatarHub } from './components/StartupsQatarHub';
 
 import { 
   SEED_ENTITIES, 
@@ -83,7 +85,32 @@ export function App() {
   };
 
   // Active Main Navigation Module
-  const [activeModule, setActiveModule] = useState<ActiveModule>('directory');
+  const [activeModule, setActiveModule] = useState<ActiveModule>(() => {
+    try {
+      const path = window.location.pathname.replace(/^\//, '');
+      if (path === 'invest-qatar') return 'invest-qatar';
+      if (path === 'startups-qatar') return 'startups-qatar';
+      if (path === 'methodology') return 'methodology';
+      if (path === 'for-sale') return 'for-sale';
+      if (path === 'news') return 'news';
+      if (path === 'intelligence') return 'intelligence';
+      if (path === 'deals' || path === 'marketplace') return 'deals';
+      if (path === 'events') return 'events';
+      if (path === 'jobs') return 'jobs';
+      if (path === 'resources') return 'resources';
+    } catch {}
+    return 'directory';
+  });
+
+  const handleTabChange = (tab: ActiveModule | string) => {
+    const mod = tab as ActiveModule;
+    setActiveModule(mod);
+    setCurrentArticleSlug(null);
+    try {
+      const newPath = mod === 'directory' ? '/' : `/${mod}`;
+      window.history.pushState({}, '', newPath);
+    } catch {}
+  };
 
   // Search state across Hero and Directory
   const [searchQuery, setSearchQuery] = useState('');
@@ -149,6 +176,18 @@ export function App() {
           setCurrentArticleSlug(match[1]);
         } else {
           setCurrentArticleSlug(null);
+          const path = window.location.pathname.replace(/^\//, '');
+          if (path === 'invest-qatar') setActiveModule('invest-qatar');
+          else if (path === 'startups-qatar') setActiveModule('startups-qatar');
+          else if (path === 'methodology') setActiveModule('methodology');
+          else if (path === 'for-sale') setActiveModule('for-sale');
+          else if (path === 'news') setActiveModule('news');
+          else if (path === 'intelligence') setActiveModule('intelligence');
+          else if (path === 'deals' || path === 'marketplace') setActiveModule('deals');
+          else if (path === 'events') setActiveModule('events');
+          else if (path === 'jobs') setActiveModule('jobs');
+          else if (path === 'resources') setActiveModule('resources');
+          else setActiveModule('directory');
         }
       } catch {}
     };
@@ -274,7 +313,7 @@ export function App() {
         language={language}
         onLanguageChange={setLanguage}
         activeTab={activeModule}
-        onTabChange={(tab: any) => setActiveModule(tab)}
+        onTabChange={handleTabChange}
         onOpenSubmitModal={() => setIsPostDealOpen(true)}
         onOpenApiExplorer={() => setIsApiModalOpen(true)}
         onOpenAdminModal={() => setIsAdminModalOpen(true)}
@@ -293,13 +332,15 @@ export function App() {
         {!currentArticleSlug && activeModule === 'directory' && (
           <HeroSection
             language={language}
-            onExploreDirectory={() => setActiveModule('directory')}
-            onViewMarketplace={() => setActiveModule('deals')}
+            onExploreDirectory={() => handleTabChange('directory')}
+            onViewMarketplace={() => handleTabChange('deals')}
             onOpenReport={() => setIsReportModalOpen(true)}
-            onViewNews={() => setActiveModule('news')}
+            onViewNews={() => handleTabChange('news')}
             onSelectArticleSlug={(slug) => navigateToArticle(slug)}
             onOpenProspectus={() => setIsProspectusModalOpen(true)}
-            onNavigateMethodology={() => setActiveModule('methodology')}
+            onNavigateMethodology={() => handleTabChange('methodology')}
+            onNavigateInvestQatar={() => handleTabChange('invest-qatar')}
+            onNavigateStartupsQatar={() => handleTabChange('startups-qatar')}
             searchQuery={searchQuery}
             onSearchChange={setSearchQuery}
             totalEntitiesCount={entities.length}
@@ -332,6 +373,26 @@ export function App() {
             )
           ) : (
             <>
+              {activeModule === 'invest-qatar' && (
+                <InvestQatarHub
+                  language={language}
+                  onNavigateTab={handleTabChange}
+                  onSelectArticleSlug={(slug) => navigateToArticle(slug)}
+                  onRequestIntro={(targetName, targetId) => setIntroTarget({ name: targetName, id: targetId })}
+                  raisingDeals={raisingDeals}
+                />
+              )}
+
+              {activeModule === 'startups-qatar' && (
+                <StartupsQatarHub
+                  language={language}
+                  onNavigateTab={handleTabChange}
+                  onSelectEntity={(entity) => setSelectedEntityForModal(entity)}
+                  onSelectArticleSlug={(slug) => navigateToArticle(slug)}
+                  entities={entities}
+                />
+              )}
+
               {activeModule === 'directory' && (
                 <DirectoryModule
                   entities={entities}
@@ -429,7 +490,7 @@ export function App() {
       {/* Footer with Independent Links */}
       <Footer
         language={language}
-        onNavigate={(mod: any) => setActiveModule(mod)}
+        onNavigate={handleTabChange}
         onOpenReport={() => setIsReportModalOpen(true)}
         onOpenApi={() => setIsApiModalOpen(true)}
         onOpenAdmin={() => setIsAdminModalOpen(true)}

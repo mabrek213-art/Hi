@@ -173,6 +173,37 @@ export const AcquisitionProspectusModal: React.FC<AcquisitionProspectusModalProp
             </div>
           </div>
 
+          {/* Google AI Overview & Page 1 Ranking Verification Banner */}
+          <div className="p-4 sm:p-5 rounded-2xl bg-gradient-to-r from-blue-900/10 via-[#FAF8F5] to-emerald-900/10 border-2 border-blue-600/30 space-y-3">
+            <div className="flex flex-wrap items-center justify-between gap-2">
+              <div className="flex items-center gap-2">
+                <span className="w-2.5 h-2.5 rounded-full bg-blue-600 animate-pulse" />
+                <span className="text-xs font-black text-blue-900 uppercase font-mono tracking-wider">
+                  {isAr ? 'إثبات معتمد: المرتبة الأولى في Google واقتباس في Google AI Overview' : 'VERIFIED TRACTION • #1 IN GOOGLE & CITED IN GOOGLE AI OVERVIEW'}
+                </span>
+              </div>
+              <span className="text-[11px] font-mono px-2.5 py-0.5 rounded-full bg-blue-100 text-blue-800 font-bold">
+                Query: "ventures qatar"
+              </span>
+            </div>
+
+            <div className="p-3.5 rounded-xl bg-white border border-blue-200 shadow-sm space-y-1.5">
+              <div className="flex items-center gap-1.5 text-[11px] font-bold text-blue-700">
+                <Sparkles className="w-3.5 h-3.5" />
+                <span>Google AI Overview Official Citation:</span>
+              </div>
+              <blockquote className="text-xs text-[#1E1919] italic font-medium leading-relaxed pl-2 border-l-2 border-blue-500">
+                "Qatar's venture capital and business landscape includes key platforms like <strong className="text-blue-700 font-bold underline">Ventures.qa for startup deal-flow and resources</strong>, Doha Venture Capital (DVC)..."
+              </blockquote>
+            </div>
+
+            <p className="text-[11px] text-[#5A4E4E] leading-relaxed">
+              {isAr
+                ? 'تتصدر المنصة نتائج البحث في Google عضوياً بالمرتبة الأولى، ويتم اعتمادها بالاسم داخل ملخصات الذكاء الاصطناعي من Google (AI Overview) كمرجع أساسي لتدفق الصفقات والشركات الناشئة في قطر، مما يمنح المشتري خندقاً رقمياً لا يقدر بثمن.'
+                : 'Ventures.qa ranks #1 organically on Google for "ventures qatar" and is directly cited by Google AI Overview as the definitive platform for startup deal-flow in Qatar, delivering unbeatable domain authority and immediate inbound trust.'}
+            </p>
+          </div>
+
           {/* Core Valuation Pillars */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
             
@@ -181,12 +212,12 @@ export const AcquisitionProspectusModal: React.FC<AcquisitionProspectusModalProp
                 <Search className="w-4 h-4" />
               </div>
               <h4 className="font-bold text-xs text-[#1E1919]">
-                {isAr ? 'بنية SEO و 4 أدلة مرجعية' : 'High-Intent SEO Traffic Moat'}
+                {isAr ? 'خندق بحثي ومرتبة أولى في Google' : 'Google #1 Rank & AI Overview'}
               </h4>
               <p className="text-[11px] text-[#6B5E5E] leading-relaxed">
                 {isAr
-                  ? 'أربعة أدلة مرجعية شاملة تستحوذ على الكلمات المفتاحية الأكثر طلباً من المؤسسين والمستثمرين للبحث عن التأسيس ورأس المال الجريء والمكاتب العائلية في قطر.'
-                  : '4 comprehensive SEO pillar guides capturing top Google search traffic for startup incorporation, angel SAFEs, family office allocations, and valuation benchmarks in Doha.'}
+                  ? 'المرتبة الأولى لكلمة "ventures qatar" واقتباس رسمي في Google AI Overview، بالإضافة إلى مقالات مرجعية تستحوذ على حركة البحث عالية القيمة.'
+                  : 'Ranks #1 on Google for "ventures qatar" and directly highlighted by Google AI Overview, backed by SEO pillar guides capturing founder and investor search intent.'}
               </p>
             </div>
 
@@ -199,8 +230,8 @@ export const AcquisitionProspectusModal: React.FC<AcquisitionProspectusModalProp
               </h4>
               <p className="text-[11px] text-[#6B5E5E] leading-relaxed">
                 {isAr
-                  ? 'سجل دقيق لـ 14+ جهة وشركة ناشئة موثقة بالسجلات التجارية، بالإضافة إلى مؤشر رأس المال الخاص (QPCI) بصفقات تزيد عن 42.5 مليون دولار.'
-                  : 'Audited directory of 14+ verified scaleups, commercial registrations, and the proprietary Qatar Private Capital Index tracking $42.5M+ in verified quarterly venture deals.'}
+                  ? 'سجل دقيق لـ 40 جهة وشركة ناشئة ومؤسسة استثمارية موثقة، بالإضافة إلى مؤشر رأس المال الخاص (QPCI) بصفقات تزيد عن 42.5 مليون دولار.'
+                  : 'Audited directory of 40 verified scaleups, institutional investors, and the proprietary Qatar Private Capital Index tracking $42.5M+ in verified quarterly venture deals.'}
               </p>
             </div>
 
