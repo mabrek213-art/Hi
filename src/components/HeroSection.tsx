@@ -1,6 +1,7 @@
 import React from 'react';
 import { Language } from '../types';
 import { 
+  Building,
   Building2, 
   ArrowRight, 
   ArrowLeft, 
@@ -34,6 +35,7 @@ interface HeroSectionProps {
   onNavigateMethodology?: () => void;
   onNavigateInvestQatar?: () => void;
   onNavigateStartupsQatar?: () => void;
+  onNavigateRealEstate?: () => void;
   searchQuery: string;
   onSearchChange: (query: string) => void;
   totalEntitiesCount: number;
@@ -51,6 +53,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
   onNavigateMethodology,
   onNavigateInvestQatar,
   onNavigateStartupsQatar,
+  onNavigateRealEstate,
   searchQuery,
   onSearchChange,
   totalEntitiesCount,
@@ -225,6 +228,16 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
                 >
                   <Rocket className="w-4 h-4 text-[#8A1538]" />
                   <span>{isAr ? 'الشركات الناشئة في قطر' : 'Startups in Qatar'}</span>
+                </button>
+              )}
+
+              {onNavigateRealEstate && (
+                <button
+                  onClick={onNavigateRealEstate}
+                  className="px-4 py-2.5 rounded-xl bg-white hover:bg-[#F2ECE4] text-[#1E1919] font-bold text-xs border border-[#C5A059]/60 shadow-sm transition-all flex items-center gap-2"
+                >
+                  <Building className="w-4 h-4 text-[#C5A059]" />
+                  <span>{isAr ? 'العقارات والاستثمار' : 'Real Estate'}</span>
                 </button>
               )}
 

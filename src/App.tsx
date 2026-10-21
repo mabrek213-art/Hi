@@ -25,6 +25,7 @@ import { ContactAndSaleModule } from './components/ContactAndSaleModule';
 import { MethodologyPage } from './components/MethodologyPage';
 import { InvestQatarHub } from './components/InvestQatarHub';
 import { StartupsQatarHub } from './components/StartupsQatarHub';
+import { RealEstateModule } from './components/RealEstateModule';
 
 import { 
   SEED_ENTITIES, 
@@ -90,6 +91,7 @@ export function App() {
       const path = window.location.pathname.replace(/^\//, '');
       if (path === 'invest-qatar') return 'invest-qatar';
       if (path === 'startups-qatar') return 'startups-qatar';
+      if (path === 'real-estate') return 'real-estate';
       if (path === 'methodology') return 'methodology';
       if (path === 'for-sale') return 'for-sale';
       if (path === 'news') return 'news';
@@ -101,6 +103,28 @@ export function App() {
     } catch {}
     return 'directory';
   });
+
+  // Dynamic Document Title based on activeModule for SEO ranking
+  useEffect(() => {
+    const isAr = language === 'ar';
+    if (activeModule === 'real-estate') {
+      document.title = isAr 
+        ? 'عقارات قطر: دليل التملك الحر للأجانب وشروط الإقامة والعوائد (٢٠٢٦) | Ventures.qa'
+        : 'Invest in Qatar Real Estate: Freehold Zones, Residency & Yields (Q2 2026) | Ventures.qa';
+    } else if (activeModule === 'invest-qatar') {
+      document.title = isAr
+        ? 'استثمر في قطر: بوابة الاستثمار الأجنبي وتأسيس الشركات بنسبة ١٠٠٪ | Ventures.qa'
+        : 'Invest Qatar: Foreign Investment & 100% Ownership Portal | Ventures.qa';
+    } else if (activeModule === 'startups-qatar') {
+      document.title = isAr
+        ? 'الشركات الناشئة في قطر: مؤشر أفضل ٤٠ شركة تكنولوجية | Ventures.qa'
+        : 'Startups in Qatar: Top 40 Ecosystem Index & Rankings | Ventures.qa';
+    } else {
+      document.title = isAr
+        ? 'Ventures.qa — منصة استثمر في قطر، دليل الشركات الناشئة ورأس المال الخاص'
+        : 'Ventures.qa — Invest in Qatar: Startups, Venture Capital & Private Market Directory';
+    }
+  }, [activeModule, language]);
 
   const handleTabChange = (tab: ActiveModule | string) => {
     const mod = tab as ActiveModule;
@@ -179,6 +203,7 @@ export function App() {
           const path = window.location.pathname.replace(/^\//, '');
           if (path === 'invest-qatar') setActiveModule('invest-qatar');
           else if (path === 'startups-qatar') setActiveModule('startups-qatar');
+          else if (path === 'real-estate') setActiveModule('real-estate');
           else if (path === 'methodology') setActiveModule('methodology');
           else if (path === 'for-sale') setActiveModule('for-sale');
           else if (path === 'news') setActiveModule('news');
@@ -341,6 +366,7 @@ export function App() {
             onNavigateMethodology={() => handleTabChange('methodology')}
             onNavigateInvestQatar={() => handleTabChange('invest-qatar')}
             onNavigateStartupsQatar={() => handleTabChange('startups-qatar')}
+            onNavigateRealEstate={() => handleTabChange('real-estate')}
             searchQuery={searchQuery}
             onSearchChange={setSearchQuery}
             totalEntitiesCount={entities.length}
@@ -390,6 +416,14 @@ export function App() {
                   onSelectEntity={(entity) => setSelectedEntityForModal(entity)}
                   onSelectArticleSlug={(slug) => navigateToArticle(slug)}
                   entities={entities}
+                />
+              )}
+
+              {activeModule === 'real-estate' && (
+                <RealEstateModule
+                  language={language}
+                  onNavigateTab={handleTabChange}
+                  onOpenReportModal={() => setIsReportModalOpen(true)}
                 />
               )}
 

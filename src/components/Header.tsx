@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Language, User } from '../types';
 import { Logo } from './Logo';
 import { 
+  Building,
   Building2, 
   Newspaper, 
   TrendingUp, 
@@ -74,6 +75,14 @@ export const Header: React.FC<HeaderProps> = ({
       icon: Rocket,
       badgeEn: 'Top 40',
       badgeAr: 'أفضل ٤٠'
+    },
+    {
+      id: 'real-estate',
+      labelEn: 'Real Estate',
+      labelAr: 'العقارات',
+      icon: Building,
+      badgeEn: 'Residency',
+      badgeAr: 'الإقامة'
     },
     {
       id: 'directory',
@@ -196,7 +205,7 @@ export const Header: React.FC<HeaderProps> = ({
                 <button
                   key={item.id}
                   onClick={() => onTabChange(item.id)}
-                  className={`px-3 py-2 rounded-xl text-xs font-bold transition-all flex items-center gap-1.5 relative ${
+                  className={`px-2.5 2xl:px-3 py-2 rounded-xl text-xs font-bold transition-all flex items-center gap-1.5 relative whitespace-nowrap ${
                     isActive
                       ? 'bg-[#8A1538] text-white shadow-sm'
                       : 'text-[#4A3F3F] hover:text-[#8A1538] hover:bg-[#F2ECE4]'

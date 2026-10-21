@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Language } from '../types';
 import { Logo } from './Logo';
 import { 
+  Building,
   Building2, 
   Newspaper, 
   TrendingUp, 
@@ -133,6 +134,15 @@ export const Footer: React.FC<FooterProps> = ({
                 >
                   <Rocket className="w-3.5 h-3.5 text-[#8A1538]" />
                   <span>{isAr ? 'الشركات الناشئة في قطر (Startups)' : 'Startups in Qatar (Index)'}</span>
+                </button>
+              </li>
+              <li>
+                <button
+                  onClick={() => onNavigate('real-estate')}
+                  className="hover:text-white transition-colors flex items-center gap-1.5 text-white font-medium"
+                >
+                  <Building className="w-3.5 h-3.5 text-[#C5A059]" />
+                  <span>{isAr ? 'العقارات والاستثمار (Real Estate)' : 'Real Estate & Freehold (QREI)'}</span>
                 </button>
               </li>
               <li>

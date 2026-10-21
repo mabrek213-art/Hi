@@ -29,6 +29,7 @@ export type ActiveModule =
   | 'directory' 
   | 'invest-qatar'
   | 'startups-qatar'
+  | 'real-estate'
   | 'news' 
   | 'intelligence' 
   | 'deals' 
