@@ -7,6 +7,16 @@
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="shortcut icon" href="/favicon.svg" />
     <link rel="apple-touch-icon" href="/favicon.svg" />
+    <script>
+      // Restore URL path if redirected from static host 404.html
+      (function() {
+        var redirect = sessionStorage.redirect;
+        delete sessionStorage.redirect;
+        if (redirect && redirect !== location.href) {
+          history.replaceState(null, null, redirect);
+        }
+      })();
+    </script>
     <title>Ventures.qa — Invest in Qatar: Startups, Venture Capital, Real Estate & Private Market</title>
     <meta name="description" content="The definitive intelligence platform to invest in Qatar. Discover verified startups in Qatar, active VC deal flow, 100% foreign property ownership zones, investor residency thresholds (730k QAR / 3.65M QAR PR), and the QPCI capital index." />
     <meta name="keywords" content="invest Qatar, startups Qatar, Qatar ventures, ventures Qatar, Qatar real estate foreign ownership, buy property in Qatar residency, Qatar freehold zones, invest in Qatar 2026, The Pearl Qatar real estate, Lusail property yields, Cabinet Resolution 28 of 2020 Qatar, Qatar permanent residency property, Qatar venture capital, QFC startups, foreign investment Qatar" />

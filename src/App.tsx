@@ -57,6 +57,99 @@ const STORAGE_KEY_RAISING = 'ventures_qa_raising_v1';
 const STORAGE_KEY_ANALYTICS = 'ventures_qa_analytics_v1';
 const STORAGE_KEY_LANG = 'ventures_qa_preferred_lang';
 
+// Robust client-side route parser for deep-linking, refresh, and popstate
+function parseRoute(pathname: string): { module: ActiveModule; canonicalPath: string; articleSlug: string | null } {
+  try {
+    // Check for news article slug first: /news/:slug
+    const newsMatch = pathname.match(/^\/news\/([a-zA-Z0-9_-]+)/);
+    if (newsMatch && newsMatch[1] && newsMatch[1] !== 'all') {
+      return { module: 'news', canonicalPath: `/news/${newsMatch[1]}`, articleSlug: newsMatch[1] };
+    }
+
+    // Clean pathname: trim leading and trailing slashes, strip query/hash, lowercase
+    const clean = pathname.split('?')[0].split('#')[0].replace(/^\/+|\/+$/g, '').toLowerCase();
+
+    // Match Real Estate (handles /real-estate, /real-estate/, and address bar typos like /real-estat, /realestate)
+    if (
+      clean === 'real-estate' || 
+      clean === 'real-estat' || 
+      clean === 'realestate' || 
+      clean === 'real_estate' || 
+      clean === 'property' || 
+      clean === 'aqarat'
+    ) {
+      return { module: 'real-estate', canonicalPath: '/real-estate', articleSlug: null };
+    }
+
+    // Match Invest Qatar
+    if (
+      clean === 'invest-qatar' || 
+      clean === 'invest' || 
+      clean === 'investqatar' || 
+      clean === 'invest_qatar' || 
+      clean === 'fdi'
+    ) {
+      return { module: 'invest-qatar', canonicalPath: '/invest-qatar', articleSlug: null };
+    }
+
+    // Match Startups Qatar
+    if (
+      clean === 'startups-qatar' || 
+      clean === 'startups' || 
+      clean === 'startup' || 
+      clean === 'startupsqatar' || 
+      clean === 'startups_qatar'
+    ) {
+      return { module: 'startups-qatar', canonicalPath: '/startups-qatar', articleSlug: null };
+    }
+
+    // Match Methodology
+    if (clean === 'methodology' || clean === 'qpci-methodology') {
+      return { module: 'methodology', canonicalPath: '/methodology', articleSlug: null };
+    }
+
+    // Match For Sale / Acquisition Prospectus
+    if (clean === 'for-sale' || clean === 'sale' || clean === 'prospectus' || clean === 'acquisition') {
+      return { module: 'for-sale', canonicalPath: '/for-sale', articleSlug: null };
+    }
+
+    // Match News / Editorial
+    if (clean === 'news' || clean.startsWith('news/')) {
+      return { module: 'news', canonicalPath: '/news', articleSlug: null };
+    }
+
+    // Match Capital Index / Market Intelligence
+    if (clean === 'intelligence' || clean === 'qpci' || clean === 'index' || clean === 'capital-index') {
+      return { module: 'intelligence', canonicalPath: '/intelligence', articleSlug: null };
+    }
+
+    // Match Deal-Flow / Marketplace
+    if (clean === 'deals' || clean === 'marketplace' || clean === 'deal-flow') {
+      return { module: 'deals', canonicalPath: '/deals', articleSlug: null };
+    }
+
+    // Match Events
+    if (clean === 'events') {
+      return { module: 'events', canonicalPath: '/events', articleSlug: null };
+    }
+
+    // Match Jobs
+    if (clean === 'jobs' || clean === 'careers') {
+      return { module: 'jobs', canonicalPath: '/jobs', articleSlug: null };
+    }
+
+    // Match Resources
+    if (clean === 'resources' || clean === 'guides') {
+      return { module: 'resources', canonicalPath: '/resources', articleSlug: null };
+    }
+
+    // Default: Directory
+    return { module: 'directory', canonicalPath: '/', articleSlug: null };
+  } catch {
+    return { module: 'directory', canonicalPath: '/', articleSlug: null };
+  }
+}
+
 export function App() {
   const { user } = useAuth();
 
@@ -85,24 +178,21 @@ export function App() {
     setLanguage(prev => prev === 'en' ? 'ar' : 'en');
   };
 
-  // Active Main Navigation Module
-  const [activeModule, setActiveModule] = useState<ActiveModule>(() => {
+  // Route Initialization
+  const initialRoute = parseRoute(typeof window !== 'undefined' ? window.location.pathname : '/');
+  const [activeModule, setActiveModule] = useState<ActiveModule>(initialRoute.module);
+  const [currentArticleSlug, setCurrentArticleSlug] = useState<string | null>(initialRoute.articleSlug);
+
+  // Silently normalize URL if arrived with typos, trailing slashes, or legacy aliases
+  useEffect(() => {
     try {
-      const path = window.location.pathname.replace(/^\//, '');
-      if (path === 'invest-qatar') return 'invest-qatar';
-      if (path === 'startups-qatar') return 'startups-qatar';
-      if (path === 'real-estate') return 'real-estate';
-      if (path === 'methodology') return 'methodology';
-      if (path === 'for-sale') return 'for-sale';
-      if (path === 'news') return 'news';
-      if (path === 'intelligence') return 'intelligence';
-      if (path === 'deals' || path === 'marketplace') return 'deals';
-      if (path === 'events') return 'events';
-      if (path === 'jobs') return 'jobs';
-      if (path === 'resources') return 'resources';
+      const current = window.location.pathname;
+      const resolved = parseRoute(current);
+      if (resolved.canonicalPath !== current && resolved.canonicalPath !== '/' && !current.startsWith('/news/')) {
+        window.history.replaceState({}, '', resolved.canonicalPath);
+      }
     } catch {}
-    return 'directory';
-  });
+  }, []);
 
   // Dynamic Document Title based on activeModule for SEO ranking
   useEffect(() => {
@@ -168,15 +258,6 @@ export function App() {
   const [events, setEvents] = useState<EcosystemEvent[]>(SEED_ECOSYSTEM_EVENTS);
   const [jobs, setJobs] = useState<EcosystemJob[]>(SEED_ECOSYSTEM_JOBS);
 
-  // Slug / Article routing
-  const [currentArticleSlug, setCurrentArticleSlug] = useState<string | null>(() => {
-    try {
-      const match = window.location.pathname.match(/^\/news\/([a-zA-Z0-9_-]+)/);
-      return match ? match[1] : null;
-    } catch {
-      return null;
-    }
-  });
   const [activeFullArticle, setActiveFullArticle] = useState<NewsArticle | null>(null);
 
   // Fetch live published articles from backend
@@ -195,25 +276,9 @@ export function App() {
   useEffect(() => {
     const handlePop = () => {
       try {
-        const match = window.location.pathname.match(/^\/news\/([a-zA-Z0-9_-]+)/);
-        if (match) {
-          setCurrentArticleSlug(match[1]);
-        } else {
-          setCurrentArticleSlug(null);
-          const path = window.location.pathname.replace(/^\//, '');
-          if (path === 'invest-qatar') setActiveModule('invest-qatar');
-          else if (path === 'startups-qatar') setActiveModule('startups-qatar');
-          else if (path === 'real-estate') setActiveModule('real-estate');
-          else if (path === 'methodology') setActiveModule('methodology');
-          else if (path === 'for-sale') setActiveModule('for-sale');
-          else if (path === 'news') setActiveModule('news');
-          else if (path === 'intelligence') setActiveModule('intelligence');
-          else if (path === 'deals' || path === 'marketplace') setActiveModule('deals');
-          else if (path === 'events') setActiveModule('events');
-          else if (path === 'jobs') setActiveModule('jobs');
-          else if (path === 'resources') setActiveModule('resources');
-          else setActiveModule('directory');
-        }
+        const resolved = parseRoute(window.location.pathname);
+        setActiveModule(resolved.module);
+        setCurrentArticleSlug(resolved.articleSlug);
       } catch {}
     };
     window.addEventListener('popstate', handlePop);
@@ -254,10 +319,10 @@ export function App() {
 
   const backFromArticle = () => {
     setCurrentArticleSlug(null);
-    try {
-      window.history.pushState({}, '', '/');
-    } catch {}
     setActiveModule('news');
+    try {
+      window.history.pushState({}, '', '/news');
+    } catch {}
   };
 
   // Analytics
