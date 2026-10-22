@@ -24,7 +24,11 @@ import {
   FileCode,
   Bell,
   Check,
-  Compass
+  Compass,
+  Landmark,
+  Rocket,
+  Coins,
+  Building
 } from 'lucide-react';
 
 interface DirectoryModuleProps {
@@ -34,6 +38,7 @@ interface DirectoryModuleProps {
   onSearchChange: (q: string) => void;
   onSelectEntity: (entity: EntityProfile) => void;
   onClaimProfile: (entity: EntityProfile) => void;
+  onNavigateTab?: (tab: string) => void;
 }
 
 export const DirectoryModule: React.FC<DirectoryModuleProps> = ({
@@ -42,7 +47,8 @@ export const DirectoryModule: React.FC<DirectoryModuleProps> = ({
   searchQuery,
   onSearchChange,
   onSelectEntity,
-  onClaimProfile
+  onClaimProfile,
+  onNavigateTab
 }) => {
   const isAr = language === 'ar';
 
@@ -183,12 +189,105 @@ export const DirectoryModule: React.FC<DirectoryModuleProps> = ({
         </div>
       </div>
 
+      {/* Arabic Dynamic Pillar Categories / Navigation Banner for Google Arabic SEO (#1 Rank Target) */}
+      <div className="mb-6 bg-gradient-to-r from-[#1E1919] via-[#2A1F21] to-[#1E1919] text-white rounded-2xl p-4 sm:p-5 border border-[#8A1538]/40 shadow-sm">
+        <div className="flex items-center justify-between mb-3 pb-2 border-b border-white/10 text-xs">
+          <span className="font-mono text-[#D4AF37] font-bold uppercase tracking-wider flex items-center gap-1.5">
+            <Sparkles className="w-3.5 h-3.5 text-[#D4AF37]" />
+            <span>{isAr ? 'الأقسام والركائز الاستثمارية الرئيسية' : 'Core Investment Pillars & Directories'}</span>
+          </span>
+          <span className="text-[11px] text-stone-400">
+            {isAr ? 'روابط وصول سريعة ومفهرسة لمحركات البحث' : 'Direct Index Anchors'}
+          </span>
+        </div>
+
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-2.5">
+          {/* Pillar 1: الشركات الناشئة في قطر (Qatar Startups) */}
+          <button
+            onClick={() => {
+              setSelectedType('startup');
+              if (onNavigateTab) onNavigateTab('startups-qatar');
+            }}
+            className="text-right rtl:text-right p-3 rounded-xl bg-white/5 hover:bg-white/15 border border-white/10 hover:border-[#8A1538] transition-all flex flex-col justify-between group"
+          >
+            <div className="flex items-center justify-between mb-1">
+              <Rocket className="w-4 h-4 text-[#8A1538] group-hover:scale-110 transition-transform" />
+              <span className="text-[10px] font-mono text-[#D4AF37]">{typeCounts.startup} {isAr ? 'شركة' : 'Cos'}</span>
+            </div>
+            <span className="font-bold text-xs sm:text-sm text-white group-hover:text-[#D4AF37] transition-colors leading-snug">
+              {isAr ? 'الشركات الناشئة في قطر' : 'Qatar Startups'}
+            </span>
+            <span className="text-[10px] text-stone-400 mt-0.5">
+              {isAr ? 'دليل أفضل ٤٠ شركة تكنولوجية' : 'Top 40 Tech Scaleups'}
+            </span>
+          </button>
+
+          {/* Pillar 2: الاستثمار في قطر ورأس المال الجريء (Invest in Qatar / VC) */}
+          <button
+            onClick={() => {
+              if (onNavigateTab) onNavigateTab('invest-qatar');
+            }}
+            className="text-right rtl:text-right p-3 rounded-xl bg-white/5 hover:bg-white/15 border border-white/10 hover:border-[#C5A059] transition-all flex flex-col justify-between group"
+          >
+            <div className="flex items-center justify-between mb-1">
+              <Landmark className="w-4 h-4 text-[#C5A059] group-hover:scale-110 transition-transform" />
+              <span className="text-[10px] font-mono text-emerald-400">{isAr ? 'ملكية ١٠٠٪' : '100% FDI'}</span>
+            </div>
+            <span className="font-bold text-xs sm:text-sm text-white group-hover:text-[#D4AF37] transition-colors leading-snug">
+              {isAr ? 'الاستثمار في قطر ورأس المال الجريء' : 'Invest in Qatar / VC'}
+            </span>
+            <span className="text-[10px] text-stone-400 mt-0.5">
+              {isAr ? 'بوابة الاستثمار الأجنبي والضرائب' : 'FDI Hub & Legal Jurisdictions'}
+            </span>
+          </button>
+
+          {/* Pillar 3: عقارات قطر وتطوير المشاريع (Qatar Real Estate & PropTech) */}
+          <button
+            onClick={() => {
+              if (onNavigateTab) onNavigateTab('real-estate');
+            }}
+            className="text-right rtl:text-right p-3 rounded-xl bg-white/5 hover:bg-white/15 border border-white/10 hover:border-[#8A1538] transition-all flex flex-col justify-between group"
+          >
+            <div className="flex items-center justify-between mb-1">
+              <Building className="w-4 h-4 text-[#C5A059] group-hover:scale-110 transition-transform" />
+              <span className="text-[10px] font-mono text-amber-300">{isAr ? '٩ مناطق تملك' : '9 Freehold'}</span>
+            </div>
+            <span className="font-bold text-xs sm:text-sm text-white group-hover:text-[#D4AF37] transition-colors leading-snug">
+              {isAr ? 'عقارات قطر وتطوير المشاريع' : 'Qatar Real Estate & PropTech'}
+            </span>
+            <span className="text-[10px] text-stone-400 mt-0.5">
+              {isAr ? 'التملك الحر والإقامة العقارية' : 'Freehold & Investor Residency'}
+            </span>
+          </button>
+
+          {/* Pillar 4: دليل المستثمرين وصناديق الاستثمار (Investors Directory) */}
+          <button
+            onClick={() => {
+              setSelectedType('investor');
+              if (onNavigateTab) onNavigateTab('qatar-venture-capital');
+            }}
+            className="text-right rtl:text-right p-3 rounded-xl bg-white/5 hover:bg-white/15 border border-white/10 hover:border-[#8A1538] transition-all flex flex-col justify-between group"
+          >
+            <div className="flex items-center justify-between mb-1">
+              <Coins className="w-4 h-4 text-[#8A1538] group-hover:scale-110 transition-transform" />
+              <span className="text-[10px] font-mono text-[#D4AF37]">{typeCounts.investor} {isAr ? 'صندوق' : 'Funds'}</span>
+            </div>
+            <span className="font-bold text-xs sm:text-sm text-white group-hover:text-[#D4AF37] transition-colors leading-snug">
+              {isAr ? 'دليل المستثمرين وصناديق الاستثمار' : 'Investors Directory'}
+            </span>
+            <span className="text-[10px] text-stone-400 mt-0.5">
+              {isAr ? 'صناديق VC والمستثمرون الملائكيون' : 'VC Funds, Angels & Family Offices'}
+            </span>
+          </button>
+        </div>
+      </div>
+
       {/* Primary Category Selector Tabs */}
       <div className="flex flex-wrap gap-2 mb-6 border-b border-[#E8DFC8] pb-4">
         {[
-          { id: 'all', labelEn: 'All Ecosystem Entities', labelAr: 'كافة الكيانات', count: typeCounts.all },
-          { id: 'startup', labelEn: 'Startups & Scaleups', labelAr: 'الشركات الناشئة والواعدة', count: typeCounts.startup },
-          { id: 'investor', labelEn: 'Active Investors & VCs', labelAr: 'المستثمرون وصناديق رأس المال', count: typeCounts.investor },
+          { id: 'all', labelEn: 'All Ecosystem Entities', labelAr: 'كافة الكيانات والشركات', count: typeCounts.all },
+          { id: 'startup', labelEn: 'Startups & Scaleups', labelAr: 'الشركات الناشئة في قطر', count: typeCounts.startup },
+          { id: 'investor', labelEn: 'Active Investors & VCs', labelAr: 'دليل المستثمرين وصناديق الاستثمار', count: typeCounts.investor },
           { id: 'incubator', labelEn: 'Incubators & Tech Hubs', labelAr: 'الحاضنات ومراكز الابتكار', count: typeCounts.incubator },
           { id: 'soe', labelEn: 'Enterprise & Growth', labelAr: 'الشركات الكبرى والمؤسسية', count: typeCounts.soe }
         ].map((tab) => {

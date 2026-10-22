@@ -125,7 +125,7 @@ export const Footer: React.FC<FooterProps> = ({
                   className="hover:text-white transition-colors flex items-center gap-1.5 text-[#C5A059] font-bold"
                 >
                   <Landmark className="w-3.5 h-3.5 text-[#C5A059]" />
-                  <span>{isAr ? 'استثمر في قطر (Invest Qatar)' : 'Invest in Qatar (FDI Hub)'}</span>
+                  <span>{isAr ? 'الاستثمار في قطر ورأس المال الجريء' : 'Invest in Qatar / VC'}</span>
                 </button>
               </li>
               <li>
@@ -134,7 +134,7 @@ export const Footer: React.FC<FooterProps> = ({
                   className="hover:text-white transition-colors flex items-center gap-1.5 text-white font-medium"
                 >
                   <Rocket className="w-3.5 h-3.5 text-[#8A1538]" />
-                  <span>{isAr ? 'الشركات الناشئة في قطر (Startups)' : 'Startups in Qatar (Index)'}</span>
+                  <span>{isAr ? 'الشركات الناشئة في قطر' : 'Qatar Startups'}</span>
                 </button>
               </li>
               <li>
@@ -143,7 +143,7 @@ export const Footer: React.FC<FooterProps> = ({
                   className="hover:text-white transition-colors flex items-center gap-1.5 text-white font-medium"
                 >
                   <Building className="w-3.5 h-3.5 text-[#C5A059]" />
-                  <span>{isAr ? 'العقارات والاستثمار (Real Estate)' : 'Real Estate & Freehold (QREI)'}</span>
+                  <span>{isAr ? 'عقارات قطر وتطوير المشاريع' : 'Qatar Real Estate & PropTech'}</span>
                 </button>
               </li>
               <li>
@@ -152,7 +152,7 @@ export const Footer: React.FC<FooterProps> = ({
                   className="hover:text-white transition-colors flex items-center gap-1.5 text-white font-medium"
                 >
                   <Coins className="w-3.5 h-3.5 text-[#8A1538]" />
-                  <span>{isAr ? 'رأس المال الجريء (Venture Capital)' : 'Qatar Venture Capital (VC)'}</span>
+                  <span>{isAr ? 'دليل المستثمرين وصناديق الاستثمار' : 'Investors Directory (VC & Angels)'}</span>
                 </button>
               </li>
               <li>
@@ -161,7 +161,7 @@ export const Footer: React.FC<FooterProps> = ({
                   className="hover:text-white transition-colors flex items-center gap-1.5"
                 >
                   <Building2 className="w-3.5 h-3.5 text-[#8A1538]" />
-                  <span>{isAr ? `دليل المنظومة (${entityCount} جهة)` : `Directory (${entityCount} Entities)`}</span>
+                  <span>{isAr ? `دليل فينتشرز قطر الشامل (${entityCount} جهة)` : `Complete Directory (${entityCount} Entities)`}</span>
                 </button>
               </li>
               <li>

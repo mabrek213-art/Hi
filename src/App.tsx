@@ -171,6 +171,9 @@ export function App() {
   // Language & Direction Management
   const [language, setLanguage] = useState<Language>(() => {
     try {
+      const urlParams = new URLSearchParams(window.location.search);
+      const urlLang = urlParams.get('lang');
+      if (urlLang === 'ar' || urlLang === 'en') return urlLang;
       const saved = localStorage.getItem(STORAGE_KEY_LANG);
       if (saved === 'ar' || saved === 'en') return saved;
     } catch (e) {
@@ -209,30 +212,66 @@ export function App() {
     } catch {}
   }, []);
 
-  // Dynamic Document Title based on activeModule for SEO ranking
+  // Dynamic Document Title and Meta Description for Google Arabic & Global Ranking
   useEffect(() => {
     const isAr = language === 'ar';
+    let title = '';
+    let description = '';
+
     if (activeModule === 'real-estate') {
-      document.title = isAr 
+      title = isAr 
         ? 'عقارات قطر: دليل التملك الحر للأجانب وشروط الإقامة والعوائد (٢٠٢٦) | Ventures.qa'
         : 'Invest in Qatar Real Estate: Freehold Zones, Residency & Yields (Q2 2026) | Ventures.qa';
+      description = isAr
+        ? 'دليل عقارات قطر والتملك الحر للأجانب: ٩ مناطق تملك حر و١٦ منطقة حق انتفاع، شروط الإقامة الدائمة، والعوائد الإيجارية لعام ٢٠٢٦.'
+        : 'Comprehensive guide to Qatar real estate, freehold zones, residency thresholds (730k / 3.65M QAR), and rental yields.';
     } else if (activeModule === 'invest-qatar') {
-      document.title = isAr
+      title = isAr
         ? 'استثمر في قطر: بوابة الاستثمار الأجنبي وتأسيس الشركات بنسبة ١٠٠٪ | Ventures.qa'
         : 'Invest Qatar: Foreign Investment & 100% Ownership Portal | Ventures.qa';
+      description = isAr
+        ? 'بوابة استثمار قطر: تأسيس الشركات بملكية أجنبية ١٠٠٪ تحت مركز قطر للمال (QFC) وصندوق الصناديق السيادي بقيمة مليار دولار.'
+        : 'Invest in Qatar: 100% foreign equity ownership, QFC Common Law, 0% personal tax, and QIA sovereign matching.';
     } else if (activeModule === 'startups-qatar') {
-      document.title = isAr
+      title = isAr
         ? 'الشركات الناشئة في قطر: مؤشر أفضل ٤٠ شركة تكنولوجية | Ventures.qa'
         : 'Startups in Qatar: Top 40 Ecosystem Index & Rankings | Ventures.qa';
+      description = isAr
+        ? 'دليل الشركات الناشئة في قطر: تصنيف أفضل ٤٠ شركة تكنولوجية صاعدة، أرقام التمويل الموثقة، وحاضنات ومسرعات الأعمال في الدوحة.'
+        : 'Startups in Qatar census: top 40 funded scaleups, verified capital history, and incubator ecosystem guide.';
     } else if (activeModule === 'qatar-venture-capital') {
-      document.title = isAr
+      title = isAr
         ? 'رأس المال الجريء في قطر: دليل الصناديق والمستثمرين الملائكيين (٢٠٢٦) | Ventures.qa'
         : 'Qatar Venture Capital: Active VC Funds, Angel Networks & Family Offices (2026) | Ventures.qa';
+      description = isAr
+        ? 'دليل صناديق رأس المال الجريء في قطر: المستثمرون النشطون، شبكات المستثمرين الملائكيين، وترخيص الصناديق في مركز قطر للمال.'
+        : 'Qatar Venture Capital hub: active VC check-writers, angel syndicates, dry powder, and QFC licensing.';
     } else {
-      document.title = isAr
-        ? 'Ventures.qa — منصة استثمر في قطر، دليل الشركات الناشئة ورأس المال الخاص'
-        : 'Ventures.qa — Invest in Qatar: Startups, Venture Capital & Private Market Directory';
+      title = isAr
+        ? 'دليل الاستثمار في قطر والشركات الناشئة والعقارات | Ventures.qa'
+        : 'Ventures.qa — Invest in Qatar: Startups, Venture Capital & Real Estate Directory';
+      description = isAr
+        ? 'المنصة المستقلة الأولى لدليل الاستثمار في قطر، الشركات الناشئة، عقارات قطر، وصناديق رأس المال الجريء (VC). اكتشف جميع فرص الاستثمار والصفقات المتاحة.'
+        : 'The independent private-sector intelligence platform for startups, investment deal flow, freehold real estate, and venture capital in Qatar.';
     }
+
+    document.title = title;
+
+    // Dynamically update meta description and OpenGraph tags
+    const descMeta = document.querySelector('meta[name="description"]');
+    if (descMeta) descMeta.setAttribute('content', description);
+
+    const ogTitle = document.querySelector('meta[property="og:title"]');
+    if (ogTitle) ogTitle.setAttribute('content', title);
+
+    const ogDesc = document.querySelector('meta[property="og:description"]');
+    if (ogDesc) ogDesc.setAttribute('content', description);
+
+    const twitterTitle = document.querySelector('meta[name="twitter:title"]');
+    if (twitterTitle) twitterTitle.setAttribute('content', title);
+
+    const twitterDesc = document.querySelector('meta[name="twitter:description"]');
+    if (twitterDesc) twitterDesc.setAttribute('content', description);
   }, [activeModule, language]);
 
   const handleTabChange = (tab: ActiveModule | string) => {
@@ -532,6 +571,7 @@ export function App() {
                   onSearchChange={setSearchQuery}
                   onSelectEntity={(entity) => setSelectedEntityForModal(entity)}
                   onClaimProfile={(entity) => setClaimingEntity(entity)}
+                  onNavigateTab={handleTabChange}
                 />
               )}
 

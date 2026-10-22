@@ -143,8 +143,8 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
             <h1 className="text-3xl sm:text-5xl lg:text-6xl font-black text-[#1E1919] tracking-tight leading-[1.12]">
               {isAr ? (
                 <>
-                  اعثر على جميع الشركات الناشئة والمستثمرين <br className="hidden sm:inline" />
-                  <span className="text-[#8A1538]">وصفقات التمويل في قطر — في مكان واحد</span>
+                  دليل الاستثمار في قطر، <br className="hidden sm:inline" />
+                  <span className="text-[#8A1538]">الشركات الناشئة، والعقارات</span>
                 </>
               ) : (
                 <>
@@ -156,7 +156,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
 
             <p className="text-sm sm:text-base text-[#5A4E4E] max-w-2xl leading-relaxed font-medium">
               {isAr
-                ? 'المنصة المستقلة الموحدة لدولة قطر: توثيق صفقات رأس المال الجريء، ومؤشر السوق الخاص (QPCI)، وأدلة المؤسسين، والربط الاستثماري المباشر بين المكاتب العائلية ورواد الأعمال.'
+                ? 'المنصة المستقلة الأولى لدليل الاستثمار في قطر، الشركات الناشئة، عقارات قطر، وصناديق رأس المال الجريء (VC). اكتشف جميع فرص الاستثمار والصفقات المتاحة في فينتشرز قطر.'
                 : 'Qatar’s independent venture intelligence resource: verified startup directory, the Qatar Private Capital Index (QPCI), founder playbooks, and direct capital matching.'}
             </p>
 

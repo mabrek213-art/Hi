@@ -64,7 +64,7 @@ export const Header: React.FC<HeaderProps> = ({
     {
       id: 'invest-qatar',
       labelEn: 'Invest Qatar',
-      labelAr: 'استثمر في قطر',
+      labelAr: 'الاستثمار في قطر',
       icon: Landmark,
       badgeEn: 'FDI Hub',
       badgeAr: 'بوابة الاستثمار'
@@ -72,7 +72,7 @@ export const Header: React.FC<HeaderProps> = ({
     {
       id: 'startups-qatar',
       labelEn: 'Startups Qatar',
-      labelAr: 'الشركات الناشئة',
+      labelAr: 'الشركات الناشئة في قطر',
       icon: Rocket,
       badgeEn: 'Top 40',
       badgeAr: 'أفضل ٤٠'
@@ -80,7 +80,7 @@ export const Header: React.FC<HeaderProps> = ({
     {
       id: 'real-estate',
       labelEn: 'Real Estate',
-      labelAr: 'العقارات',
+      labelAr: 'عقارات قطر',
       icon: Building,
       badgeEn: 'Residency',
       badgeAr: 'الإقامة'
