@@ -22,7 +22,8 @@ import {
   Lock,
   Scale,
   Landmark,
-  Rocket
+  Rocket,
+  Coins
 } from 'lucide-react';
 
 interface HeaderProps {
@@ -83,6 +84,14 @@ export const Header: React.FC<HeaderProps> = ({
       icon: Building,
       badgeEn: 'Residency',
       badgeAr: 'الإقامة'
+    },
+    {
+      id: 'qatar-venture-capital',
+      labelEn: 'Venture Capital',
+      labelAr: 'رأس المال الجريء',
+      icon: Coins,
+      badgeEn: 'VC Hub',
+      badgeAr: 'صناديق VC'
     },
     {
       id: 'directory',

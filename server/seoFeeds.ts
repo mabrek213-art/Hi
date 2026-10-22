@@ -46,6 +46,8 @@ export function generateSitemapXml(): string {
     { path: '', priority: '1.0' },
     { path: '/invest-qatar', priority: '1.0' },
     { path: '/startups-qatar', priority: '1.0' },
+    { path: '/qatar-venture-capital', priority: '1.0' },
+    { path: '/real-estate', priority: '1.0' },
     { path: '/directory', priority: '0.9' },
     { path: '/news', priority: '0.9' },
     { path: '/intelligence', priority: '0.9' },

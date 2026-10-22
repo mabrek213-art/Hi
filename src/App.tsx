@@ -26,6 +26,7 @@ import { MethodologyPage } from './components/MethodologyPage';
 import { InvestQatarHub } from './components/InvestQatarHub';
 import { StartupsQatarHub } from './components/StartupsQatarHub';
 import { RealEstateModule } from './components/RealEstateModule';
+import { QatarVentureCapitalHub } from './components/QatarVentureCapitalHub';
 
 import { 
   SEED_ENTITIES, 
@@ -101,6 +102,20 @@ function parseRoute(pathname: string): { module: ActiveModule; canonicalPath: st
       clean === 'startups_qatar'
     ) {
       return { module: 'startups-qatar', canonicalPath: '/startups-qatar', articleSlug: null };
+    }
+
+    // Match Qatar Venture Capital (handles /qatar-venture-capital, /qatar-vc, /venture-capital, /vc)
+    if (
+      clean === 'qatar-venture-capital' ||
+      clean === 'venture-capital' ||
+      clean === 'qatar-vc' ||
+      clean === 'vc' ||
+      clean === 'qatarventurecapital' ||
+      clean === 'venture' ||
+      clean === 'vcs' ||
+      clean === 'qatar-venture'
+    ) {
+      return { module: 'qatar-venture-capital', canonicalPath: '/qatar-venture-capital', articleSlug: null };
     }
 
     // Match Methodology
@@ -209,6 +224,10 @@ export function App() {
       document.title = isAr
         ? 'الشركات الناشئة في قطر: مؤشر أفضل ٤٠ شركة تكنولوجية | Ventures.qa'
         : 'Startups in Qatar: Top 40 Ecosystem Index & Rankings | Ventures.qa';
+    } else if (activeModule === 'qatar-venture-capital') {
+      document.title = isAr
+        ? 'رأس المال الجريء في قطر: دليل الصناديق والمستثمرين الملائكيين (٢٠٢٦) | Ventures.qa'
+        : 'Qatar Venture Capital: Active VC Funds, Angel Networks & Family Offices (2026) | Ventures.qa';
     } else {
       document.title = isAr
         ? 'Ventures.qa — منصة استثمر في قطر، دليل الشركات الناشئة ورأس المال الخاص'
@@ -431,6 +450,7 @@ export function App() {
             onNavigateMethodology={() => handleTabChange('methodology')}
             onNavigateInvestQatar={() => handleTabChange('invest-qatar')}
             onNavigateStartupsQatar={() => handleTabChange('startups-qatar')}
+            onNavigateVentureCapital={() => handleTabChange('qatar-venture-capital')}
             onNavigateRealEstate={() => handleTabChange('real-estate')}
             searchQuery={searchQuery}
             onSearchChange={setSearchQuery}
@@ -489,6 +509,18 @@ export function App() {
                   language={language}
                   onNavigateTab={handleTabChange}
                   onOpenReportModal={() => setIsReportModalOpen(true)}
+                />
+              )}
+
+              {activeModule === 'qatar-venture-capital' && (
+                <QatarVentureCapitalHub
+                  language={language}
+                  onNavigateTab={handleTabChange}
+                  onSelectEntity={(entity) => setSelectedEntityForModal(entity)}
+                  onRequestIntro={(targetName, targetId) => setIntroTarget({ name: targetName, id: targetId })}
+                  onOpenPostDeal={() => setIsPostDealOpen(true)}
+                  onOpenReportModal={() => setIsReportModalOpen(true)}
+                  entities={entities}
                 />
               )}
 

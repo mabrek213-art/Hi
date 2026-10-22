@@ -21,7 +21,8 @@ import {
   DollarSign,
   HelpCircle,
   ExternalLink,
-  Landmark
+  Landmark,
+  Coins
 } from 'lucide-react';
 
 interface HeroSectionProps {
@@ -36,6 +37,7 @@ interface HeroSectionProps {
   onNavigateInvestQatar?: () => void;
   onNavigateStartupsQatar?: () => void;
   onNavigateRealEstate?: () => void;
+  onNavigateVentureCapital?: () => void;
   searchQuery: string;
   onSearchChange: (query: string) => void;
   totalEntitiesCount: number;
@@ -54,6 +56,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
   onNavigateInvestQatar,
   onNavigateStartupsQatar,
   onNavigateRealEstate,
+  onNavigateVentureCapital,
   searchQuery,
   onSearchChange,
   totalEntitiesCount,
@@ -183,7 +186,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
               {/* Trending Filter Pills */}
               <div className="flex flex-wrap items-center gap-1.5 mt-2.5 text-xs text-[#7A6D6D]">
                 <span className="font-semibold text-[#8A1538]">{isAr ? 'الأكثر بحثاً:' : 'Trending:'}</span>
-                {['Invest Qatar', 'Startups Qatar', 'Snoonu', 'FinTech', 'Rasmal Ventures', 'Avey AI', 'Series A', 'SAFE Notes'].map((term) => (
+                {['Invest Qatar', 'Startups Qatar', 'Venture Capital', 'Snoonu', 'FinTech', 'Rasmal Ventures', 'Avey AI', 'Series A', 'SAFE Notes'].map((term) => (
                   <button
                     key={term}
                     onClick={() => {
@@ -191,13 +194,15 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
                         onNavigateInvestQatar();
                       } else if (term === 'Startups Qatar' && onNavigateStartupsQatar) {
                         onNavigateStartupsQatar();
+                      } else if (term === 'Venture Capital' && onNavigateVentureCapital) {
+                        onNavigateVentureCapital();
                       } else {
                         onSearchChange(term);
                         onExploreDirectory();
                       }
                     }}
                     className={`px-2 py-0.5 rounded-md border text-[11px] transition-colors ${
-                      term === 'Invest Qatar' || term === 'Startups Qatar'
+                      term === 'Invest Qatar' || term === 'Startups Qatar' || term === 'Venture Capital'
                         ? 'bg-[#8A1538]/10 border-[#8A1538] text-[#8A1538] font-bold hover:bg-[#8A1538] hover:text-white'
                         : 'bg-white border-[#E8DFC8] hover:border-[#8A1538] text-[#4A3F3F]'
                     }`}
@@ -228,6 +233,16 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
                 >
                   <Rocket className="w-4 h-4 text-[#8A1538]" />
                   <span>{isAr ? 'الشركات الناشئة في قطر' : 'Startups in Qatar'}</span>
+                </button>
+              )}
+
+              {onNavigateVentureCapital && (
+                <button
+                  onClick={onNavigateVentureCapital}
+                  className="px-4 py-2.5 rounded-xl bg-white hover:bg-[#F2ECE4] text-[#1E1919] font-bold text-xs border border-[#8A1538]/30 shadow-sm transition-all flex items-center gap-2"
+                >
+                  <Coins className="w-4 h-4 text-[#8A1538]" />
+                  <span>{isAr ? 'رأس المال الجريء (VC)' : 'Venture Capital'}</span>
                 </button>
               )}
 

@@ -19,7 +19,8 @@ import {
   CheckCircle2,
   ExternalLink,
   Landmark,
-  Rocket
+  Rocket,
+  Coins
 } from 'lucide-react';
 
 interface FooterProps {
@@ -143,6 +144,15 @@ export const Footer: React.FC<FooterProps> = ({
                 >
                   <Building className="w-3.5 h-3.5 text-[#C5A059]" />
                   <span>{isAr ? 'العقارات والاستثمار (Real Estate)' : 'Real Estate & Freehold (QREI)'}</span>
+                </button>
+              </li>
+              <li>
+                <button
+                  onClick={() => onNavigate('qatar-venture-capital')}
+                  className="hover:text-white transition-colors flex items-center gap-1.5 text-white font-medium"
+                >
+                  <Coins className="w-3.5 h-3.5 text-[#8A1538]" />
+                  <span>{isAr ? 'رأس المال الجريء (Venture Capital)' : 'Qatar Venture Capital (VC)'}</span>
                 </button>
               </li>
               <li>

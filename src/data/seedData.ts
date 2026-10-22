@@ -1795,6 +1795,191 @@ export const SEED_ENTITIES: EntityProfile[] = [
     "contactEmail": "investments@almanacapital.qa"
   },
   {
+    "id": "qstp-tech-venture-fund",
+    "slug": "qstp-tech-venture-fund",
+    "name": "QSTP Tech Venture Fund",
+    "nameAr": "صندوق واحة قطر للمشاريع التكنولوجية",
+    "tagline": "Strategic Seed to Series A fund by Qatar Foundation catalyzing DeepTech and scientific IP",
+    "taglineAr": "صندوق استثماري استراتيجي لدعم الشركات التكنولوجية العميقة والملكية الفكرية البحثية",
+    "description": "The venture investment arm of Qatar Science & Technology Park (QSTP), deploying equity into early-stage and growth tech ventures developing proprietary IP in AI, HealthTech, robotics, energy transition, and cybersecurity.",
+    "descriptionAr": "الذراع الاستثماري الجريء لواحة قطر للعلوم والتكنولوجيا التابعة لمؤسسة قطر، يمول الشركات الناشئة التكنولوجية ذات الملكية الفكرية المتقدمة.",
+    "type": "investor",
+    "sector": "Active Investors & VCs",
+    "stage": "Seed",
+    "foundedYear": 2017,
+    "teamSize": "14 Investment Managers",
+    "headquarters": "QSTP Tech Park Campus, Education City",
+    "headquartersAr": "مجمع واحة العلوم، المدينة التعليمية، الدوحة",
+    "website": "https://qstp.org.qa/funds",
+    "logo": "QS",
+    "logoBg": "#7C3AED",
+    "verified": true,
+    "claimed": true,
+    "claimedByEmail": "venturefund@qstp.org.qa",
+    "aumUsd": "$50,000,000 USD",
+    "checkSizeRange": "$250K – $1.5M USD",
+    "institutionalBacking": [
+      "Qatar Foundation Endowment",
+      "National Research Innovation Framework"
+    ],
+    "keyPeople": [
+      {
+        "name": "Dr. Jack Lau",
+        "nameAr": "د. جاك لاو",
+        "role": "President & Investment Committee",
+        "roleAr": "رئيس الواحة ولجنة الاستثمار"
+      },
+      {
+        "name": "Aysha Al-Hamadi",
+        "nameAr": "عائشة الحمادي",
+        "role": "Investment Director",
+        "roleAr": "مديرة الاستثمار الجريء"
+      }
+    ],
+    "metrics": {
+      "Invested Startups": "18 Portfolio Cos",
+      "Co-Investment Multiplier": "3.8x Private Match",
+      "Target Sectors": "DeepTech, AI, BioTech, Cyber"
+    },
+    "isFeatured": true,
+    "contactEmail": "venturefund@qstp.org.qa"
+  },
+  {
+    "id": "qia-fund-of-funds",
+    "slug": "qia-fund-of-funds",
+    "name": "QIA Global & Regional VC Fund of Funds",
+    "nameAr": "برنامج صندوق الصناديق - جهاز قطر للاستثمار",
+    "tagline": "Sovereign $1 Billion USD allocation backing premier VC fund managers deploying in Qatar",
+    "taglineAr": "مخصص سيادي بقيمة مليار دولار لدعم مديري صناديق الاستثمار الجريء الدولية والإقليمية",
+    "description": "Qatar Investment Authority's catalytic Fund of Funds program committing anchor LP capital to top-tier international and regional venture managers who establish offices in Doha and deploy growth capital into Qatari scaleups.",
+    "descriptionAr": "برنامج جهاز قطر للاستثمار الرائد برأس مال مليار دولار للاستثمار كشريك محدود في صناديق رأس المال الجريء العالمية المشترطة استثمار جزء في الشركات القطرية.",
+    "type": "investor",
+    "sector": "Active Investors & VCs",
+    "stage": "Growth",
+    "foundedYear": 2024,
+    "teamSize": "22 Sovereign Investment Officers",
+    "headquarters": "QIA Tower, West Bay, Doha",
+    "headquartersAr": "برج جهاز قطر للاستثمار، الخليج الغربي، الدوحة",
+    "website": "https://qia.qa",
+    "logo": "QI",
+    "logoBg": "#8A1538",
+    "verified": true,
+    "claimed": true,
+    "claimedByEmail": "fof@qia.qa",
+    "aumUsd": "$1,000,000,000 USD",
+    "checkSizeRange": "$10M – $50M USD LP Commitments",
+    "institutionalBacking": [
+      "State of Qatar Sovereign Wealth Reserve"
+    ],
+    "keyPeople": [
+      {
+        "name": "Mansoor Bin Ebrahim Al-Mahmoud",
+        "nameAr": "منصور بن إبراهيم آل محمود",
+        "role": "Chief Executive Officer - QIA",
+        "roleAr": "الرئيس التنفيذي - جهاز قطر للاستثمار"
+      },
+      {
+        "name": "Mohammed Al-Sowaidi",
+        "nameAr": "محمد السويدي",
+        "role": "Chief Investment Officer - Americas & Tech",
+        "roleAr": "رئيس الاستثمار للتكنولوجيا"
+      }
+    ],
+    "metrics": {
+      "Dedicated Program Size": "$1.0 Billion USD",
+      "Target GP Commitments": "20–25 Global Funds",
+      "Mandate": "Anchor LP + Doha Office + Local Deployment"
+    },
+    "isFeatured": true,
+    "contactEmail": "fof@qia.qa"
+  },
+  {
+    "id": "jaidah-capital",
+    "slug": "jaidah-capital",
+    "name": "Jaidah Investment Group",
+    "nameAr": "مجموعة الجيدة للاستثمار",
+    "tagline": "Family office venture allocation focused on smart mobility, industrial automation & logistics",
+    "taglineAr": "الذراع الاستثماري لمجموعة الجيدة في مجالات التنقل الذكي والأتمتة الصناعية",
+    "description": "The private venture capital division of Jaidah Group, investing balance sheet capital into Series A and growth-stage technology companies transforming commercial transport, heavy equipment telemetry, energy efficiency, and logistics.",
+    "descriptionAr": "الذراع الاستثماري التكنولوجي لمجموعة الجيدة العريقة، يركز على تكنولوجيا النقل التجاري واللوجستيات المتقدمة.",
+    "type": "investor",
+    "sector": "Active Investors & VCs",
+    "stage": "Series A",
+    "foundedYear": 2016,
+    "teamSize": "11 Investment Leads",
+    "headquarters": "Jaidah Square, Umm Ghuwailina, Doha",
+    "headquartersAr": "ميدان الجيدة، أم غويلينة، الدوحة",
+    "website": "https://jaidah.com.qa",
+    "logo": "JG",
+    "logoBg": "#1E3A8A",
+    "verified": true,
+    "claimed": true,
+    "claimedByEmail": "ventures@jaidah.com.qa",
+    "aumUsd": "$150,000,000 USD",
+    "checkSizeRange": "$1M – $3.5M USD",
+    "institutionalBacking": [
+      "Jaidah Commercial Holdings"
+    ],
+    "keyPeople": [
+      {
+        "name": "Mohamed Jaidah",
+        "nameAr": "محمد الجيدة",
+        "role": "Group Executive Director",
+        "roleAr": "المدير التنفيذي للمجموعة"
+      }
+    ],
+    "metrics": {
+      "Direct Tech Portfolio": "12 Companies",
+      "Deployment Stage": "Series A & Series B",
+      "Key Verticals": "Mobility, Fleet SaaS, Clean Energy"
+    },
+    "isFeatured": false,
+    "contactEmail": "ventures@jaidah.com.qa"
+  },
+  {
+    "id": "mannai-tech-investments",
+    "slug": "mannai-tech-investments",
+    "name": "Mannai Tech Ventures",
+    "nameAr": "مناعي للمشاريع التكنولوجية",
+    "tagline": "Corporate & private venture capital division investing in enterprise SaaS and cloud infrastructure",
+    "taglineAr": "الذراع الاستثماري لمجموعة مناعي في برمجيات الشركات والبنية السحابية",
+    "description": "Mannai Corporation's venture allocation division partnering with high-growth enterprise SaaS, FinTech, and cybersecurity companies offering commercial synergies across Qatar's largest enterprise ICT networks.",
+    "descriptionAr": "الذراع الاستثماري التكنولوجي لمجمع شركات المناعي، يدعم الشركات التي تقدم حلولاً برمجية متطورة للشركات والمصارف.",
+    "type": "investor",
+    "sector": "Active Investors & VCs",
+    "stage": "Series A",
+    "foundedYear": 2018,
+    "teamSize": "9 Investment Principals",
+    "headquarters": "Mannai Complex, Salwa Road, Doha",
+    "headquartersAr": "مجمع المناعي، طريق سلوى، الدوحة",
+    "website": "https://mannai.com",
+    "logo": "MV",
+    "logoBg": "#0F766E",
+    "verified": true,
+    "claimed": true,
+    "claimedByEmail": "techventures@mannai.com.qa",
+    "aumUsd": "$80,000,000 USD",
+    "checkSizeRange": "$750K – $2.5M USD",
+    "institutionalBacking": [
+      "Mannai Corporation (QSE: MCCS)"
+    ],
+    "keyPeople": [
+      {
+        "name": "Khalid Mannai",
+        "nameAr": "خالد المناعي",
+        "role": "Vice Chairman - Executive Committee",
+        "roleAr": "نائب رئيس اللجنة التنفيذية"
+      }
+    ],
+    "metrics": {
+      "Enterprise Tech Deployments": "15 Investments",
+      "Average Syndicate Lead": "$1.5M USD",
+      "Primary Focus": "B2B SaaS, Cybersecurity, Cloud"
+    },
+    "isFeatured": false,
+    "contactEmail": "techventures@mannai.com.qa"
+  },
+  {
     "id": "qfth-hub",
     "slug": "qfth-hub",
     "name": "Qatar FinTech Hub (QFTH)",
