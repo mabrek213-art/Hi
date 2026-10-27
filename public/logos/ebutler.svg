@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <rect width="64" height="64" rx="16" fill="#1E293B"/>
+  <!-- EButler Concierge Bowtie & Star -->
+      <polygon points="16,21 29,27 16,33" fill="#FFFFFF"/>
+      <polygon points="48,21 35,27 48,33" fill="#FFFFFF"/>
+      <rect x="27.5" y="23" width="9" height="8" rx="2" fill="#F59E0B"/>
+      <path d="M32 37V49M27 44H37" stroke="#FDE68A" stroke-width="3" stroke-linecap="round"/>
+</svg>

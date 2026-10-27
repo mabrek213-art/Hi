@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <rect width="64" height="64" rx="16" fill="#334155"/>
+  <!-- Airlift Quadcopter Drone -->
+      <rect x="26" y="26" width="12" height="12" rx="3" fill="#38BDF8"/>
+      <path d="M26 26L18 18M38 26L46 18M26 38L18 46M38 38L46 46" stroke="#FFFFFF" stroke-width="4" stroke-linecap="round"/>
+      <circle cx="16" cy="16" r="5" stroke="#FFFFFF" stroke-width="2.5" fill="none"/>
+      <circle cx="48" cy="16" r="5" stroke="#FFFFFF" stroke-width="2.5" fill="none"/>
+      <circle cx="16" cy="48" r="5" stroke="#FFFFFF" stroke-width="2.5" fill="none"/>
+      <circle cx="48" cy="48" r="5" stroke="#FFFFFF" stroke-width="2.5" fill="none"/>
+      <rect x="27.5" y="38" width="9" height="7" rx="1.5" fill="#FCD34D"/>
+</svg>

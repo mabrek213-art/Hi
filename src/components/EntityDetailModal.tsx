@@ -19,6 +19,7 @@ import {
   ArrowLeft,
   FileCheck
 } from 'lucide-react';
+import { CompanyLogo } from './CompanyLogo';
 
 interface EntityDetailModalProps {
   entity: EntityProfile | null;
@@ -93,12 +94,14 @@ export const EntityDetailModal: React.FC<EntityDetailModalProps> = ({
 
           <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 mt-2">
             <div className="flex items-center gap-4">
-              <div 
-                className="w-16 h-16 rounded-2xl flex items-center justify-center text-white font-black text-2xl shadow-lg border-2 border-white/20 flex-shrink-0"
-                style={{ backgroundColor: entity.logoBg || '#8A1538' }}
-              >
-                {entity.logo}
-              </div>
+              <CompanyLogo
+                entityId={entity.id}
+                name={entity.name}
+                logo={entity.logo}
+                logoBg={entity.logoBg}
+                size="lg"
+                className="flex-shrink-0 shadow-lg border-2 border-white/20"
+              />
               <div>
                 <div className="flex items-center gap-2">
                   <h2 className="text-2xl font-black tracking-tight text-white">

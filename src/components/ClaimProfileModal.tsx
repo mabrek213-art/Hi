@@ -11,6 +11,7 @@ import {
   ArrowRight,
   ArrowLeft
 } from 'lucide-react';
+import { CompanyLogo } from './CompanyLogo';
 
 interface ClaimProfileModalProps {
   entity: EntityProfile | null;
@@ -77,9 +78,14 @@ export const ClaimProfileModal: React.FC<ClaimProfileModalProps> = ({
           </button>
           
           <div className="flex items-center gap-3">
-            <div className="w-10 h-10 rounded-xl bg-white/10 flex items-center justify-center font-bold text-white border border-white/20">
-              <ShieldCheck className="w-6 h-6 text-[#C5A059]" />
-            </div>
+            <CompanyLogo
+              entityId={entity.id}
+              name={entity.name}
+              logo={entity.logo}
+              logoBg={entity.logoBg}
+              size="md"
+              className="shrink-0 shadow border-white/30"
+            />
             <div>
               <h3 className="text-lg font-black tracking-tight">
                 {isAr ? 'توثيق وإدارة الملف الرسمي' : 'Claim Official Profile'}

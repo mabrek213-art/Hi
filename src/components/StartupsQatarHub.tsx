@@ -20,6 +20,7 @@ import {
   Layers,
   HelpCircle
 } from 'lucide-react';
+import { CompanyLogo } from './CompanyLogo';
 
 interface StartupsQatarHubProps {
   language: Language;
@@ -371,10 +372,16 @@ export const StartupsQatarHub: React.FC<StartupsQatarHubProps> = ({
               >
                 <div className="space-y-3">
                   <div className="flex items-center justify-between">
-                    <div className="flex items-center gap-2">
-                      <span className="w-6 h-6 rounded-full bg-[#8A1538] text-white flex items-center justify-center text-xs font-black font-mono">
+                    <div className="flex items-center gap-2.5">
+                      <span className="w-6 h-6 rounded-full bg-[#8A1538] text-white flex items-center justify-center text-xs font-black font-mono shrink-0">
                         #{idx + 1}
                       </span>
+                      <CompanyLogo
+                        entityId={startup.id}
+                        name={startup.name}
+                        size="sm"
+                        className="shadow-sm"
+                      />
                       <span className="text-base font-black text-[#1E1919] group-hover:text-[#8A1538] transition-colors">
                         {isAr ? startup.nameAr : startup.name}
                       </span>
@@ -529,9 +536,19 @@ export const StartupsQatarHub: React.FC<StartupsQatarHubProps> = ({
                   </span>
                 </div>
 
-                <h4 className="text-base font-black text-[#1E1919] group-hover:text-[#8A1538] transition-colors">
-                  {isAr && startup.nameAr ? startup.nameAr : startup.name}
-                </h4>
+                <div className="flex items-center gap-3">
+                  <CompanyLogo
+                    entityId={startup.id}
+                    name={startup.name}
+                    logo={startup.logo}
+                    logoBg={startup.logoBg}
+                    size="sm"
+                    className="shrink-0"
+                  />
+                  <h4 className="text-base font-black text-[#1E1919] group-hover:text-[#8A1538] transition-colors leading-tight">
+                    {isAr && startup.nameAr ? startup.nameAr : startup.name}
+                  </h4>
+                </div>
 
                 <p className="text-xs text-[#5A4E4E] line-clamp-2 leading-relaxed">
                   {isAr && startup.taglineAr ? startup.taglineAr : startup.tagline}

@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <rect width="64" height="64" rx="16" fill="#475569"/>
+  <!-- Paperfly Origami Airplane -->
+      <polygon points="13,35 51,14 37,49 29,38" fill="#FFFFFF"/>
+      <polygon points="29,38 51,14 32,35" fill="#CBD5E1"/>
+      <path d="M11 46C18 45 23 41 26 37" stroke="#94A3B8" stroke-width="3" stroke-dasharray="3 3" stroke-linecap="round"/>
+</svg>

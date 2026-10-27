@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <rect width="64" height="64" rx="16" fill="#10B981"/>
+  <!-- SkipCash Contactless Card & S-Flow -->
+      <rect x="11" y="16" width="42" height="32" rx="6" stroke="#FFFFFF" stroke-width="3.5" fill="none"/>
+      <path d="M19 27C22 24 27 24 30 27" stroke="#A7F3D0" stroke-width="3" stroke-linecap="round"/>
+      <path d="M18 32C24 27 32 27 38 32" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round"/>
+      <path d="M32 40L41 32L32 24V29.5H24V34.5H32V40Z" fill="#FDE047"/>
+</svg>

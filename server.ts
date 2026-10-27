@@ -632,6 +632,9 @@ async function startServer() {
     res.send(`User-agent: *\nAllow: /\nSitemap: https://ventures.qa/sitemap.xml\n`);
   });
 
+  // Serve public static assets (logos, images, robots, etc.)
+  app.use(express.static(path.resolve(process.cwd(), 'public')));
+
   // --- VITE MIDDLEWARE SETUP ---
   if (process.env.NODE_ENV !== 'production') {
     const vite = await createViteServer({
@@ -643,7 +646,15 @@ async function startServer() {
     // Fallback for HTML5 SPA history navigation in dev mode
     app.use('*', async (req, res, next) => {
       const url = req.originalUrl;
-      if (url.startsWith('/api') || url.startsWith('/rss.xml') || url.startsWith('/sitemap.xml') || url.startsWith('/robots.txt')) {
+      if (
+        url.startsWith('/api') || 
+        url.startsWith('/rss.xml') || 
+        url.startsWith('/sitemap.xml') || 
+        url.startsWith('/robots.txt') ||
+        url.startsWith('/logos') ||
+        url.startsWith('/assets') ||
+        /\.(svg|png|jpg|jpeg|webp|gif|ico|json|xml|txt|woff2?|ttf)$/i.test(url)
+      ) {
         return next();
       }
       try {

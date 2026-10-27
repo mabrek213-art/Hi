@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <rect width="64" height="64" rx="16" fill="#047857"/>
+  <!-- Al-Mana Arch & Royal M -->
+      <path d="M16 48V29C16 20 23 13 32 13C41 13 48 20 48 29V48" stroke="#C5A059" stroke-width="3" fill="none"/>
+      <path d="M22 41V29L32 37L42 29V41" stroke="#FFFFFF" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+      <circle cx="32" cy="19" r="2.5" fill="#FDE047"/>
+</svg>

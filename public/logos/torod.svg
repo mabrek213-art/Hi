@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <rect width="64" height="64" rx="16" fill="#2563EB"/>
+  <!-- Torod Fast Courier Box -->
+      <polygon points="32,13 49,22 32,32 15,22" fill="#93C5FD"/>
+      <polygon points="15,22 32,32 32,51 15,41" fill="#FFFFFF"/>
+      <polygon points="49,22 32,32 32,51 49,41" fill="#60A5FA"/>
+      <path d="M24 22L32 27L40 22" stroke="#1D4ED8" stroke-width="3" stroke-linecap="round"/>
+</svg>

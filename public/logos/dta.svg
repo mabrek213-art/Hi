@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <rect width="64" height="64" rx="16" fill="#4338CA"/>
+  <!-- Doha Tech Angels Wings & Central Seed -->
+      <path d="M29 22C21 22 13 25 10 35C18 35 24 30 29 25" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round"/>
+      <path d="M29 29C23 29 16 32 13 41C20 41 24 37 29 32" stroke="#A5B4FC" stroke-width="2.5" stroke-linecap="round"/>
+      <path d="M35 22C43 22 51 25 54 35C46 35 40 30 35 25" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round"/>
+      <path d="M35 29C41 29 48 32 51 41C44 41 40 37 35 32" stroke="#A5B4FC" stroke-width="2.5" stroke-linecap="round"/>
+      <polygon points="32,16 37,24 32,32 27,24" fill="#FDE047"/>
+</svg>

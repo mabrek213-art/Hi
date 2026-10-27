@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <rect width="64" height="64" rx="16" fill="#14B8A6"/>
+  <!-- Droobi Therapeutic Water Drop & Pulse -->
+      <path d="M32 13C32 13 16 32 16 39C16 47 23 52 32 52C41 52 48 47 48 39C48 32 32 13 32 13Z" fill="#FFFFFF"/>
+      <path d="M21 40H26L29 34L34 45L37 37L39 40H43" stroke="#0D9488" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

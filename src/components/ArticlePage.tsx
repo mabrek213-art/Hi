@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { NewsArticle, Language, EntityProfile } from '../types';
 import { LogoMark } from './Logo';
+import { CompanyLogo } from './CompanyLogo';
 import { 
   ArrowLeft, 
   ArrowRight, 
@@ -423,9 +424,14 @@ export const ArticlePage: React.FC<ArticlePageProps> = ({
                 <div>
                   <div className="flex items-start justify-between gap-3 mb-2">
                     <div className="flex items-center gap-2.5">
-                      <div className="w-9 h-9 rounded-lg bg-white border border-[#E8DFC8] flex items-center justify-center font-bold text-xs text-[#8A1538] font-mono shadow-sm">
-                        {entity.name.slice(0, 2).toUpperCase()}
-                      </div>
+                      <CompanyLogo
+                        entityId={entity.id}
+                        name={entity.name}
+                        logo={entity.logo}
+                        logoBg={entity.logoBg}
+                        size="sm"
+                        className="shrink-0"
+                      />
                       <div>
                         <h4 className="font-bold text-sm text-[#1E1919] group-hover:text-[#8A1538] transition-colors flex items-center gap-1.5">
                           <span>{entity.name}</span>

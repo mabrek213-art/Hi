@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <rect width="64" height="64" rx="16" fill="#3B82F6"/>
+  <!-- Synergy AI Synaptic Infinity -->
+      <path d="M22 38C16 38 13 34 13 29C13 23 16 19 22 19C29 19 35 38 42 38C48 38 51 34 51 29C51 23 48 19 42 19C35 19 29 38 22 38Z" stroke="#FFFFFF" stroke-width="4" stroke-linecap="round" fill="none"/>
+      <circle cx="22" cy="29" r="4" fill="#93C5FD"/>
+      <circle cx="42" cy="29" r="4" fill="#FDE047"/>
+</svg>

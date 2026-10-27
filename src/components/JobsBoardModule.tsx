@@ -14,6 +14,7 @@ import {
   Lock
 } from 'lucide-react';
 import { PaymentModal } from './PaymentModal';
+import { CompanyLogo } from './CompanyLogo';
 
 interface JobsBoardModuleProps {
   language: Language;
@@ -194,17 +195,23 @@ export const JobsBoardModule: React.FC<JobsBoardModuleProps> = ({
               job.isFeatured ? 'border-[#C5A059] shadow-md bg-gradient-to-r from-white to-[#FAF8F5]' : 'border-[#E8DFC8]'
             } hover:border-[#8A1538] p-5 transition-all flex flex-col md:flex-row md:items-center justify-between gap-4`}
           >
-            <div className="space-y-2 max-w-2xl">
-              <div className="flex flex-wrap items-center gap-2">
-                <span className="text-xs font-black text-[#8A1538] bg-[#8A1538]/10 px-2.5 py-0.5 rounded-md">
-                  {job.companyName}
-                </span>
-                <span className="px-2 py-0.5 rounded text-[10px] font-bold bg-[#FAF8F5] text-[#5A4E4E] border border-[#E8DFC8]">
-                  {job.sector}
-                </span>
-                <span className="px-2 py-0.5 rounded text-[10px] font-bold bg-[#FAF8F5] text-[#5A4E4E] border border-[#E8DFC8]">
-                  {job.type}
-                </span>
+            <div className="flex items-start gap-3.5 max-w-2xl">
+              <CompanyLogo
+                name={job.companyName}
+                size="md"
+                className="shrink-0 mt-0.5"
+              />
+              <div className="space-y-2">
+                <div className="flex flex-wrap items-center gap-2">
+                  <span className="text-xs font-black text-[#8A1538] bg-[#8A1538]/10 px-2.5 py-0.5 rounded-md">
+                    {job.companyName}
+                  </span>
+                  <span className="px-2 py-0.5 rounded text-[10px] font-bold bg-[#FAF8F5] text-[#5A4E4E] border border-[#E8DFC8]">
+                    {job.sector}
+                  </span>
+                  <span className="px-2 py-0.5 rounded text-[10px] font-bold bg-[#FAF8F5] text-[#5A4E4E] border border-[#E8DFC8]">
+                    {job.type}
+                  </span>
                 {job.isFeatured && (
                   <span className="px-2 py-0.5 rounded text-[10px] font-bold uppercase bg-[#C5A059] text-[#1E1919] flex items-center gap-1">
                     <Sparkles className="w-3 h-3" />
@@ -235,6 +242,7 @@ export const JobsBoardModule: React.FC<JobsBoardModuleProps> = ({
                   <span>{job.postedDate}</span>
                 </div>
               </div>
+            </div>
             </div>
 
             <div className="shrink-0 flex items-center gap-2 self-end md:self-auto">

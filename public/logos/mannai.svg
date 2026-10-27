@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <rect width="64" height="64" rx="16" fill="#0F766E"/>
+  <!-- Mannai Tech Prism -->
+      <polygon points="32,13 50,24 50,43 32,53 14,43 14,24" stroke="#FFFFFF" stroke-width="3" fill="none"/>
+      <line x1="32" y1="13" x2="32" y2="53" stroke="#5EEAD4" stroke-width="2.5"/>
+      <line x1="14" y1="24" x2="50" y2="43" stroke="#5EEAD4" stroke-width="2.5"/>
+      <line x1="50" y1="24" x2="14" y2="43" stroke="#5EEAD4" stroke-width="2.5"/>
+      <circle cx="32" cy="32" r="5" fill="#FDE047"/>
+</svg>

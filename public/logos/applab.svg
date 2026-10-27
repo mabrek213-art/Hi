@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <rect width="64" height="64" rx="16" fill="#0284C7"/>
+  <!-- Applab Isometric Code Cube -->
+      <path d="M32 13L48 22L32 32L16 22L32 13Z" fill="#BAE6FD"/>
+      <path d="M16 22L32 32V51L16 41V22Z" fill="#FFFFFF"/>
+      <path d="M32 32L48 22V41L32 51V32Z" fill="#7DD3FC"/>
+      <path d="M22 32L27 35L22 38" stroke="#0369A1" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M42 32L37 35L42 38" stroke="#0369A1" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

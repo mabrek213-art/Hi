@@ -27,6 +27,7 @@ import {
   Landmark,
   Rocket
 } from 'lucide-react';
+import { CompanyLogo } from './CompanyLogo';
 
 interface QatarVentureCapitalHubProps {
   language: Language;
@@ -409,12 +410,14 @@ export const QatarVentureCapitalHub: React.FC<QatarVentureCapitalHubProps> = ({
                   {/* Card Header with Logo & Badges */}
                   <div className="flex items-start justify-between gap-3 mb-4">
                     <div className="flex items-center space-x-3 rtl:space-x-reverse">
-                      <div 
-                        className="w-12 h-12 rounded-xl flex items-center justify-center font-bold text-white shadow-sm text-sm"
-                        style={{ backgroundColor: investor.logoBg || '#8A1538' }}
-                      >
-                        {investor.logo || investor.name.slice(0, 2).toUpperCase()}
-                      </div>
+                      <CompanyLogo
+                        entityId={investor.id}
+                        name={investor.name}
+                        logo={investor.logo}
+                        logoBg={investor.logoBg}
+                        size="md"
+                        className="flex-shrink-0"
+                      />
                       <div>
                         <h3 className="font-serif font-bold text-lg text-[#1E1919] leading-snug">
                           {isAr && investor.nameAr ? investor.nameAr : investor.name}

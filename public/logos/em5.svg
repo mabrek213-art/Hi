@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <rect width="64" height="64" rx="16" fill="#8B5CF6"/>
+  <!-- EM5 Education Mortarboard & Play -->
+      <path d="M32 14L51 24L32 34L13 24L32 14Z" fill="#FFFFFF"/>
+      <path d="M19 29V38C19 43 25 46 32 46C39 46 45 43 45 38V29" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round" fill="none"/>
+      <path d="M50 26V40" stroke="#DDD6FE" stroke-width="3" stroke-linecap="round"/>
+      <polygon points="29,21 38,24 29,27" fill="#7C3AED"/>
+</svg>

@@ -53,7 +53,7 @@ import {
   EcosystemJob
 } from './types';
 
-const STORAGE_KEY_ENTITIES = 'ventures_qa_entities_v1';
+const STORAGE_KEY_ENTITIES = 'ventures_qa_entities_v3';
 const STORAGE_KEY_RAISING = 'ventures_qa_raising_v1';
 const STORAGE_KEY_ANALYTICS = 'ventures_qa_analytics_v1';
 const STORAGE_KEY_LANG = 'ventures_qa_preferred_lang';
@@ -287,13 +287,22 @@ export function App() {
   // Search state across Hero and Directory
   const [searchQuery, setSearchQuery] = useState('');
 
-  // Entities State with persistence
+  // Entities State with persistence & automatic logo migration
   const [entities, setEntities] = useState<EntityProfile[]>(() => {
     try {
       const saved = localStorage.getItem(STORAGE_KEY_ENTITIES);
       if (saved) {
         const parsed = JSON.parse(saved);
-        if (Array.isArray(parsed) && parsed.length > 0) return parsed;
+        if (Array.isArray(parsed) && parsed.length > 0) {
+          // Merge latest seed logos into any stored entities
+          return parsed.map((item: EntityProfile) => {
+            const seed = SEED_ENTITIES.find(s => s.id === item.id);
+            if (seed && (!item.logo || item.logo.length <= 4 || !item.logo.startsWith('/'))) {
+              return { ...item, logo: seed.logo, logoBg: seed.logoBg || item.logoBg };
+            }
+            return item;
+          });
+        }
       }
     } catch (e) {}
     return SEED_ENTITIES;

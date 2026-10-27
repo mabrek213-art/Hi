@@ -30,6 +30,7 @@ import {
   Coins,
   Building
 } from 'lucide-react';
+import { CompanyLogo } from './CompanyLogo';
 
 interface DirectoryModuleProps {
   entities: EntityProfile[];
@@ -445,12 +446,14 @@ export const DirectoryModule: React.FC<DirectoryModuleProps> = ({
                   <div className="flex items-start justify-between gap-3 mb-3">
                     <div className="flex items-center gap-3">
                       {/* Logo Avatar */}
-                      <div
-                        className="w-12 h-12 rounded-xl flex items-center justify-center text-white font-bold text-base shadow-sm border border-black/10 flex-shrink-0"
-                        style={{ backgroundColor: entity.logoBg || '#8A1538' }}
-                      >
-                        {entity.logo}
-                      </div>
+                      <CompanyLogo
+                        entityId={entity.id}
+                        name={entity.name}
+                        logo={entity.logo}
+                        logoBg={entity.logoBg}
+                        size="md"
+                        className="flex-shrink-0"
+                      />
                       <div>
                         <div className="flex items-center gap-1.5">
                           <h3 

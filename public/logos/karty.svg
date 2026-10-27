@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <rect width="64" height="64" rx="16" fill="#F59E0B"/>
+  <!-- Karty Contactless Cards -->
+      <rect x="13" y="21" width="35" height="24" rx="5" fill="#B45309"/>
+      <rect x="18" y="15" width="35" height="24" rx="5" fill="#FFFFFF"/>
+      <rect x="23" y="21" width="8" height="6" rx="1.5" fill="#F59E0B"/>
+      <path d="M40 21C42.5 23.5 42.5 26.5 40 29" stroke="#D97706" stroke-width="2.5" stroke-linecap="round"/>
+      <path d="M44 19C48 23 48 27 44 31" stroke="#D97706" stroke-width="2.5" stroke-linecap="round"/>
+</svg>

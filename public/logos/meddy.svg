@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <rect width="64" height="64" rx="16" fill="#0284C7"/>
+  <!-- Meddy Helium Health Stethoscope M -->
+      <path d="M19 16V29C19 35 25 41 32 41C39 41 45 35 45 29V16" stroke="#FFFFFF" stroke-width="4" stroke-linecap="round" fill="none"/>
+      <path d="M32 41V47C32 50 35 52 38 52H40" stroke="#FFFFFF" stroke-width="4" stroke-linecap="round" fill="none"/>
+      <circle cx="42" cy="52" r="4" fill="#FDE047"/>
+      <circle cx="19" cy="16" r="3" fill="#FFFFFF"/>
+      <circle cx="45" cy="16" r="3" fill="#FFFFFF"/>
+</svg>

@@ -26,6 +26,7 @@ import {
   Zap,
   Briefcase
 } from 'lucide-react';
+import { CompanyLogo } from './CompanyLogo';
 
 interface DealFlowMarketplaceProps {
   raisingOpportunities: RaisingOpportunity[];
@@ -222,16 +223,23 @@ export const DealFlowMarketplace: React.FC<DealFlowMarketplaceProps> = ({
                 <div>
                   {/* Top Info */}
                   <div className="flex items-start justify-between gap-3 mb-2">
-                    <div>
-                      <span className="text-[11px] font-bold text-[#8A1538] uppercase tracking-wider block">
-                        {opportunity.sector}
-                      </span>
-                      <h3 className="text-xl font-black text-[#1E1919] tracking-tight">
-                        {isAr ? opportunity.companyNameAr : opportunity.companyName}
-                      </h3>
-                      <p className="text-xs text-[#7A6D6D]">
-                        {isAr ? opportunity.locationAr : opportunity.location}
-                      </p>
+                    <div className="flex items-center gap-3">
+                      <CompanyLogo
+                        name={opportunity.companyName}
+                        size="md"
+                        className="shrink-0"
+                      />
+                      <div>
+                        <span className="text-[11px] font-bold text-[#8A1538] uppercase tracking-wider block">
+                          {opportunity.sector}
+                        </span>
+                        <h3 className="text-xl font-black text-[#1E1919] tracking-tight">
+                          {isAr ? opportunity.companyNameAr : opportunity.companyName}
+                        </h3>
+                        <p className="text-xs text-[#7A6D6D]">
+                          {isAr ? opportunity.locationAr : opportunity.location}
+                        </p>
+                      </div>
                     </div>
 
                     <span className="text-xs px-2.5 py-1 rounded-full font-bold bg-[#FAF8F5] text-[#1E1919] border border-[#E8DFC8] font-mono">
@@ -474,6 +482,11 @@ export const DealFlowMarketplace: React.FC<DealFlowMarketplaceProps> = ({
                     <span className="text-[8px] font-sans font-semibold uppercase">{isAr ? 'توافق' : 'FIT'}</span>
                   </div>
 
+                  <CompanyLogo
+                    name={opp.companyName}
+                    size="sm"
+                    className="shrink-0"
+                  />
                   <div>
                     <div className="flex items-center gap-2">
                       <h5 className="font-bold text-[#1E1919] text-base">

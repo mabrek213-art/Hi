@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <rect width="64" height="64" rx="16" fill="#EA580C"/>
+  <!-- Subol IoT Safety Sensor Shield -->
+      <polygon points="32,11 50,21 50,43 32,53 14,43 14,21" fill="#FFFFFF"/>
+      <circle cx="32" cy="32" r="6" fill="#EA580C"/>
+      <path d="M22 24C28 19 36 19 42 24" stroke="#EA580C" stroke-width="3" stroke-linecap="round"/>
+      <path d="M22 40C28 45 36 45 42 40" stroke="#EA580C" stroke-width="3" stroke-linecap="round"/>
+</svg>
